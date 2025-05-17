@@ -1,6 +1,5 @@
 # EnclaveExtended
 Enclave PC (2002/2003) - Extended
-
 <br>FEATURES
 <br>-28 Playable Characters, all available for his own or respective counterparts Campaign
 <br>-Play the first Light Side Campaign mission, the Introduction map with any Character you want
@@ -9,7 +8,7 @@ Enclave PC (2002/2003) - Extended
 <br>-A few new hidden weapons like swords, daggers or staffs from unlocked characters
 <br>-A "No Shield Slot" option that represents an invisible shield to ensure 100% playability without
 <br>+includes the "wizard bugfix" which prevents Wizard class from obtaining a damage bonus, like Sorceress
-<br>+includes a complete new challenge map for Light Side, "Northern Watch" (Unlocked from start)
+<br>+includes a complete new challenge map for Light Side, "[Northern Watch](https://github.com/landonrivers/EnclaveRegistry/tree/northern-watch)" (Unlocked from start)
 <br>OPTIONAL
 <br>-Everything is free! Weapons, Armors, Shields, Staffs, Bows, Crossbows, Ammo and Potions.
 <br>-Play each level from the beginning, all levels unlocked
