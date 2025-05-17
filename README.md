@@ -24,7 +24,7 @@ Enclave PC (2002/2003) - Extended
 <br>Special Crossbow, Ancient Dagger, Ancient Sword, Ancient Hammer, Assembly Sword, Assembly Staff, Queen Staff, Wine (Shield), Zales Staff
 
 <br>INSTALLATION
-<br>01. Download EnclaveUnlocker.rar
+<br>01. Download Enclave Extended Reposity
 <br>02. Extract it to your game directory and overwrite all files
 <br>Retail Default Patch - C:\Program Files (x86)\Starbreeze Studios\Enclave
 <br>Steam Default Patch - C:\Program Files (x86)\Valve\Steam\Steamapps\Common\Enclave
