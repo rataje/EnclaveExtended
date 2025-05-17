@@ -1,6 +1,7 @@
 # EnclaveExtended
-Enclave PC (2002/2003) - Extended
-<br>FEATURES
+**Enclave PC (2002/2003) - Extended**
+<br>
+<br>**FEATURES**
 <br>-28 Playable Characters, all available for his own or respective counterparts Campaign
 <br>-Play the first Light Side Campaign mission, the Introduction map with any Character you want
 <br>-Play the Dark Side campaign right from the start without having to complete the Light Campaign first
@@ -13,26 +14,26 @@ Enclave PC (2002/2003) - Extended
 <br>-Everything is free! Weapons, Armors, Shields, Staffs, Bows, Crossbows, Ammo and Potions.
 <br>-Play each level from the beginning, all levels unlocked
 
-<br>ABOUT
+<br>**ABOUT**
 <br>The Mod activates many Story and Side Characters as Playable. No Model swapping. Only registry XRG editing. In addition, I made all standard characters of the light and dark sides playable for their respective counterparts. To expand all this work for them, I've created a new mission entry for the Light Side (l_m0) to give the player access to the map/level screen and allow playing the Introduction level with any character after the Intro. To enhance also the playability with weapons etc. I also created a "No Armor" slot to ensure 100% shield-free play. Since you can pick up a shield in some levels, you can now also drop it back at the same location. This wasn't possible without a direct imaginary weapon slot. The Mod has full localization support for all five StringTables: English (Default), German, Spanish, France and Italian. Optionally I created an Unlocker version of it, which removes all prices from weapons, shields, staffs, bows, crossbows, ammo and potions
 
-<br>NEW CHARACTERS
+<br>**NEW CHARACTERS**
 <br>Marcus, Captain Lorus, Senator Alecto, Princess Jasindra, Queen Ayrindel, Assembly Guard, Ancestor Warrior, Zale, Mordessa, Scaara, Skeleton, Paladin
 
-<br>NEW EQUIPMENT
+<br>**NEW EQUIPMENT**
 <br>Special Crossbow, Ancient Dagger, Ancient Sword, Ancient Hammer, Assembly Sword, Assembly Staff, Queen Staff, Wine (Shield), Zales Staff
 
-<br>INSTALLATION
-<br>01. Download Enclave Extended Reposity
-<br>02. Extract it to your game directory and overwrite all files
-<br>Retail Default Patch - C:\Program Files (x86)\Starbreeze Studios\Enclave
-<br>Steam Default Patch - C:\Program Files (x86)\Valve\Steam\Steamapps\Common\Enclave
-<br>03. Start the game and have fun
+<br>**INSTALLATION**
+<br>**01.** Download Enclave Extended Reposity
+<br>**02.** Extract it to your game directory and overwrite all files
+<br>**Retail Default Patch** - C:\Program Files (x86)\Starbreeze Studios\Enclave
+<br>**Steam Default Patch** - C:\Program Files (x86)\Valve\Steam\Steamapps\Common\Enclave
+<br>**03.** Start the game and have fun
 
 <br>For security reasons, I have added the originals of all modified files,
 <br>which are located in the Sbz1/registry folder (named with the extension *.original)
 
-<br>FUTURE PLANS
+<br>**FUTURE PLANS**
 <br>-A few things like armor selction for certain characters that didn't make it into the first release
 <br>-Localization support for StringTables: Spanish, France and Italian.
 <br>-Standard Concept Version, unlock evertyhing as in vanilla game
