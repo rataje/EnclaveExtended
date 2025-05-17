@@ -1,0 +1,1659 @@
+*locations
+{
+	*Iellon
+	{
+		*position 414,186
+		*iconsurface GUI_Ic2_IellonOutpost
+	}
+	*Iellon2
+	{
+		*position 421,204
+		*iconsurface GUI_Ic2_IellonOutpost
+	}
+	*Celadia
+	{
+		*position 439,205
+		*iconsurface GUI_Ic2_Celadia
+	}
+	*DesertedTemple
+	{
+		*position 472,199
+		*iconsurface GUI_Ic2_Temple
+	}
+	*DividedCity
+	{
+		*position 391,244
+		*iconsurface GUI_Ic2_DividedCity
+	}
+	*Wastes
+	{
+		*position 338,205
+		*iconsurface GUI_Ic2_Wastes
+	}
+	*ArkAmar
+	{
+		*position 216,206
+		*iconsurface GUI_Ic2_Ark_Amar
+	}
+	*Ancestors
+	{
+		*position 76,95
+		*iconsurface GUI_Ic2_Ancients
+	}
+	*Sanctuary
+	{
+		*position 269,142
+		*iconsurface GUI_Ic2_Sanctuary
+	}
+	*Underworld
+	{
+		*position 341,308
+		*iconsurface GUI_Ic2_UnderworldA
+	}
+	*Underworld2
+	{
+		*position 317,312
+		*iconsurface GUI_Ic2_UnderworldB
+	}
+	*KamZara
+	{
+		*position 284,199
+		*iconsurface GUI_Ic2_KamZara
+	}
+	*Wilderness
+	{
+		*position 472,270
+		*iconsurface GUI_Ic2_WildernessA
+	}
+	*Wilderness2
+	{
+		*position 490,275
+		*iconsurface GUI_Ic2_WildernessB
+	}
+	*ArkMoor
+	{
+		*position 379,73
+		*iconsurface GUI_Ic2_Ark_Moor
+	}
+	*Vatar
+	{
+		*position 379,73
+		*iconsurface GUI_Ic2_Vatar
+	}
+	*Zurana
+	{
+		*position 252,287
+		*iconsurface GUI_Ic2_Zuranas
+	}
+	*Mansion
+	{
+		*position 567,225
+		*iconsurface GUI_Ic2_MansionA
+	}
+	*Guardian
+	{
+		*position 590,266
+		*iconsurface GUI_Ic2_TheDragon
+	}
+	*Mansion2
+	{
+		*position 589,238
+		*iconsurface GUI_Ic2_MansionB
+	}
+	*GreatWall
+	{
+		*position 452,239
+		*iconsurface GUI_Ic2_GreatWall
+	}
+	*Mines
+	{
+		*position 381,165
+		*iconsurface GUI_Ic2_Mines
+	}
+	*UrAnnon
+	{
+		*position 131,238
+		*iconsurface GUI_Ic2_UrAnnon
+	}
+	*Celenheim
+	{
+		*position 504,220
+		*iconsurface GUI_Ic2_Celenheim
+	}
+	*Tolvfors
+	{
+		*position 471,376
+		*iconsurface GUI_Ic2_Challenge
+	}
+	*Hagastrom
+	{
+		*position 550,368
+		*iconsurface GUI_Ic2_Challenge
+	}
+	*Lexe
+	{
+		*position 580,390
+		*iconsurface GUI_Ic2_Challenge
+	}
+	*Naglagard
+	{
+		*position 289,359
+		*iconsurface GUI_Ic2_Challenge
+	}
+	*ForbiddenAtgard
+	{
+		*position 308,235
+		*iconsurface GUI_Ic2_Challenge
+	}
+	*Highvalley
+	{
+		*position 500,100
+		*iconsurface GUI_Ic2_Challenge
+	}
+	*NorthernWatch
+	{
+		*position 450,120
+		*iconsurface GUI_Ic2_Challenge
+	}
+}
+
+*campaigns
+{
+	*light
+	{
+		*name Campaign of Light
+		*mapsurface gui_map01
+		*defaulticonsurface GUI_GenericLocation
+		*video_win GUI_Scoreboard_1
+		*video_lose GUI_MFL_01
+		*equipafterchallenge 2
+		*defaultcharacter paladin
+		*briefingtexture GUI_BriefingL_01
+		*maxgoldaward 13000,9320
+	}
+	*dark
+	{
+		*name Campaign of Dark
+		*mapsurface gui_map01
+		*defaulticonsurface GUI_GenericLocation
+		*video_win GUI_Scoreboard_1
+		*video_lose GUI_MFD_01
+		*equipafterchallenge 2
+		*defaultcharacter assassin
+		*briefingtexture GUI_BriefingD_01
+		*maxgoldaward 13000,feticia
+	}
+	*gameplaytesting
+	{
+		*name Gameplay Testing Campaign
+		*mapsurface gui_map01
+		*defaulticonsurface GUI_GenericLocation
+		*video_win Scoreboard_01
+		*video_lose GUI_MFD_01
+	}
+}
+
+*characters
+{
+	*paladin
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*itemslot5 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	*archer
+	{
+		*itemslot0 0x020,GUI_ICON_BOWS32
+		*itemslot1 0x8120,GUI_ICON_ARROWS32:§LMENU_MISCARROWS
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x009,GUI_ICON_DAGGERS32
+		*itemslot5 0x106,GUI_ICON_POTIONS32
+		*itemslot6 0x200,GUI_ICON_ARMOURS32
+
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON,l_m6
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC,l_m12
+		
+		*subslot3 0x120,GUI_ICON_ARROW_BURST
+		*subslot4 0x121,GUI_ICON_ARROW_FIRE
+		*subslot5 0x122,GUI_ICON_ARROW_GRENADE
+		*subslot6 0x123,GUI_ICON_ARROW_SNIPER
+		*subslot7 0x124,GUI_ICON_ARROW_MAGIC,l_m12
+	}
+	*druid
+	{
+		*itemslot0 0x010,GUI_ICON_STAFFS32
+		*itemslot1 0x011,GUI_ICON_STAFFS32
+		*itemslot2 0x009,GUI_ICON_DAGGERS32
+		*itemslot3 0x106,GUI_ICON_POTIONS32
+		*itemslot4 0x200,GUI_ICON_ARMOURS32
+	}	
+	*boarrider
+	{
+		*itemslot0 0x000,GUI_ICON_AXES32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*itemslot5 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC,l_m12
+	}
+	*engineer
+	{
+		*itemslot0 0x000,GUI_ICON_HAMMERS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x003,GUI_ICON_BOMBS32
+		*itemslot5 0x004,GUI_ICON_FIREBOTTLES32
+		*itemslot6 0x106,GUI_ICON_POTIONS32
+		*itemslot7 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	*wizard
+	{
+		*itemslot0 0x010,GUI_ICON_STAFFS32
+		*itemslot1 0x011,GUI_ICON_STAFFS32
+		*itemslot2 0x009,GUI_ICON_DAGGERS32
+		*itemslot3 0x106,GUI_ICON_POTIONS32
+		*itemslot4 0x200,GUI_ICON_ARMOURS32
+	}
+	*9320
+	{
+		*itemslot0 0x106,GUI_ICON_POTIONS32
+	}
+	*Golem
+	{
+		*itemslot0 0x106,GUI_ICON_POTIONS32
+	}
+	*assassin
+	{
+		*itemslot0 0x020,GUI_ICON_BOWS32
+		*itemslot1 0x8120,GUI_ICON_ARROWS32:§LMENU_MISCARROWS
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x009,GUI_ICON_DAGGERS32
+		*itemslot5 0x106,GUI_ICON_POTIONS32
+		*itemslot6 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON,d_m7
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC,d_m11
+	
+		*subslot3 0x120,GUI_ICON_ARROW_BURST
+		*subslot4 0x121,GUI_ICON_ARROW_FIRE
+		*subslot5 0x122,GUI_ICON_ARROW_GRENADE
+		*subslot6 0x123,GUI_ICON_ARROW_SNIPER
+		*subslot7 0x124,GUI_ICON_ARROW_MAGIC,d_m11
+	}	
+	*berserker
+	{
+		*itemslot0 0x000,GUI_ICON_HAMMERS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*itemslot5 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}	
+	*sorceress
+	{
+		*itemslot0 0x010,GUI_ICON_STAFFS32
+		*itemslot1 0x011,GUI_ICON_STAFFS32
+		*itemslot2 0x009,GUI_ICON_DAGGERS32
+		*itemslot3 0x106,GUI_ICON_POTIONS32
+		*itemslot4 0x200,GUI_ICON_ARMOURS32
+	}
+	*wolfrider
+	{
+		*itemslot0 0x000,GUI_ICON_AXES32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*itemslot5 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON,d_m7
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC,d_m11
+	}
+	*bombardier
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x003,GUI_ICON_BOMBS32
+		*itemslot5 0x004,GUI_ICON_FIREBOTTLES32
+		*itemslot6 0x106,GUI_ICON_POTIONS32
+		*itemslot7 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	*lich
+	{
+		*itemslot0 0x010,GUI_ICON_STAFFS32
+		*itemslot1 0x011,GUI_ICON_STAFFS32
+		*itemslot2 0x009,GUI_ICON_DAGGERS32
+		*itemslot3 0x106,GUI_ICON_POTIONS32
+		*itemslot4 0x200,GUI_ICON_ARMOURS32
+	}
+	*feticia
+	{
+		*itemslot0 0x106,GUI_ICON_POTIONS32
+	}
+	*stonegnome
+	{
+		*itemslot0 0x106,GUI_ICON_POTIONS32
+	}	
+	// new characters
+	*knight
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*itemslot5 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	*marcus
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+	}
+	*lorus
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+	}
+	*jasindra
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x020,GUI_ICON_BOWS32
+		*itemslot3 0x8120,GUI_ICON_ARROWS32:§LMENU_MISCARROWS
+		*itemslot4 0x009,GUI_ICON_DAGGERS32
+		*itemslot5 0x011,GUI_ICON_STAFFS32
+		*itemslot6 0x106,GUI_ICON_POTIONS32
+
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+		
+		*subslot3 0x120,GUI_ICON_ARROW_BURST
+		*subslot4 0x121,GUI_ICON_ARROW_FIRE
+		*subslot5 0x122,GUI_ICON_ARROW_GRENADE
+		*subslot6 0x123,GUI_ICON_ARROW_SNIPER
+		*subslot7 0x124,GUI_ICON_ARROW_MAGIC
+	}
+	*ayndirel
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x020,GUI_ICON_BOWS32
+		*itemslot3 0x8120,GUI_ICON_ARROWS32:§LMENU_MISCARROWS
+		*itemslot4 0x009,GUI_ICON_DAGGERS32
+		*itemslot5 0x011,GUI_ICON_STAFFS32
+		*itemslot6 0x106,GUI_ICON_POTIONS32
+
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+		
+		*subslot3 0x120,GUI_ICON_ARROW_BURST
+		*subslot4 0x121,GUI_ICON_ARROW_FIRE
+		*subslot5 0x122,GUI_ICON_ARROW_GRENADE
+		*subslot6 0x123,GUI_ICON_ARROW_SNIPER
+		*subslot7 0x124,GUI_ICON_ARROW_MAGIC
+	}
+	*assembly
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x010,GUI_ICON_STAFFS32
+		*itemslot2 0x011,GUI_ICON_STAFFS32
+		*itemslot3 0x009,GUI_ICON_DAGGERS32
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+	}
+	*zale
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x010,GUI_ICON_STAFFS32
+		*itemslot2 0x011,GUI_ICON_STAFFS32
+		*itemslot3 0x009,GUI_ICON_DAGGERS32
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+	}
+	*alecto
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x009,GUI_ICON_DAGGERS32
+		*itemslot5 0x106,GUI_ICON_POTIONS32
+
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	*ancestor
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x009,GUI_ICON_DAGGERS32
+		*itemslot5 0x106,GUI_ICON_POTIONS32
+
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	*mordessa_good
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x009,GUI_ICON_DAGGERS32
+		*itemslot5 0x011,GUI_ICON_STAFFS32
+		*itemslot6 0x106,GUI_ICON_POTIONS32
+		
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	*skeleton_good
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x020,GUI_ICON_BOWS32
+		*itemslot3 0x8120,GUI_ICON_ARROWS32:§LMENU_MISCARROWS
+		*itemslot4 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot5 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot6 0x106,GUI_ICON_POTIONS32
+		*itemslot7 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+	}
+	*scaara_good
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x106,GUI_ICON_POTIONS32
+	
+	}
+	*knight_dark
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*itemslot5 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	*marcus_dark
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+	}
+	*lorus_dark
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+	}
+	*jasindra_dark
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x020,GUI_ICON_BOWS32
+		*itemslot3 0x8120,GUI_ICON_ARROWS32:§LMENU_MISCARROWS
+		*itemslot4 0x009,GUI_ICON_DAGGERS32
+		*itemslot5 0x011,GUI_ICON_STAFFS32
+		*itemslot6 0x106,GUI_ICON_POTIONS32
+
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+		
+		*subslot3 0x120,GUI_ICON_ARROW_BURST
+		*subslot4 0x121,GUI_ICON_ARROW_FIRE
+		*subslot5 0x122,GUI_ICON_ARROW_GRENADE
+		*subslot6 0x123,GUI_ICON_ARROW_SNIPER
+		*subslot7 0x124,GUI_ICON_ARROW_MAGIC
+	}
+	*ayndirel_dark
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x020,GUI_ICON_BOWS32
+		*itemslot3 0x8120,GUI_ICON_ARROWS32:§LMENU_MISCARROWS
+		*itemslot4 0x009,GUI_ICON_DAGGERS32
+		*itemslot5 0x011,GUI_ICON_STAFFS32
+		*itemslot6 0x106,GUI_ICON_POTIONS32
+
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+		
+		*subslot3 0x120,GUI_ICON_ARROW_BURST
+		*subslot4 0x121,GUI_ICON_ARROW_FIRE
+		*subslot5 0x122,GUI_ICON_ARROW_GRENADE
+		*subslot6 0x123,GUI_ICON_ARROW_SNIPER
+		*subslot7 0x124,GUI_ICON_ARROW_MAGIC
+	}
+	*assembly_dark
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x010,GUI_ICON_STAFFS32
+		*itemslot2 0x011,GUI_ICON_STAFFS32
+		*itemslot3 0x009,GUI_ICON_DAGGERS32
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+	}
+	*zale_dark
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x010,GUI_ICON_STAFFS32
+		*itemslot2 0x011,GUI_ICON_STAFFS32
+		*itemslot3 0x009,GUI_ICON_DAGGERS32
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+	}
+	*alecto_dark
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x009,GUI_ICON_DAGGERS32
+		*itemslot5 0x106,GUI_ICON_POTIONS32
+
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	*ancestor_dark
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x009,GUI_ICON_DAGGERS32
+		*itemslot5 0x106,GUI_ICON_POTIONS32
+
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	*skeleton
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x020,GUI_ICON_BOWS32
+		*itemslot3 0x8120,GUI_ICON_ARROWS32:§LMENU_MISCARROWS
+		*itemslot4 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot5 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot6 0x106,GUI_ICON_POTIONS32
+		*itemslot7 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+	}
+	*scaara
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x106,GUI_ICON_POTIONS32
+	
+	}
+	*mordessa
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x009,GUI_ICON_DAGGERS32
+		*itemslot3 0x011,GUI_ICON_STAFFS32
+		*itemslot4 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot5 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot6 0x106,GUI_ICON_POTIONS32
+		
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	// new dark characters
+	*paladin_dark
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*itemslot5 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	*archer_dark
+	{
+		*itemslot0 0x020,GUI_ICON_BOWS32
+		*itemslot1 0x8120,GUI_ICON_ARROWS32:§LMENU_MISCARROWS
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x009,GUI_ICON_DAGGERS32
+		*itemslot5 0x106,GUI_ICON_POTIONS32
+		*itemslot6 0x200,GUI_ICON_ARMOURS32
+
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON,l_m6
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC,l_m12
+		
+		*subslot3 0x120,GUI_ICON_ARROW_BURST
+		*subslot4 0x121,GUI_ICON_ARROW_FIRE
+		*subslot5 0x122,GUI_ICON_ARROW_GRENADE
+		*subslot6 0x123,GUI_ICON_ARROW_SNIPER
+		*subslot7 0x124,GUI_ICON_ARROW_MAGIC,l_m12
+	}
+	*druid_dark
+	{
+		*itemslot0 0x010,GUI_ICON_STAFFS32
+		*itemslot1 0x011,GUI_ICON_STAFFS32
+		*itemslot2 0x009,GUI_ICON_DAGGERS32
+		*itemslot3 0x106,GUI_ICON_POTIONS32
+		*itemslot4 0x200,GUI_ICON_ARMOURS32
+	}	
+	*boarrider_dark
+	{
+		*itemslot0 0x000,GUI_ICON_AXES32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*itemslot5 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC,l_m12
+	}
+	*engineer_dark
+	{
+		*itemslot0 0x000,GUI_ICON_HAMMERS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x003,GUI_ICON_BOMBS32
+		*itemslot5 0x004,GUI_ICON_FIREBOTTLES32
+		*itemslot6 0x106,GUI_ICON_POTIONS32
+		*itemslot7 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	*wizard_dark
+	{
+		*itemslot0 0x010,GUI_ICON_STAFFS32
+		*itemslot1 0x011,GUI_ICON_STAFFS32
+		*itemslot2 0x009,GUI_ICON_DAGGERS32
+		*itemslot3 0x106,GUI_ICON_POTIONS32
+		*itemslot4 0x200,GUI_ICON_ARMOURS32
+	}
+	// new light characters
+	*assassin_light
+	{
+		*itemslot0 0x020,GUI_ICON_BOWS32
+		*itemslot1 0x8120,GUI_ICON_ARROWS32:§LMENU_MISCARROWS
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x009,GUI_ICON_DAGGERS32
+		*itemslot5 0x106,GUI_ICON_POTIONS32
+		*itemslot6 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON,d_m7
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC,d_m11
+	
+		*subslot3 0x120,GUI_ICON_ARROW_BURST
+		*subslot4 0x121,GUI_ICON_ARROW_FIRE
+		*subslot5 0x122,GUI_ICON_ARROW_GRENADE
+		*subslot6 0x123,GUI_ICON_ARROW_SNIPER
+		*subslot7 0x124,GUI_ICON_ARROW_MAGIC,d_m11
+	}	
+	*berserker_light
+	{
+		*itemslot0 0x000,GUI_ICON_HAMMERS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*itemslot5 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	*sorceress_light
+	{
+		*itemslot0 0x010,GUI_ICON_STAFFS32
+		*itemslot1 0x011,GUI_ICON_STAFFS32
+		*itemslot2 0x009,GUI_ICON_DAGGERS32
+		*itemslot3 0x106,GUI_ICON_POTIONS32
+		*itemslot4 0x200,GUI_ICON_ARMOURS32
+	}
+	*wolfrider_light
+	{
+		*itemslot0 0x000,GUI_ICON_AXES32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x106,GUI_ICON_POTIONS32
+		*itemslot5 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON,d_m7
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC,d_m11
+	}
+	*bombardier_light
+	{
+		*itemslot0 0x000,GUI_ICON_SWORDS32
+		*itemslot1 0x101,GUI_ICON_SHIELDS32
+		*itemslot2 0x021,GUI_ICON_CROSSBOWS32
+		*itemslot3 0x8110,GUI_ICON_ARROWS32:§LMENU_MISCBOLTS
+		*itemslot4 0x003,GUI_ICON_BOMBS32
+		*itemslot5 0x004,GUI_ICON_FIREBOTTLES32
+		*itemslot6 0x106,GUI_ICON_POTIONS32
+		*itemslot7 0x200,GUI_ICON_ARMOURS32
+	
+		*subslot0 0x110,GUI_ICON_BOLT_NORMAL
+		*subslot1 0x112,GUI_ICON_BOLT_POISON
+		*subslot2 0x111,GUI_ICON_BOLT_MAGIC
+	}
+	*lich_light
+	{
+		*itemslot0 0x010,GUI_ICON_STAFFS32
+		*itemslot1 0x011,GUI_ICON_STAFFS32
+		*itemslot2 0x009,GUI_ICON_DAGGERS32
+		*itemslot3 0x106,GUI_ICON_POTIONS32
+		*itemslot4 0x200,GUI_ICON_ARMOURS32
+	}	
+}
+
+*challenges
+{
+	*l_sb1
+	{
+		*location Iellon
+		*type cutscene
+		*cutscene_storybookid stl01
+	}
+	*l_sb2
+	{
+		*location DesertedTemple
+		*type cutscene
+		*cutscene_storybookid stl02
+	}
+	*l_sb3
+	{
+		*location Ancestors
+		*type cutscene
+		*cutscene_storybookid stl03
+	}
+	*l_sb4
+	{
+		*location KamZara
+		*type cutscene
+		*cutscene_storybookid stl04
+	}
+	*l_sb5
+	{
+		*location ArkMoor
+		*type cutscene
+		*cutscene_storybookid stl05
+	}
+	*l_endcredits
+	{
+		*location ArkMoor
+		*type cutscene
+		*hidefrommap 1
+		*cutscene_storybookid l_endcredits
+	}
+	*d_sb1
+	{
+		*location Zurana
+		*type cutscene
+		*cutscene_storybookid std01
+	}
+	*d_sb2
+	{
+		*location ArkMoor
+		*type cutscene
+		*cutscene_storybookid std02
+	}
+	*d_sb3
+	{
+		*location WILDERNESS
+		*type cutscene
+		*cutscene_storybookid std03
+	}
+	*d_sb4
+	{
+		*location Mines
+		*type cutscene
+		*cutscene_storybookid std04
+	}
+	*d_sb5
+	{
+		*location Celenheim
+		*type cutscene
+		*cutscene_storybookid std05
+	}
+	*d_endcredits
+	{
+		*location Celenheim
+		*type cutscene
+		*hidefrommap 1
+		*cutscene_storybookid d_endcredits
+	}
+	*l_cs01
+	{
+		*location Celenheim
+		*type cutscene
+		*music_atmosphere theme_celenheim
+		*hidefrommap 1
+		*map csl01
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_spawncharacter 1
+		*cutscene_length 88
+		*cutscene_fadeoutduration 2
+		*cutscene_cameratarget Cam01
+	}
+	*l_cs02
+	{
+		*location Celenheim
+		*type cutscene
+		*music_atmosphere theme_celenheim
+		*hidefrommap 1
+		*map csl02
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_spawncharacter 1
+		*cutscene_length 65
+		*cutscene_fadeoutduration 2
+		*cutscene_cameratarget Cam01
+	}
+	*d_cs1
+	{
+		*location Zurana
+		*type cutscene
+		*music_atmosphere theme_mordessa2
+		*hidefrommap 1
+		*map csd01
+		*picmips 0,0,0,0,0,0,0,0
+
+		*cutscene_spawncharacter 1
+		*cutscene_length 63
+		*cutscene_fadeoutduration 2
+		*cutscene_cameratarget Cam01
+	}
+	*d_cs2
+	{
+		*location Zurana
+		*type cutscene
+		*music_atmosphere theme_mordessa2
+		*hidefrommap 1
+		*map csd02
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_spawncharacter 1
+		*cutscene_length 66
+		*cutscene_fadeoutduration 2
+		*cutscene_cameratarget Cam01
+	}
+	*d_cs3
+	{
+		*location Celadia
+		*type cutscene
+		*music_atmosphere theme_mordessa2
+		*hidefrommap 1
+		*map csd03
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_spawncharacter 1
+		*cutscene_length 64
+		*cutscene_fadeoutduration 2
+		*cutscene_cameratarget Cam01
+	}
+	*d_cs4
+	{
+		*location ArkMoor
+		*type cutscene
+		*music_atmosphere theme_mordessa2
+		*hidefrommap 1
+		*map csd04
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_spawncharacter 1
+		*cutscene_length 98
+		*cutscene_fadeoutduration 2
+		*cutscene_cameratarget Cam01
+	}
+	*d_cs5
+	{
+		*location Mansion
+		*type cutscene
+		*music_atmosphere theme_mordessa2
+		*hidefrommap 1
+		*map csd05
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_spawncharacter 1
+		*cutscene_length 57
+		*cutscene_fadeoutduration 2
+		*cutscene_cameratarget Cam01
+	}
+	*d_cs7
+	{
+		*location Mines
+		*type cutscene
+		*music_atmosphere theme_mordessa2
+		*hidefrommap 1
+		*map csd07b
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_spawncharacter 1
+		*cutscene_length 38
+		*cutscene_fadeoutduration 2
+		*cutscene_cameratarget Cam01
+	}
+	*d_cs8
+	{
+		*location UrAnnon
+		*type cutscene
+		*music_atmosphere theme_mordessa2
+		*hidefrommap 1
+		*map csd08
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_spawncharacter 1
+		*cutscene_length 49
+		*cutscene_fadeoutduration 2
+		*cutscene_cameratarget Cam01
+	}
+	*l_m0
+	{
+		*gamemenu GameMenu_Campaign
+		*picmips 0,0,0,0,0,0,0,0
+		*noequip 0
+	}
+	*l_m1
+	{
+		*location Iellon
+		*type mission
+		*music_atmosphere dark_03_a
+		*music_battle dark_03_b
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_select l_sb1
+		*noequip 0
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map Iellon_Dungeon
+			*award challenge:l_m2,gold:75
+		}
+	}
+	*l_m2
+	{
+		*location Iellon
+		*type mission
+		*music_atmosphere light_01_a
+		*music_battle light_01_b
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_win l_cs01
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map Iellon_Outpost_L
+			*award challenge:l_m3,gold:75
+		}
+	}
+	*l_m3
+	{
+		*location Celadia
+		*type mission
+		*music_atmosphere light_01_a
+		*music_battle light_01_b
+		*picmips 0,0,0,0,0,0,0,0
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map Celadia_Village_L
+			*award challenge:l_m4,gold:150
+		}
+	}
+	*l_m4
+	{
+		*location DesertedTemple
+		*type mission
+		*music_atmosphere light_02_a
+		*music_battle light_02_b
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_win l_sb2
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map Deserted_Temple
+			*award challenge:l_m5,gold:200
+			*specialaward_0 challenge:l_c1_1
+		}
+	}
+	*l_m5
+	{
+		*location DividedCity
+		*type mission
+		*music_atmosphere dark_02_a
+		*music_battle dark_02_b
+		*picmips 0,0,0,0,0,0,0,0
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map Divided_City
+			*award challenge:l_m6,gold:250
+		}
+	}
+	*l_m6
+	{
+		*location Wastes
+		*type mission
+		*music_atmosphere dark_01_a
+		*music_battle dark_01_b
+		*picmips 0,0,0,0,0,0,0,0
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map Outland_Wastes
+			*award challenge:l_m7,gold:300
+		}
+	}
+	*l_m7
+	{
+		*location ArkAmar
+		*type mission
+		*music_atmosphere dark_03_a
+		*music_battle dark_03_b
+		*picmips 0,0,0,0,0,0,0,0
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map Ark_Amar
+			*award challenge:l_m8,gold:350
+			*specialaward_0 challenge:l_c2
+		}
+	}
+	*l_m8
+	{
+		*location Ancestors
+		*type mission
+		*music_atmosphere light_02_a
+		*music_battle light_02_b
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_win l_sb3
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map Ancestors
+			*award challenge:l_m9,gold:400
+		}
+	}
+	*l_m9
+	{
+		*location Sanctuary
+		*type mission
+		*music_atmosphere light_01_a
+		*music_battle light_01_b
+		*picmips 0,0,0,0,0,0,0,0
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map Sanctuary
+			*award challenge:l_m10,gold:450
+		}
+	}
+	*l_m10
+	{
+		*location Underworld
+		*type mission
+		*music_atmosphere dark_04_a
+		*music_battle dark_04_b
+		*picmips 0,0,0,0,0,0,0,0
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map Underworld_I
+			*award challenge:l_m11,gold:500
+			*specialaward_0 challenge:l_c3_1
+		}
+	}
+	*l_m11
+	{
+		*location Underworld
+		*type mission
+		*music_atmosphere dark_04_a
+		*music_battle dark_04_b
+		*picmips 0,0,0,0,0,0,0,0
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map Underworld_II
+			*award challenge:l_m12,gold:550
+		}
+	}
+	*l_m12
+	{
+		*location KamZara
+		*type mission
+		*music_atmosphere dark_01_a
+		*music_battle dark_01_b
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_win l_sb4,l_cs02
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map Kam-Zara
+			*award challenge:l_m13,gold:600
+		}
+	}
+	*l_m13
+	{
+		*location ArkMoor
+		*type mission
+		*music_atmosphere dark_04_a
+		*music_battle dark_04_b
+		*picmips 0,0,0,0,0,0,0,0
+		*backplane 12000
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map Ark_Moor_L
+			*award challenge:l_m14,gold:650
+		}
+	}
+	*l_m14
+	{
+		*location ArkMoor
+		*type mission
+		*music_atmosphere dark_04_a
+		*music_battle dark_04_b
+		*picmips 0,0,0,0,0,0,0,0
+		*backplane 12000
+		*cutscene_win l_sb5,l_endcredits
+
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map Vatar
+			*award special:quittomenu
+		}
+	}
+	*d_m0
+	{
+		*gamemenu GameMenu_Campaign
+		*picmips 0,0,0,0,0,0,0,0
+		*noequip 0
+	}
+	*d_m1
+	{
+		*location Zurana
+		*type mission
+		*music_atmosphere dark_03_a
+		*music_battle dark_03_b
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_select d_sb1,d_cs1
+		*cutscene_win d_cs2
+		*noequip 0
+
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map Zuranas_Mansion
+			*award challenge:d_m2,gold:100
+		}
+	}
+	*d_m2
+	{
+		*location Celadia
+		*type mission
+		*music_atmosphere light_01_a
+		*music_battle light_01_b
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_win d_cs3
+
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map Celadia_Village_D
+			*award challenge:d_m3,gold:200
+		}
+	}
+	*d_m3
+	{
+		*location ArkMoor
+		*type mission
+		*music_atmosphere dark_04_a
+		*music_battle dark_04_b
+		*picmips 0,0,0,0,0,0,0,0
+		*backplane 12000
+		*cutscene_win d_cs4,d_sb2
+
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map Ark_Moor_D
+			*award challenge:d_m4,gold:200
+		}
+	}
+	*d_m4
+	{
+		*location Mansion
+		*type mission
+		*music_atmosphere dark_02_a
+		*music_battle dark_02_b
+		*picmips 0,0,0,0,0,0,0,0
+
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map Mansion_of_Dreams_I
+			*award challenge:d_m5,gold:250
+			*specialaward_0 challenge:d_c1_1
+		}
+	}
+	*d_m5
+	{
+		*location Mansion
+		*type mission
+		*music_atmosphere dark_01_a
+		*music_battle dark_01_b
+		*picmips 0,0,0,0,0,0,0,0
+
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map The_Guardian
+			*award challenge:d_m6,gold:300
+		}
+	}
+	*d_m6
+	{
+		*location Mansion
+		*type mission
+		*music_atmosphere dark_03_a
+		*music_battle dark_03_b
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_win d_cs5
+
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map Mansion_of_Dreams_II
+			*award challenge:d_m7,gold:350
+		}
+	}
+	*d_m7
+	{
+		*location Wilderness
+		*type mission
+		*music_atmosphere light_02_a
+		*music_battle light_02_b
+		*picmips 0,0,0,0,0,0,0,0
+		*backplane 15000
+
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map Wilderness_I
+			*award challenge:d_m8,gold:400
+		}
+	}
+	*d_m8
+	{
+		*location Wilderness
+		*type mission
+		*music_atmosphere light_01_a
+		*music_battle light_01_b
+		*picmips 0,0,0,0,0,0,0,0
+		*backplane 8000
+		*cutscene_win d_sb3
+
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map Wilderness_II
+			*award challenge:d_m9,gold:450
+			*specialaward_0 challenge:d_c2
+		}
+	}
+	*d_m9
+	{
+		*location Iellon
+		*type mission
+		*music_atmosphere light_01_a
+		*music_battle light_01_b
+		*picmips 0,0,0,0,0,0,0,0
+
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map Iellon_Outpost_D
+			*award challenge:d_m10,gold:500
+		}
+	}
+	*d_m10
+	{
+		*location GreatWall
+		*type mission
+		*music_atmosphere light_02_a
+		*music_battle light_02_b
+		*picmips 0,0,0,0,0,0,0,0
+
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map The_Great_Wall
+			*award challenge:d_m11,gold:550
+			*specialaward_0 challenge:d_c3_1
+		}
+	}
+	*d_m11
+	{
+		*location Mines
+		*type mission
+		*music_atmosphere dark_02_a
+		*music_battle dark_02_b
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_win d_cs7,d_sb4
+
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map Mines_Of_Ungard
+			*award challenge:d_m12,gold:600
+		}
+	}
+	*d_m12
+	{
+		*location UrAnnon
+		*type mission
+		*music_atmosphere dark_01_a
+		*music_battle dark_01_b
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_win d_cs8
+
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map Ur-Annon_Island
+			*award challenge:d_m13,gold:650
+		}
+	}
+	*d_m13
+	{
+		*location Celenheim
+		*type mission
+		*music_atmosphere light_01_a
+		*music_battle light_01_b
+		*picmips 0,0,0,0,0,0,0,0
+		*cutscene_win d_sb5,d_endcredits
+
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map Celenheim
+			*award special:quittomenu
+		}
+	}
+	*d_c1_1
+	{
+		*location Tolvfors
+		*type Survival
+		*music_atmosphere light_02_a
+		*music_battle light_02_b
+		*picmips 0,0,0,0,0,0,0,0
+
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map tolvfors
+			*award challenge:d_c1_2,gold:100
+			*survival_enemies Ai_Boarrider_L0,Ai_Boarrider_L1,Ai_Boarrider_L2,Ai_Boarrider_L3,Ai_Huntress_L0+Ai_Huntress_L0
+			*survival_timelimit 60
+		}
+	}
+	*d_c1_2
+	{
+		*location Tolvfors
+		*type Survival
+		*music_atmosphere light_02_a
+		*music_battle light_02_b
+		*picmips 0,0,0,0,0,0,0,0
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map tolvfors
+			*award challenge:d_c1_3,gold:200
+			*survival_enemies Ai_Boarrider_L1,Ai_Engineer_L0+Ai_Boarrider_L3,Ai_Huntress_L1+Ai_Huntress_L1,Ai_Knight_L0,Ai_Huntress_L2+Ai_Huntress_L2,Ai_Knight_L3
+			*survival_timelimit 60
+		}
+	}
+	*d_c1_3
+	{
+		*location Tolvfors
+		*type Survival
+		*music_atmosphere light_02_a
+		*music_battle light_02_b
+		*picmips 0,0,0,0,0,0,0,0
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map tolvfors
+			*award gold:300
+			*survival_enemies Ai_Boarrider_L1+Ai_Engineer_L2,Ai_Huntress_L1+Ai_Huntress_L1+Ai_Engineer_L2,Ai_Knight_L2+Ai_Knight_L2+Ai_Wizard_L0,Ai_Wizard_L1+Ai_Wizard_L2+Ai_Knight_L3+Ai_Boarrider_L2
+			*survival_timelimit 60
+		}
+	}
+	*d_c2
+	{
+		*location Highvalley
+		*type Mission
+		*music_atmosphere dark_02_a
+		*music_battle dark_02_b
+		*picmips 0,0,0,0,0,0,0,0
+		*noequip 1
+		*neverfail 1
+		*enemycount 1
+		*forcemaxgold 1000
+		*character bombardier
+		{
+			*map Highvalley
+		}
+	}
+	*d_c3_1
+	{
+		*location Lexe
+		*type Survival
+		*music_atmosphere dark_03_a
+		*music_battle dark_03_b
+		*picmips 0,0,0,0,0,0,0,0
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map lexe
+			*award challenge:d_c3_2,gold:300
+			*survival_enemies Ai_engineer_L1+Ai_boarrider_L1+Ai_boarrider_L1,Ai_huntress_L2+Ai_huntress_L2+Ai_boarrider_L2,Ai_huntress_L2+Ai_huntress_L2+Ai_engineer_L2+Ai_boarrider_L2,Ai_boarrider_L3+Ai_druid_L3+Ch_engineer_L3+Ch_engineer_L3
+			*survival_timelimit 60
+		}
+	}
+	*d_c3_2
+	{
+		*location Lexe
+		*type Survival
+		*music_atmosphere dark_03_a
+		*music_battle dark_03_b
+		*picmips 0,0,0,0,0,0,0,0
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map lexe
+			*award challenge:d_c3_3,gold:500
+			*survival_enemies Ch_engineer_L3+Ai_huntress_L2+Ai_druid_L2,Ch_engineer_L3+Ai_boarrider_L2+Ai_boarrider_L2+Ai_huntress_L2,Ch_engineer_L3+Ai_druid_L2+Ai_huntress_L2+Ai_huntress_L2,Ch_engineer_L3+Ch_engineer_L3+Ch_boarrider_L3+Ch_boarrider_L3
+			*survival_timelimit 60
+		}
+	}
+	*d_c3_3
+	{
+		*location Lexe
+		*type Survival
+		*music_atmosphere dark_03_a
+		*music_battle dark_03_b
+		*picmips 0,0,0,0,0,0,0,0
+		*character assassin+berserker+sorceress+wolfrider+bombardier+lich+feticia+stonegnome+skeleton+scaara+mordessa+paladin_dark+archer_dark+druid_dark+boarrider_dark+engineer_dark+wizard_dark+knight_dark+marcus_dark+lorus_dark+jasindra_dark+ayndirel_dark+assembly_dark+zale_dark+alecto_dark+ancestor_dark
+		{
+			*map lexe
+			*award gold:800
+			*survival_enemies Ch_engineer_L3+Ch_boarrider_L3+Ch_boarrider_L3+Ai_druid_L3,Ch_boarrider_L3+Ch_boarrider_L3+Ch_engineer_L3+Ch_Knight_L3,Ch_boarrider_L3+Ch_Knight_L3+Ch_Knight_L3+Ai_huntress_L3,Ch_Knight_L3+Ch_Knight_L3+Ch_boarrider_L3+Ai_wizard_L3+Ai_wizard_L3
+			*survival_timelimit 60
+		}
+	}
+	*l_c1_1
+	{
+		*location ForbiddenAtgard
+		*type Survival
+		*music_atmosphere light_01_a
+		*music_battle light_01_b
+		*picmips 0,0,0,0,0,0,0,0
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map forbiddenatgard
+			*award challenge:l_c1_2,gold:100
+			*survival_enemies Ai_wolfrider_L0,Ai_wolfrider_L1,Ai_wolfrider_L2,Ai_wolfrider_L3,Ai_assassin_L1
+			*survival_timelimit 60
+		}
+	}
+	*l_c1_2
+	{
+		*location ForbiddenAtgard
+		*type Survival
+		*music_atmosphere light_01_a
+		*music_battle light_01_b
+		*picmips 0,0,0,0,0,0,0,0
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map forbiddenatgard
+			*award challenge:l_c1_3,gold:200
+			*survival_enemies Ai_wolfrider_L1,Ai_wolfrider_L1+Ai_wolfrider_L1,Ai_assassin_L0+Ai_assassin_L0,Ai_bombardier_L0,Ai_assassin_L0+Ai_assassin_L1,Ai_bombardier_L1
+			*survival_timelimit 60
+		}
+	}
+	*l_c1_3
+	{
+		*location ForbiddenAtgard
+		*type Survival
+		*music_atmosphere light_01_a
+		*music_battle light_01_b
+		*picmips 0,0,0,0,0,0,0,0
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map forbiddenatgard
+			*award gold:300
+			*survival_enemies Ai_wolfrider_L1+Ai_wolfrider_L1,Ai_assassin_L1+Ai_assassin_L1,Ai_bombardier_L0+Ai_assassin_L1,Ai_bombardier_L1+Ai_bombardier_L1,Ai_bombardier_L2+Ai_assassin_L2,Ai_assassin_L2+Ai_assassin_L2
+			*survival_timelimit 60
+		}
+	}
+	*l_c2
+	{
+		*location Naglagard
+		*type Mission
+		*music_atmosphere dark_01_a
+		*music_battle dark_01_b
+		*picmips 0,0,0,0,0,0,0,0
+		*noequip 1
+		*neverfail 1
+		*enemycount 1
+		*forcemaxgold 1000
+		*character engineer
+		{
+			*map naglagard
+		}
+	}
+	*l_c3_1
+	{
+		*location Hagastrom
+		*type Survival
+		*music_atmosphere dark_03_a
+		*music_battle dark_03_b
+		*picmips 0,0,0,0,0,0,0,0
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map hagastrom
+			*award challenge:l_c3_2,gold:300
+			*survival_enemies Ai_bombardier_L1+Ai_bombardier_L1,Ai_bombardier_L1+Ai_assassin_L1,Ai_assassin_L1+Ai_bombardier_L1+Ai_bombardier_L1,Ai_lich_L1+Ch_bombardier_L3+Ch_bombardier_L3
+			*survival_timelimit 60
+		}
+	}
+	*l_c3_2
+	{
+		*location Hagastrom
+		*type Survival
+		*music_atmosphere dark_03_a
+		*music_battle dark_03_b
+		*picmips 0,0,0,0,0,0,0,0
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map hagastrom
+			*award challenge:l_c3_3,gold:500
+			*survival_enemies Ai_bombardier_L2+Ai_assassin_L2,Ai_bombardier_L2+Ai_bombardier_L2+Ai_lich_L2,Ai_bombardier_L2+Ai_lich_L2+Ai_assassin_L2+Ai_assassin_L2,Ch_bombardier_L3+Ch_bombardier_L3+Ai_lich_L2+Ai_berserker_L2
+			*survival_timelimit 60
+		}
+	}
+	*l_c3_3
+	{
+		*location Hagastrom
+		*type Survival
+		*music_atmosphere dark_03_a
+		*music_battle dark_03_b
+		*picmips 0,0,0,0,0,0,0,0
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map hagastrom
+			*award gold:800
+			*survival_enemies Ch_bombardier_L3+Ch_bombardier_L3+Ai_lich_L3,Ch_bombardier_L3+Ch_bombardier_L3+Ai_lich_L3+Ai_berserker_L3,Ai_berserker_L3+Ai_berserker_L3+Ch_bombardier_L3+Ch_bombardier_L3+Ai_sorceress_L2,Ai_berserker_L3+Ai_berserker_L3+Ch_bombardier_L3+Ch_bombardier_L3+Ai_sorceress_L3+Ai_sorceress_L3
+			*survival_timelimit 60
+		}
+	}
+	*l_c_northernwatch //This entry has been added to enable the Northern Watch mission
+	{
+		*location NorthernWatch
+		*type mission
+		*music_atmosphere dark_01_a
+		*music_battle dark_01_b
+		*picmips 0,0,0,0,0,0,0,0
+		*character paladin+archer+druid+boarrider+engineer+wizard+9320+golem+knight+marcus+lorus+jasindra+ayndirel+assembly+zale+alecto+ancestor+mordessa_good+assassin_light+berserker_light+sorceress_light+wolfrider_light+bombardier_light+lich_light+skeleton_good+scaara_good
+		{
+			*map northern_watch
+		}
+	}
+}
+
+
+
