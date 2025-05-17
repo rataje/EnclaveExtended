@@ -1,0 +1,159 @@
+//----------------------------------------------------------------------
+//- DAGGER -------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*weapon_dagger_short
+{
+	*classname template_weapon_dagger
+	*price 0
+	*damage 10
+
+	*impactforce 0
+	*animtimescale 1.0
+	*melee_stunduration 0.6
+
+	*model "weapons\\Dagger1"
+	*iconsurface gui_icon_dagger
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+
+	*spawn_hit hiteffect_shortdagger
+	*spawn_special hiteffect_shortdagger_special
+}
+
+*weapon_dagger_long
+{
+	*classname template_weapon_dagger
+	*price 0
+	*damage 20
+
+	*impactforce 0
+	*animtimescale 1.025
+	*melee_stunduration 0.7
+
+	*model "weapons\\longdagger"
+	*iconsurface gui_icon_longdagger
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.7
+
+	*spawn_hit hiteffect_longdagger
+	*spawn_special hiteffect_longdagger_special
+}
+
+*weapon_dagger_curved
+{
+	*classname template_weapon_dagger
+	*price 0
+	*damage 30
+
+	*impactforce 0
+	*animtimescale 1.05
+	*melee_stunduration 0.8
+
+	*model "weapons\\WaveDagger"
+	*iconsurface gui_icon_wavedagger
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.75
+	//*melee_combomultiplier2 2.5
+	//*melee_combotimegap 0.6
+	
+	*spawn_hit hiteffect_curvedagger
+	*spawn_special hiteffect_curvedagger_special
+}
+
+*weapon_dagger_sacrifice
+{
+	*classname template_weapon_dagger
+	*price 0
+	*damage 40
+
+	*impactforce 0
+	*animtimescale 1.075
+	*melee_stunduration 0.9
+
+	*model "weapons\\DarkDagger01"
+	*iconsurface gui_icon_ceremonialdagg
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 3.0
+	//*melee_combotimegap 0.45
+
+	*spawn_hit hiteffect_ceremonial
+	*spawn_special hiteffect_ceremonial_special
+}
+
+*weapon_dagger_poison
+{
+	*classname template_weapon_dagger
+	*price 0
+	*damage 50, poison+blockable
+
+	*impactforce 0
+	*animtimescale 1.1
+	*melee_stunduration 1.0
+
+	*model "weapons\\PoisonDagger"
+	*iconsurface gui_icon_poisondagger
+	*attachmodel "DoubleTrail:Trail_Sword04,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 3.0
+	//*melee_combotimegap 0.3
+
+	*spawn_hit hiteffect_poisondagger
+	*spawn_special hiteffect_poisondagger_special
+	*damage_effect attach_poison
+}
+
+*weapon_dagger_ancient
+{
+	*classname template_weapon_dagger
+	*price 0
+	*damage 20
+
+	*impactforce 0
+	*melee_stunduration 1.6
+
+	*model "weapons\\ancientdagger"
+	*iconsurface gui_icon_ancientdagger
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+
+	*spawn_hit hiteffect_shortdagger
+	*spawn_special hiteffect_shortdagger_special
+}
+
+*weapon_special_vine
+{
+	*classname template_weapon_dagger
+	*price 0
+	*damage 5
+
+	*model "world\\stuff\\bigbottle"
+	*iconsurface gui_icon_molotov
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+}

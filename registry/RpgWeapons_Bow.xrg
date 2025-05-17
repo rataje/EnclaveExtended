@@ -1,0 +1,268 @@
+//----------------------------------------------------------------------
+//- BOW ----------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*template_weapon_bow
+{
+	*rpgclass bow
+
+	*skill bow
+	*damagetype pierce+blockable
+
+	*itemtype 0x20
+	*linkeditemtypes 0x120,0x121,0x122,0x123,0x124
+
+	*ai_type RANGED_BOW
+	*anim_stance animlist:140
+	*sound_pickup eq_misc4
+
+*BurstBowKeys
+	*burst_flags aiming+needammo+unloadonunequip+keepaftermission+twohanded
+//	*burst_spawn projectile_burstarrow
+	*burst_reloadtime 1.5
+	*burst_damage 10, pierce+blockable
+
+	*maxloadedarrows 10
+	*yoffset 0.00 //0.05 before but then the aiming ways off
+	*xspread 0.20
+	*yspread 0.02
+	*spreadunity 0.5
+	*columnspread 5.0
+	*velocityspread 0.1
+
+	*range 1024
+	
+	*burst_sound_charge bow_burst02
+	*burst_sound_release bow_burst01
+	*burst_sound_reload bow_burst03
+	*burst_sound_equip 
+	*burst_sound_unequip 
+
+	*burst_anim_equip animlist:227
+	*burst_anim_reload animlist:152
+	*burst_anim_charge animlist:153
+	*burst_anim_release animlist:154
+
+	*burst_anim_reload_crouch animlist:152
+	*burst_anim_charge_crouch animlist:153
+	*burst_anim_release_crouch animlist:154
+
+	*subchargeanimstart 0.66
+	*subchargeanimhold 3.28
+	*subchargeanimend 5.50
+
+	*quickshot_releasetime 0.7
+	*quickshot_velocityfraction 0.3
+
+*SniperBowKeys
+	*sniper_flags aiming+needammo+keepaftermission+twohanded
+//	*sniper_spawn projectile_sniperarrow
+	*sniper_reloadtime 1
+	*sniper_damage 40, sniper+blockable
+
+	*zoom1 5
+	*zoom2 20
+
+	*range 8192
+	*moveback 3
+
+	*range 1024
+
+	*sniper_sound_charge bow_snipe02
+	*sniper_sound_release bow_snipe01
+	*sniper_sound_reload bow_snipe03
+	*sniper_sound_equip 
+	*sniper_sound_unequip 
+
+	*sniper_anim_equip animlist:227
+	*sniper_anim_reload_stand animlist:155
+	*sniper_anim_raisecharge_stand animlist:156
+	*sniper_anim_chargeloop_stand animlist:157
+	*sniper_anim_releaselowerreload_stand animlist:158
+	*sniper_anim_releaselower_stand animlist:159
+
+	*sniper_anim_reload_crouch animlist:155
+	*sniper_anim_raisecharge_crouch animlist:156
+	*sniper_anim_chargeloop_crouch animlist:157
+	*sniper_anim_releaselowerreload_crouch animlist:158
+	*sniper_anim_releaselower_crouch animlist:159
+}
+
+//----------------------------------------------------------------------
+
+*weapon_bow_short
+{
+*SharedBowKeys
+	*classname template_weapon_bow
+	*price 0	
+
+	*model "weapons\\ShortBow"
+	*iconsurface gui_icon_shortbow
+
+	*attachangles 0,0.25,0.60
+	*attachpoint 1
+	*attachrottrack 19
+	*muzzleattachpoint 0
+
+*BurstBowKeys
+	*burst_reloadtime 0.25
+	*burst_damage 50, pierce+blockable
+
+	*maxloadedarrows 10
+	*xspread 0.2
+	*yspread 0.02
+	*spreadunity 0.7
+	*columnspread 5.0
+	*velocityspread 0.1
+
+*SniperBowKeys
+	*sniper_reloadtime 1
+	*sniper_damage 50, sniper+blockable
+
+	*zoom1 2
+	*zoom2 8
+	
+	*moveback 3
+}
+
+//----------------------------------------------------------------------
+
+*weapon_bow_long
+{
+*SharedBowKeys
+	*classname template_weapon_bow
+	*price 0
+
+	*iconsurface gui_icon_tribalbow
+
+	*model "weapons\\WoodenBow"
+	*attachangles 0,0.25,0.60
+	*attachpoint 1
+	*attachrottrack 19
+	*muzzleattachpoint 0
+
+*BurstBowKeys
+	*burst_reloadtime 0.2
+	*burst_damage 70, pierce+blockable
+
+	*maxloadedarrows 10
+	*xspread 0.1
+	*yspread 0.02
+	*spreadunity 0.7
+	*columnspread 5.0
+	*velocityspread 0.1
+
+*SniperBowKeys
+	*sniper_reloadtime 0.9
+	*sniper_damage 70, sniper+blockable
+
+	*zoom1 4
+	*zoom2 12
+
+	*moveback 3
+}
+
+//----------------------------------------------------------------------
+
+*weapon_bow_burst
+{
+*SharedBowKeys
+	*classname template_weapon_bow
+	*price 0
+
+	*iconsurface gui_icon_burstbow
+
+	*model "weapons\\BurstBow"
+	*attachangles 0,0.25,0.60
+	*attachpoint 1
+	*attachrottrack 19
+	*muzzleattachpoint 0
+
+*BurstBowKeys
+	*burst_reloadtime 0.15
+	*burst_damage 100, pierce+blockable
+
+	*maxloadedarrows 10
+	*xspread 0.1
+	*yspread 0.02
+	*spreadunity 0.7
+	*columnspread 5.0
+	*velocityspread 0.1
+
+*SniperBowKeys
+	*sniper_reloadtime 0.85
+	*sniper_damage 100, sniper+blockable
+
+	*zoom1 4
+	*zoom2 16
+
+	*moveback 3
+}
+
+//----------------------------------------------------------------------
+
+*weapon_bow_sniper
+{
+*SharedBowKeys
+	*classname template_weapon_bow
+	*price 0
+
+	*iconsurface gui_icon_sniperbow
+
+	*model "weapons\\SniperBow"
+	*attachangles 0,0.25,0.60
+	*attachpoint 1
+	*attachrottrack 19
+	*muzzleattachpoint 0
+
+*BurstBowKeys
+	*burst_reloadtime 0.1
+	*burst_damage 150, pierce+blockable
+
+	*maxloadedarrows 10
+	*xspread 0.1
+	*yspread 0.02
+	*spreadunity 0.7
+	*columnspread 5.0
+	*velocityspread 0.1
+
+*SniperBowKeys
+	*sniper_reloadtime 0.7
+	*sniper_damage 150, sniper+blockable
+
+	*moveback 3
+}
+
+//----------------------------------------------------------------------
+
+*weapon_bow_magic
+{
+	*SharedBowKeys
+	*classname template_weapon_bow
+	*price 0
+
+	*iconsurface gui_icon_MagicBow
+
+	*model "weapons\\MagicBow"
+	*attachangles 0,0.25,0.60
+	*attachpoint 1
+	*attachrottrack 19
+	*muzzleattachpoint 0
+
+	*BurstBowKeys
+	*burst_reloadtime 1
+	*burst_damage 200, magic+blockable
+
+	*maxloadedarrows 10
+	*xspread 0.1
+	*yspread 0.02
+	*spreadunity 0.7
+	*columnspread 5.0
+	*velocityspread 0.1
+
+	*SniperBowKeys
+	*sniper_reloadtime 1
+	*sniper_damage 200, sniper+blockable
+
+	*moveback 3
+}

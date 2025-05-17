@@ -1,0 +1,2396 @@
+*WINDOW "MENU"
+{
+	*CLASSNAME "P3MainMenu"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+// PC PORT: New (commented out as acc. not used here)
+	*ACCELLERATOR_1 esc,,"cg_menu \"DEVMENU\""
+//	*SCRIPT_CREATE "initcampaign"
+
+	*WINDOW
+	{
+		*CLASSNAME "P3MainMenuIconButton"
+		*RGN 258, 152, 128, 128
+		*STYLE NOCLIPPING
+//		*SCRIPT_PRESSED "cg_menu \"NEWGAME\""
+		*SCRIPT_PRESSED "cg_menu \"SELECTDIFFICULTY\""
+//		*SCRIPT_PRESSED "quickchallenge"
+		*ICON_SURFACE "*VIDEO_Gui_Main_A-01"
+		*DESCRIPTION "§Z22§LMENU_NEWGAME"
+		*ABUTTONHELP "§LMENU_OK"
+		*BBUTTONHELP ""
+		*OUTRO "*VIDEO_Gui_Main_E1"
+	}	
+
+	*WINDOW
+	{
+		*CLASSNAME "P3MainMenuIconButton"
+		*RGN 165, 316, 128, 128
+		*STYLE NOCLIPPING
+		*SCRIPT_PRESSED "cg_menu \"OPTIONS\""
+		*ICON_SURFACE "*VIDEO_Gui_Main_A-02"
+		*DESCRIPTION "§Z22§LMENU_OPTIONS"
+		*ABUTTONHELP "§LMENU_OK"
+		*BBUTTONHELP ""
+		*OUTRO "*VIDEO_Gui_Main_E4"
+	}	
+
+	*WINDOW
+	{
+		*CLASSNAME "P3MainMenuIconButton"
+		*ID Exit
+		*RGN 351, 316, 128, 128
+		*STYLE NOCLIPPING
+//		*SCRIPT_PRESSED "freeresources; cg_menu \"DEVMENU\""
+//		*SCRIPT_PRESSED "cg_menu \"ENDCREDITS\""
+		*SCRIPT_PRESSED "cg_menu \"CREDITS_MENU\""
+		*ICON_SURFACE "*VIDEO_Gui_Main_A-03"
+//		*DESCRIPTION "§Z22§LMENU_CREDITS"
+		*DESCRIPTION "§Z22§LMENU_EXITGAME"
+		*ABUTTONHELP "§LMENU_OK"
+		*BBUTTONHELP ""
+		*OUTRO "*VIDEO_Gui_Main_E5"
+	}	
+
+	*WINDOW
+	{
+		*CLASSNAME "P3MainMenuIconButton"
+		*ID LoadGame
+		*RGN 500, 39, 128, 128
+		*STYLE NOCLIPPING
+		*SCRIPT_PRESSED "cg_menu \"LOADGAME\""
+		*ICON_SURFACE "*VIDEO_Gui_Main_A-04"
+		*DESCRIPTION "§Z22§LMENU_LOADGAME"
+		*ABUTTONHELP "§LMENU_OK"
+		*BBUTTONHELP ""
+		*OUTRO "*VIDEO_Gui_Main_E2"
+	}	
+
+	*WINDOW
+	{
+		*CLASSNAME "P3MainMenuIconButton"
+		*ID Continue
+		*RGN 16, 40, 128, 128
+		*STYLE NOCLIPPING
+//		*SCRIPT_PRESSED "setgamekey \"current_campaign\",\"GAMEPLAYTESTING\"; gui_next 11"
+		*ICON_SURFACE "*VIDEO_Gui_Main_A-05"
+		*DESCRIPTION "§Z22§LMENU_CONTINUE"
+		*ABUTTONHELP "§LMENU_OK"
+		*BBUTTONHELP ""
+		*OUTRO "*VIDEO_Gui_Main_E3"
+	}	
+}
+
+*WINDOW "DEVMENU"
+{
+	*CLASSNAME "P3Menu"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	*SCRIPT_CREATE "r_picmip 0,0; r_picmip 1,0; r_picmip 2,0; r_picmip 3,0; r_picmip 4,0; r_picmip 5,0; r_picmip 6,0; r_picmip 7,0"
+	*ACCELLERATOR_1 ctrl+z,,cg_menu MENU
+//	*ACCELLERATOR_2 gui_back,,cg_menu MENU
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Frame"
+		*RGN 380, 140, 240, 320
+		*STYLE BEHIND
+	}
+
+/*	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 440, 200, 120, 25
+		*TEXT "§Z20Create game"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "setgameclass \"teamdm\"; splitscreen 1; cg_menu \"GAMECREATE\""
+		*ABUTTONHELP "Create"
+		*BBUTTONHELP "Go back"
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 440, 230, 120, 25
+		*TEXT "§Z20Full Light"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "setgamekey \"current_campaign\",\"FULLLIGHT\"; setgameclass \"Campaign\"; map \"Campaign\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 440, 260, 120, 25
+		*TEXT "§Z20Full Dark"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "setgamekey \"current_campaign\",\"FULLDARK\"; setgameclass \"Campaign\"; map \"Campaign\""
+	}*/
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 440, 290, 120, 25
+		*TEXT "§Z20Delete Cache"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "deletecache"
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 440, 320, 120, 25
+		*TEXT "§Z20Dev options"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"GAMEOPTIONS\""
+	}
+
+	*WINDOW
+	{
+		*ID Button_Options
+		*CLASSNAME "P3Button"
+		*RGN 440, 350, 120, 25
+		*TEXT "§Z20Videomodes"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"SYSTEMOPTIONS\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 440, 380, 120, 25
+		*TEXT "§Z20§LMENU_QUIT"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"QUIT\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 0, 465, 640, 15
+		*TEXT "§LMENU_COPYRIGHT"
+		*STYLE BEHIND, TEXT_CENTER
+		*COLOR_BG 0xff803319
+	}
+}
+
+*WINDOW "NEWGAME"
+{
+	*CLASSNAME "P3NewGame"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	// *ACCELLERATOR_1 gui_cancel,,cg_menu MENU
+	*ACCELLERATOR_2 gui_back,,cg_menu MENU
+
+	// A-Z
+
+	// Control
+
+//	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 496,313,80,30	*ID "DONE" *STYLE HIDDENFOCUS *TPK "§LMENU_NGDONE"	*TPKC 5}
+//	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 380,313,80,30	*STYLE HIDDENFOCUS *TPK "§LMENU_NGCLEAR"	*TPKC 4}
+//	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 179,313,80,30	*STYLE HIDDENFOCUS *TPK "§LMENU_NGDEL"		*TPKC 3}
+//	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 64,313,80,30	*STYLE HIDDENFOCUS *TPK "§LMENU_NGSPACE"	*TPKC 2}
+
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 496,313,80,30	*ID "DONE" *STYLE HIDDENFOCUS *TPK ""	*TPKC 5}
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 380,313,80,30	*STYLE HIDDENFOCUS *TPK ""	*TPKC 4}
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 179,313,80,30	*STYLE HIDDENFOCUS *TPK ""		*TPKC 3}
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 64,313,80,30	*STYLE HIDDENFOCUS *TPK ""	*TPKC 2}
+
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 89,85,30,30 *TPK "A" *ID "A" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 146,85,30,30 *TPK "B" * ID "B" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 203,85,30,30 *TPK "C" *ID "C" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 262,85,30,30 *TPK "D" *ID "D" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 347,85,30,30 *TPK "E" *ID "E" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 406,85,30,30 *TPK "F" *ID "F" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 463,85,30,30 *TPK "G" *ID "G" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 519,85,30,30 *TPK "H" *ID "H" *TPKC 1}
+
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 89,130,30,30 *TPK "I" *ID "I" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 146,130,30,30 *TPK "J" *ID "J" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 203,130,30,30 *TPK "K" *ID "K" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 262,130,30,30 *TPK "L" *ID "L" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 347,130,30,30 *TPK "M" *ID "M" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 406,130,30,30 *TPK "N" *ID "N" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 463,130,30,30 *TPK "O" *ID "O" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 519,130,30,30 *TPK "P" *ID "P" *TPKC 1}
+
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 89,176,30,30 *TPK "Q" *ID "Q" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 146,176,30,30 *TPK "R" *ID "R" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 203,176,30,30 *TPK "S" *ID "S" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 262,176,30,30 *TPK "T" *ID "T" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 347,176,30,30 *TPK "U" *ID "U" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 406,176,30,30 *TPK "V" *ID "V" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 463,176,30,30 *TPK "W" *ID "W" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 519,176,30,30 *TPK "X" *ID "X" *TPKC 1}
+
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 89,220,30,30 *TPK "Y" *ID "Y" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 146,220,30,30 *TPK "Z" *ID "Z" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 203,220,30,30 *TPK "0" *ID "0" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 262,220,30,30 *TPK "1" *ID "1" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 347,220,30,30 *TPK "2" *ID "2" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 406,220,30,30 *TPK "3" *ID "3" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 463,220,30,30 *TPK "4" *ID "4" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 519,220,30,30 *TPK "5" *ID "5" *TPKC 1}
+
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 89,267,30,30 *TPK "6" *ID "6" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 146,267,30,30 *TPK "7" *ID "7" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 203,267,30,30 *TPK "8" *ID "8" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 262,267,30,30 *TPK "9" *ID "9" *TPKC 1} 
+	/*
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 347,267,30,30 *TPK "+" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 406,267,30,30 *TPK "-" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 463,267,30,30 *TPK "*" *TPKC 1} 
+	*WINDOW { *CLASSNAME "P3NewGameButton" *RGN 519,267,30,30 *TPK "#" *TPKC 1}
+	*/
+}
+
+*WINDOW "CHOOSEEPISODE"
+{
+	*CLASSNAME "P3Menu"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 0, 80, 640, 30
+		*TEXT "§Z30§Cfff§LMENU_CHOOSEEPISODE"
+		*STYLE BEHIND, TEXT_CENTER
+		*COLOR_BG 0xff803319
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Frame"
+		*RGN 180, 100, 280, 170
+		*STYLE BEHIND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 160, 160, 25
+		*TEXT "§Z20§LMENU_CAMPAIGNLIGHT"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "setgamekey \"current_campaign\",\"LIGHT\"; setgameclass \"Campaign\"; map \"Campaign\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 190, 160, 25
+		*TEXT "§Z20§LMENU_CAMPAIGNDARK"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "setgamekey \"current_campaign\",\"DARK\"; setgameclass \"Campaign\"; map \"Campaign\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "IconButton"
+		*RGN 10, 440, 110, 32
+		*TEXT "§Z20§LMENU_BACK"
+		*TEXTCOLOR_BG 0xffffffff
+		*ICONSURFACE GUI_Button_B_32
+		*SCRIPT_PRESSED "cg_menu \"NEWGAME\""
+	}
+}
+
+*WINDOW "LOADGAME"
+{
+	*CLASSNAME "P3Loadgame"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+}
+
+*WINDOW "ENDCREDITS"
+{
+	*CLASSNAME "P3EndCredits"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+}
+
+*WINDOW "INTRO"
+{
+	*CLASSNAME "P3Intro"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+//	*SCRIPT_CREATE "initcampaign; showbootscreen 0"
+}
+
+*WINDOW "LOGO"
+{
+	*CLASSNAME "P3EnclaveLogo"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+}
+
+*WINDOW "ARCADE"
+{
+	*CLASSNAME "P3Menu"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 240, 80, 160, 30
+		*TEXT "§Z30§Cfff§LMENU_VS"
+		*STYLE BEHIND, TEXT_CENTER
+		*COLOR_BG 0xff803319
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Frame"
+		*RGN 180, 100, 280, 230
+		*STYLE BEHIND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 160, 160, 25
+		*TEXT "§Z20§LMENU_2PLAYERH"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "splitaxis 0; splitscreen 2; cg_menu \"GAMECREATE\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 190, 160, 25
+		*TEXT "§Z20§LMENU_2PLAYERV"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "splitaxis 1; splitscreen 2; cg_menu \"GAMECREATE\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 220, 160, 25
+		*TEXT "§Z20§LMENU_3PLAYER"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "splitscreen 3; cg_menu \"GAMECREATE\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 250, 160, 25
+		*TEXT "§Z20§LMENU_4PLAYER"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "splitscreen 4; cg_menu \"GAMECREATE\""
+	}
+
+	*WINDOW Back
+	{
+		*CLASSNAME "P3Button"
+		*RGN 10, 450, 100, 25
+		*TEXT "§Z20§LMENU_BACK"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"MENU\""
+	}
+}
+
+*WINDOW "NOTSUPPORTEDYET"
+{
+	*CLASSNAME "P3Menu"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 0, 220, 640, 20
+		*TEXT "§Z20§Cfff§LMENU_UNSUPPORTED"
+		*STYLE BEHIND, TEXT_CENTER
+		*COLOR_BG 0xff803319
+	}
+	*WINDOW Back
+	{
+		*CLASSNAME "P3Button"
+		*RGN 10, 450, 100, 25
+		*TEXT "§Z20§LMENU_BACK"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"MENU\""
+	}
+}
+
+*WINDOW "GAMECREATE"
+{
+	*CLASSNAME "P3GameCreate"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	*PREVMENU "MENU"
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 10, 5, 640, 40
+		*TEXT "§Z40§LMENU_CREATEGAME"
+		*STYLE BEHIND
+		*TEXTCOLOR_BG 0xff803319
+	}
+
+	*WINDOW GameType
+	{
+		*CLASSNAME "P3Text"
+		*RGN 10, 70, 100, 25
+		*TEXT "§Z18§LMENU_GAMETYPE"
+		*STYLE BEHIND
+		*ID NextGameType
+	}
+
+	*WINDOW GameType
+	{
+		*CLASSNAME "P3Text"
+		*RGN 100, 70, 135, 25
+		*TEXT ""
+		*COLOR_BG 0xff803319
+		*ID GameType
+	}
+
+	*WINDOW GameTypeButton
+	{
+		*CLASSNAME "P3Button"
+		*RGN 235, 70, 20, 20
+		*TEXT "§Z18<"
+		*TEXTCOLOR_BG 0xffffffff
+		*ID PrevGameType
+	}
+
+	*WINDOW GameTypeButton
+	{
+		*CLASSNAME "P3Button"
+		*RGN 255, 70, 20, 20
+		*TEXT "§Z18>"
+		*TEXTCOLOR_BG 0xffffffff
+		*ID NextGameType
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 10, 450, 100, 25
+		*TEXT "§Z20§LMENU_BACK"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"MENU\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 480, 450, 140, 25
+		*TEXT "§Z20§LMENU_LAUNCH"
+		*TEXTCOLOR_BG 0xffffffff
+		*ID Launch
+		*__SCRIPT_PRESSED "stream_play sbz1\\music\\loading.mp3"
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_MapName
+		*CLASSNAME "P3Button"
+		*RGN 10, 105, 230, 15
+		*TEXT "§Z14 §LMENU_MAPNAME"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_Author
+		*CLASSNAME "P3Button"
+		*RGN 240, 105, 170, 15
+		*TEXT "§Z14 §LMENU_AUTHOR"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_Support
+		*CLASSNAME "P3Button"
+		*RGN 410, 105, 90, 15
+		*TEXT "§Z14 §LMENU_GAMEMODES"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_Players
+		*CLASSNAME "P3Button"
+		*RGN 500, 105, 130, 15
+		*TEXT "§Z14 §LMENU_PLAYERS"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW MapList
+	{
+		*ID "MapList"
+		*CLIENTSTYLE CLIENT_SCROLLY
+		*CLASSNAME "MapList"
+		*RGN 10, 120, 620, 312
+		*TEXTCOLOR_BG 0xffffffff
+		*COLOR_CUSTOM0 0xff4f4f4f, 0xff7f7f7f
+		*COLOR_CUSTOM1 0xff0c0c0c, 0xff1c1c1c
+		*COLOR_BG 0xff0f0f0f
+		*STYLE TABSTOP
+	}
+
+}
+
+*WINDOW "INGAME_CHANGEMAP"
+{
+	*CLASSNAME "P3GameCreate"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	*PREVMENU ""
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 10, 450, 100, 25
+		*TEXT "§Z20§LMENU_BACK"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 480, 450, 140, 25
+		*TEXT "§Z20§LMENU_LAUNCH"
+		*TEXTCOLOR_BG 0xffffffff
+		*ID Launch
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_MapName
+		*CLASSNAME "P3Button"
+		*RGN 10, 105, 230, 15
+		*TEXT "§Z14 §LMENU_MAPNAME"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_Author
+		*CLASSNAME "P3Button"
+		*RGN 240, 105, 170, 15
+		*TEXT "§Z14 §LMENU_AUTHOR"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_Support
+		*CLASSNAME "P3Button"
+		*RGN 410, 105, 90, 15
+		*TEXT "§Z14 §LMENU_GAMEMODES"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_Players
+		*CLASSNAME "P3Button"
+		*RGN 500, 105, 130, 15
+		*TEXT "§Z14 §LMENU_PLAYERS"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW MapList
+	{
+		*ID "MapList"
+		*CLIENTSTYLE CLIENT_SCROLLY
+		*CLASSNAME "MapList"
+		*RGN 10, 120, 620, 312
+		*TEXTCOLOR_BG 0xffffffff
+		*COLOR_CUSTOM0 0xff4f4f4f, 0xff7f7f7f
+		*COLOR_CUSTOM1 0xff0c0c0c, 0xff1c1c1c
+		*COLOR_BG 0xff0f0f0f
+		*STYLE TABSTOP
+	}
+}
+
+*WINDOW "GAMESCAN"
+{
+	*CLASSNAME "P3GameScan"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 10, 5, 640, 40
+		*TEXT "§Z40§LMENU_JOINGAME"
+		*STYLE BEHIND
+		*TEXTCOLOR_BG 0xff803319
+	}
+
+	*WINDOW
+	{
+		*ID StartScan
+		*CLASSNAME "P3Button"
+		*RGN 490, 5, 140, 25
+		*TEXT "§Z20§LMENU_SCAN"
+		*TEXTCOLOR_BG 0xffffffff
+	}
+
+	*WINDOW
+	{
+		*ID Connect
+		*CLASSNAME "P3Button"
+		*RGN 510, 450, 120, 25
+		*TEXT "§Z20§LMENU_JOIN"
+		*TEXTCOLOR_BG 0xffffffff
+		*STYLE TABSTOP
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_Address
+		*CLASSNAME "P3Button"
+		*RGN 10, 85, 135, 15
+		*TEXT "§Z14 §LMENU_IPADDR"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_Server
+		*CLASSNAME "P3Button"
+		*RGN 145, 85, 165, 15
+		*TEXT "§Z14 §LMENU_SERVERNAME"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_Game
+		*CLASSNAME "P3Button"
+		*RGN 310, 85, 50, 15
+		*TEXT "§Z14 §LMENU_MAPTYPE"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_Map
+		*CLASSNAME "P3Button"
+		*RGN 360, 85, 120, 15
+		*TEXT "§Z14 §LMENU_MAPNAME"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_Map
+		*CLASSNAME "P3Button"
+		*RGN 480, 85, 50, 15
+		*TEXT "§Z14 §LMENU_MAPPLAYERS"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_FL
+		*CLASSNAME "P3Button"
+		*RGN 530, 85, 20, 15
+		*TEXT "§Z14§LMENU_FL"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_TL
+		*CLASSNAME "P3Button"
+		*RGN 550, 85, 20, 15
+		*TEXT "§Z14§LMENU_TL"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ListSort
+	{
+		*ID Sort_Ping
+		*CLASSNAME "P3Button"
+		*RGN 570, 85, 60, 15
+		*TEXT "§Z14 §LMENU_PING"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ServerList
+	{
+		*ID "ServerList"
+		*CLIENTSTYLE CLIENT_SCROLLY
+		*CLASSNAME "ServerList"
+		*RGN 10, 100, 620, 190
+		*TEXT "§Z20§LMENU_RETURN"
+		*TEXTCOLOR_BG 0xffffffff
+		*COLOR_CUSTOM0 0xff4f4f4f, 0xff7f7f7f
+		*COLOR_CUSTOM1 0xff0c0c0c, 0xff1c1c1c
+		*COLOR_BG 0xff0f0f0f
+		*STYLE TABSTOP
+	}
+
+	*WINDOW PlayerListSort
+	{
+		*ID Sort_Name
+		*CLASSNAME "P3Button"
+		*RGN 10, 300, 140, 15
+		*TEXT "§Z14 §LMENU_PLAYERNAME"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW PlayerListSort
+	{
+		*ID Sort_Team
+		*CLASSNAME "P3Button"
+		*RGN 150, 300, 60, 15
+		*TEXT "§Z14 §LMENU_PLISTTEAM"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW PlayerListSort
+	{
+		*ID Sort_Team
+		*CLASSNAME "P3Button"
+		*RGN 210, 300, 50, 15
+		*TEXT "§Z14 §LMENU_PLISTSCORE"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW PlayerListSort
+	{
+		*ID Sort_Team
+		*CLASSNAME "P3Button"
+		*RGN 260, 300, 50, 15
+		*TEXT "§Z14 §LMENU_PLISTPING"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW PlayerList
+	{
+		*CLASSNAME "List2"
+		*RGN 10, 315, 300, 125
+		*CLIENTSTYLE CLIENT_SCROLLY
+		*TEXTCOLOR_BG 0xffffffff
+		*COLOR_CUSTOM0 0xff4f4f4f, 0xff7f7f7f
+		*COLOR_CUSTOM1 0xff0c0c0c, 0xff1c1c1c
+		*COLOR_BG 0xff0f0f0f
+		*STYLE
+	}
+
+	*WINDOW ServerVarSort
+	{
+		*ID Sort_Team
+		*CLASSNAME "P3Button"
+		*RGN 325, 300, 100, 15
+		*TEXT "§Z14 §LMENU_SVV_VARNAME"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ServerVarSort
+	{
+		*ID Sort_Team
+		*CLASSNAME "P3Button"
+		*RGN 425, 300, 200, 15
+		*TEXT "§Z14 §LMENU_SVV_VARVALUE"
+		*TEXTCOLOR_BG 0xffffffff
+		*TEXTSTYLE
+		*STYLE
+	}
+
+	*WINDOW ServerVarList
+	{
+		*CLASSNAME "List2"
+		*RGN 325, 315, 300, 125
+		*CLIENTSTYLE CLIENT_SCROLLY
+		*TEXTCOLOR_BG 0xffffffff
+		*COLOR_CUSTOM0 0xff4f4f4f, 0xff7f7f7f
+		*COLOR_CUSTOM1 0xff0c0c0c, 0xff1c1c1c
+		*COLOR_BG 0xff0f0f0f
+		*STYLE
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 10, 450, 100, 25
+		*TEXT "§Z20§LMENU_BACK"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"MENU\""
+	}
+}
+
+*WINDOW "GAMEOPTIONS"
+{
+	*CLASSNAME "P3Options"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 50, 0, 470, 30
+		*TEXT "§Z30§Cfff§LMENU_GAMEOPTIONS"
+		*STYLE BEHIND, TEXT_CENTER
+		*COLOR_BG 0xff803319
+	}
+
+	*WINDOW TxtRes
+	{
+		*CLASSNAME "P3Text"
+		*RGN 100, 70, 200, 20
+		*TEXT "§Z20§LMENU_WORLDTXT"
+		*STYLE BEHIND
+	}
+
+	*WINDOW TxtRes
+	{
+		*CLASSNAME "P3Text"
+		*RGN 100, 100, 200, 20
+		*TEXT "§Z20§LMENU_OBJECTTXT"
+		*STYLE BEHIND
+	}
+
+	*WINDOW TxtResBar
+	{
+		*CLASSNAME "DragbarX"
+		*RGN 320, 70, 130, 20
+		*DRAG_MIN 0
+		*DRAG_MAX 6
+		*DRAG_VIEWSIZE -1
+		*ID Option_picmip0
+	}
+
+	*WINDOW TxtResBar
+	{
+		*CLASSNAME "DragbarX"
+		*RGN 320, 100, 130, 20
+		*DRAG_MIN 0
+		*DRAG_MAX 6
+		*DRAG_VIEWSIZE -1
+		*ID Option_picmip1
+	}
+
+	*WINDOW OptionText
+	{
+		*CLASSNAME "P3Text"
+		*RGN 100, 130, 200, 20
+		*TEXT "§Z20§LMENU_MULTIPASS"
+		*STYLE BEHIND
+	}
+
+	*WINDOW OptionBox
+	{
+		*CLASSNAME "P3OptionBox"
+		*RGN 320, 130, 130, 20
+		*OPTIONS "§Z20§LMENU_DISABLE,§Z20§LMENU_ENABLE"
+		*COLOR_SHDW 0xff200c06
+		*COLOR_BG 0xff808080
+		*STYLE BEHIND,TABSTOP
+		*ID Option_multipass
+	}
+
+	*WINDOW OptionText
+	{
+		*CLASSNAME "P3Text"
+		*RGN 100, 160, 200, 20
+		*TEXT "§Z20§LMENU_FLARES"
+		*STYLE BEHIND
+	}
+
+	*WINDOW OptionBox
+	{
+		*CLASSNAME "P3OptionBox"
+		*RGN 320, 160, 130, 20
+		*OPTIONS "§Z20§LMENU_DISABLE,§Z20§LMENU_ENABLE"
+		*COLOR_SHDW 0xff200c06
+		*COLOR_BG 0xff808080
+		*STYLE BEHIND,TABSTOP
+		*ID Option_flares
+	}
+
+	*WINDOW TxtRes
+	{
+		*CLASSNAME "P3Text"
+		*RGN 100, 190, 200, 20
+		*TEXT "§Z20§LMENU_DYNLIGHT"
+		*STYLE BEHIND
+	}
+
+	*WINDOW OptionBox
+	{
+		*CLASSNAME "P3OptionBox"
+		*RGN 320, 190, 130, 20
+		*OPTIONS "§Z20§LMENU_DISABLE,§Z20§LMENU_ENABLE"
+		*COLOR_SHDW 0xff200c06
+		*COLOR_BG 0xff808080
+		*STYLE BEHIND,TABSTOP
+		*ID Option_dlight
+	}
+
+	*WINDOW TxtRes
+	{
+		*CLASSNAME "P3Text"
+		*RGN 100, 220, 200, 20
+		*TEXT "§Z20§LMENU_MODELLIGHT"
+		*STYLE BEHIND
+	}
+
+	*WINDOW OptionBox
+	{
+		*CLASSNAME "P3OptionBox"
+		*RGN 320, 220, 130, 20
+		*OPTIONS "§Z20§LMENU_NICE,§Z20§LMENU_FAST"
+		*COLOR_SHDW 0xff200c06
+		*COLOR_BG 0xff808080
+		*STYLE BEHIND,TABSTOP
+		*ID Option_fastlight
+	}
+
+	*WINDOW TxtRes
+	{
+		*CLASSNAME "P3Text"
+		*RGN 100, 250, 200, 20
+		*TEXT "§Z20§LMENU_WALLMARK"
+		*STYLE BEHIND
+	}
+
+	*WINDOW OptionBox
+	{
+		*CLASSNAME "P3OptionBox"
+		*RGN 320, 250, 130, 20
+		*OPTIONS "§Z20§LMENU_DISABLE,§Z20§LMENU_ENABLE"
+		*COLOR_SHDW 0xff200c06
+		*COLOR_BG 0xff808080
+		*STYLE BEHIND,TABSTOP
+		*ID Option_wallmarks
+	}
+
+	*WINDOW Stencil shadows
+	{
+		*CLASSNAME "P3Text"
+		*RGN 100, 280, 200, 20
+		*TEXT "§Z20§LMENU_STENCILSHADOWS"
+		*STYLE BEHIND
+	}
+
+	*WINDOW InvMouse optbox.
+	{
+		*CLASSNAME "P3OptionBox"
+		*RGN 320, 280, 130, 20
+		*OPTIONS "§Z20§LMENU_DISABLE,§Z20§LMENU_ENABLE"
+		*COLOR_SHDW 0xff200c06
+		*COLOR_BG 0xff808080
+		*STYLE BEHIND,TABSTOP
+		*ID Option_stencilshadows
+	}
+
+	*WINDOW Mouse X
+	{
+		*CLASSNAME "P3Text"
+		*RGN 100, 310, 200, 20
+		*TEXT "§Z20§LMENU_MOUSESENSX"
+		*STYLE BEHIND
+	}
+
+	*WINDOW Mouse Y
+	{
+		*CLASSNAME "P3Text"
+		*RGN 100, 340, 200, 20
+		*TEXT "§Z20§LMENU_MOUSESENSY"
+		*STYLE BEHIND
+	}
+
+	*WINDOW Bar_Mouse X
+	{
+		*CLASSNAME "DragbarX"
+		*RGN 320, 310, 130, 20
+		*DRAG_MIN 1
+		*DRAG_MAX 12
+		*DRAG_VIEWSIZE -1
+		*ID Option_mousex
+	}
+
+	*WINDOW Bar_Mouse Y
+	{
+		*CLASSNAME "DragbarX"
+		*RGN 320, 340, 130, 20
+		*DRAG_MIN 1
+		*DRAG_MAX 12
+		*DRAG_VIEWSIZE -1
+		*ID Option_mousey
+	}
+
+	*WINDOW InvMouse
+	{
+		*CLASSNAME "P3Text"
+		*RGN 100, 370, 200, 20
+		*TEXT "§Z20§LMENU_MOUSEINVERT"
+		*STYLE BEHIND
+	}
+
+	*WINDOW InvMouse optbox.
+	{
+		*CLASSNAME "P3OptionBox"
+		*RGN 320, 370, 130, 20
+		*OPTIONS "§Z20§LMENU_NO,§Z20§LMENU_YES"
+		*COLOR_SHDW 0xff200c06
+		*COLOR_BG 0xff808080
+		*STYLE BEHIND,TABSTOP
+		*ID Option_invertmouse
+	}
+
+	*WINDOW Gamma
+	{
+		*CLASSNAME "P3Text"
+		*RGN 100, 400, 200, 20
+		*TEXT "§Z20§LMENU_BRIGHTNESS"
+		*STYLE BEHIND
+	}
+
+	*WINDOW Bar_Gamma
+	{
+		*CLASSNAME "DragbarX"
+		*RGN 320, 400, 130, 20
+		*DRAG_MIN 50
+		*DRAG_MAX 150
+		*DRAG_VIEWSIZE -1
+		*ID Option_gamma
+	}
+
+	*WINDOW Back
+	{
+		*CLASSNAME "P3Button"
+		*RGN 10, 450, 100, 25
+		*TEXT "§Z20§LMENU_BACK"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"MENU\""
+	}
+	*WINDOW Apply
+	{
+		*CLASSNAME "P3Button"
+		*RGN 520, 450, 100, 25
+		*TEXT "§Z20§LMENU_APPLY"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"MENU\""
+		*ID Apply
+	}
+
+/*	Some controls look strange with this on
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Frame"
+		*RGN 40, 20, 470, 450
+		*STYLE BEHIND
+	}*/
+}
+
+*WINDOW "OPTIONS"
+{
+	*CLASSNAME "P3MenuOptions"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+//	*ACCELLERATOR_1 gui_cancel,,cg_menu MENU
+//	*ACCELLERATOR_2 gui_back,,cg_menu MENU
+
+/*
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 0, 60, 640, 30
+		*TEXT "§Z30§Cfff§LMENU_OPTIONS"
+		*STYLE BEHIND, TEXT_CENTER
+		*COLOR_BG 0xff803319
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Frame"
+		*RGN 180, 100, 280, 260
+		*STYLE BEHIND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 160, 160, 25
+		*TEXT "§Z20§LMENU_CONTROLS"
+		*TEXTCOLOR_BG 0xffffffff
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 190, 160, 25
+		*TEXT "§Z20§LMENU_AUDIO"
+		*TEXTCOLOR_BG 0xffffffff
+	}
+
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 220, 160, 25
+		*TEXT "§Z20§LMENU_VIDEO"
+		*TEXTCOLOR_BG 0xffffffff
+	}
+
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 250, 160, 25
+		*TEXT "§Z20§LMENU_PARCTRL"
+		*TEXTCOLOR_BG 0xffffffff
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 280, 160, 25
+		*TEXT "§Z20§LMENU_LANG"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"OPTIONS_LANG\""
+	}
+
+	*WINDOW Back
+	{
+		*CLASSNAME "P3Button"
+		*RGN 10, 450, 100, 25
+		*TEXT "§Z20§LMENU_BACK"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"MENU\""
+	}
+	*/
+}
+
+*WINDOW "OPTIONS_LANG"
+{
+	*CLASSNAME "P3Menu"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 0, 60, 640, 30
+		*TEXT "§Z30§Cfff§LMENU_LANG"
+		*STYLE BEHIND, TEXT_CENTER
+		*COLOR_BG 0xff803319
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Frame"
+		*RGN 180, 100, 280, 260
+		*STYLE BEHIND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 190, 160, 25
+		*TEXT "§Z20English"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "setgame \"sbz1\\\\\", \"P3\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 220, 160, 25
+		*TEXT "§Z20Svenska"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "setgame \"sbz1\\\\;sbz1_swe\\\\\", \"P3\""
+	}
+
+	*WINDOW Back
+	{
+		*CLASSNAME "P3Button"
+		*RGN 10, 450, 100, 25
+		*TEXT "§Z20§LMENU_BACK"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"OPTIONS\""
+	}
+}
+
+*WINDOW "SYSTEMOPTIONS"
+{
+	*CLASSNAME "P3VideoMenu"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+
+	*WINDOW Back
+	{
+		*CLASSNAME "P3Button"
+		*RGN 10, 450, 100, 25
+		*TEXT "§Z20§LMENU_BACK"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"MENU\""
+	}
+}
+
+*WINDOW "SURVIVAL"
+{
+	*CLASSNAME "Window"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 0, 50, 640, 30
+		*TEXT "§Z20§Cfff§LMENU_CHOOSELOC"
+		*STYLE BEHIND, TEXT_CENTER
+		*COLOR_BG 0xff803319
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Frame"
+		*RGN 100, 70, 440, 200
+		*STYLE BEHIND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 160, 130, 160, 25
+		*TEXT "§Z20EAM1"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "map \"Survival1\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 160, 160, 160, 25
+		*TEXT "§Z20EAM3"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "map \"EAM3\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 10, 450, 100, 25
+		*TEXT "§Z20§LMENU_BACK"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"MENU\""
+	}
+}
+
+*WINDOW "QUIT"
+{
+	*CLASSNAME "Window"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 180, 80, 280, 30
+		*TEXT "§Z30§Cfff§LMENU_QUITASK"
+		*STYLE BEHIND, TEXT_CENTER
+		*COLOR_BG 0xff803319
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Frame"
+		*RGN 220, 100, 200, 170
+		*STYLE BEHIND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 290, 150, 60, 30
+		*TEXT "§Z20§LMENU_YES"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "quit"
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 290, 190, 60, 30
+		*TEXT "§Z20§LMENU_NO"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"MENU\""
+	}
+}
+
+*WINDOW "DEVKITINSTALL"
+{
+	*CLASSNAME "Window"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 0, 50, 640, 30
+		*TEXT "§Z20§Cfff§LMENU_DEVINSTALL"
+		*STYLE BEHIND, TEXT_CENTER
+		*COLOR_BG 0xff803319
+	}
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 0, 80, 640, 30
+		*TEXT "§Z20§Cfff§LMENU_AREYOUSURE"
+		*STYLE BEHIND, TEXT_CENTER
+		*COLOR_BG 0xff803319
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Frame"
+		*RGN 220, 100, 200, 170
+		*STYLE BEHIND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 290, 150, 60, 30
+		*TEXT "§Z20§LMENU_YES"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "devkitinstall; cg_menu \"REBOOT\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 290, 190, 60, 30
+		*TEXT "§Z20§LMENU_NO"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"MENU\""
+	}
+}
+
+*WINDOW "REBOOT"
+{
+	*CLASSNAME "Window"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 0, 50, 640, 30
+		*TEXT "§Z20§Cfff§LMENU_DEVREBOOT1"
+		*STYLE BEHIND, TEXT_CENTER
+		*COLOR_BG 0xff803319
+	}
+	*WINDOW
+	{
+		*CLASSNAME "P3Text"
+		*RGN 0, 140, 640, 30
+		*TEXT "§Z20§CfffLMENU_DEVREBOOT2"
+		*STYLE BEHIND, TEXT_CENTER
+		*COLOR_BG 0xff803319
+	}
+}
+
+*WINDOW "GAMEMENU"
+{
+	*CLASSNAME "P3GameMenu"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+//	*ACCELLERATOR_1 gui_cancel,,"cg_menu \"\""
+//	*ACCELLERATOR_2 gui_back,,"cg_menu \"\""
+//	*ACCELLERATOR_3 esc,,"cg_menu \"\""
+	*SCRIPT_CREATE "pause 1"
+	*SCRIPT_DESTROY "pause 0"
+
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 390, 220, 25
+		*TEXT "§Z20(NI) OPTIONS"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"options\""
+		*NO_PAINT_BACKGROUND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 240, 220, 25
+		*TEXT "§Z20§LMENU_RESUME"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"\""
+		*NO_PAINT_BACKGROUND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 270, 220, 25
+		*TEXT "§Z20§LMENU_RESTARTMAP"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "sv_restart; cg_menu \"\""
+		*NO_PAINT_BACKGROUND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 300, 220, 25
+		*TEXT "§Z20§LMENU_NOCLIP"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cmd noclip; cg_menu \"\""
+		*NO_PAINT_BACKGROUND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 330, 220, 25
+		*TEXT "§Z20§LMENU_DEBUGMENU"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"ingame_debug\""
+		*NO_PAINT_BACKGROUND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 360, 220, 25
+		*TEXT "§Z20§LMENU_QUITTOMENU"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "initcampaign 2"
+		*NO_PAINT_BACKGROUND
+	}
+}
+
+*WINDOW "INGAME_DEBUG"
+{
+	*CLASSNAME "P3GameMenu"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	*ACCELLERATOR_1 gui_cancel,,"pause 0; cl_opengamemenu"
+	*ACCELLERATOR_2 gui_back,,"pause 0; cl_opengamemenu"
+	*ACCELLERATOR_3 esc,,"pause 0; cl_opengamemenu"
+
+	*WINDOW BlackBox
+	{
+		*CLASSNAME "P3OptionBox"
+		*RGN 230, 160, 220, 80
+		*COLOR_SHDW 0xc0000000
+		*COLOR_BG 0xc0000000
+		*STYLE BEHIND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 170, 200, 25
+		*TEXT "§Z20Dump resources"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "rs_classes; rs_resources"
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 200, 200, 25
+		*TEXT "§Z20Update anims"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "rs_updateanims"
+	}
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 230, 200, 25
+		*TEXT "§Z20Update models"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "rs_updatemodels"
+	}
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 260, 200, 25
+		*TEXT "§Z20Update surfaces"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "rs_updatesurfaces"
+	}
+}
+
+*WINDOW "GAMEMENU_CAMPAIGN"
+{
+	*CLASSNAME "P3GameMenu"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	*SCRIPT_SECRET1 "cg_menu \"cheatmenu\""
+	*SCRIPT_CREATE "pause 1"
+	*SCRIPT_DESTROY "pause 0"
+	
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*ID top
+		*STYLE NOKEYPROCESS
+		*RGN 210, 230, 220, 20
+		*TEXT "§Z20§LMENU_RESUME"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"\""
+		*P3COMMAND 26
+		*NO_PAINT_BACKGROUND
+		*ABUTTONHELP "§LMENU_RESUME"
+		*BBUTTONHELP "§LMENU_BACK"
+	}
+	
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 255, 220, 20
+		*TEXT "§Z20§LMENU_CHEATS"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"cheatmenu\""
+		*NO_PAINT_BACKGROUND
+		*ABUTTONHELP "§LMENU_RESUME"
+		*BBUTTONHELP "§LMENU_BACK"
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 280, 220, 20
+		*TEXT "§Z20§LMENU_SHOWBRIEFING"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "showbriefing 1; cg_menu \"ingame_briefing\""
+		*NO_PAINT_BACKGROUND
+		*ABUTTONHELP "§LMENU_SHOWBRIEFING"
+		*BBUTTONHELP "§LMENU_BACK"
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 305, 220, 20
+		*TEXT "§Z20§LMENU_RESTARTMISSION"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "endchallenge 2; cg_menu \"\""
+		*P3COMMAND	1
+		*NO_PAINT_BACKGROUND
+		*ABUTTONHELP "§LMENU_RESTARTMISSION"
+		*BBUTTONHELP "§LMENU_BACK"
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 330, 220, 20
+		*TEXT "§Z20§LMENU_QUITTOMAP"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "endchallenge 4; cg_menu \"\""
+		*P3COMMAND	2
+		*NO_PAINT_BACKGROUND
+		*ABUTTONHELP "§LMENU_QUITTOMAP"
+		*BBUTTONHELP "§LMENU_BACK"
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 355, 220, 20
+		*TEXT "§Z20§LMENU_LOADGAME"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"LOADGAME\""
+		*NO_PAINT_BACKGROUND
+		*P3COMMAND 4711
+		*ABUTTONHELP "§LMENU_RESUME"
+		*BBUTTONHELP "§LMENU_BACK"
+	}
+	
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 380, 220, 20
+		*TEXT "§Z20§LMENU_OPTIONS"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cg_menu \"options\""
+		*NO_PAINT_BACKGROUND
+		*P3COMMAND 42
+		*ABUTTONHELP "§LMENU_RESUME"
+		*BBUTTONHELP "§LMENU_BACK"
+	}
+	
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*ID bottom
+		*STYLE NOKEYPROCESS
+		*RGN 210, 405, 220, 20
+		*TEXT "§Z20§LMENU_QUITTOMENU"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "initcampaign 2"
+		*P3COMMAND	3
+		*NO_PAINT_BACKGROUND
+		*ABUTTONHELP "§LMENU_QUITTOMENU"
+		*BBUTTONHELP "§LMENU_BACK"
+	}
+}
+
+*WINDOW ingame_briefing
+{
+	*CLASSNAME P3Menu
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS 
+	*CAPTIONCLASS 
+	*BORDERCLASS 
+	*STYLE HIDDENFOCUS
+	*ACCELLERATOR_1 gui_ok,,"showbriefing 0; pause 0; cl_opengamemenu"
+	*ACCELLERATOR_2 gui_start,,"showbriefing 0; pause 0; cl_opengamemenu"
+//	*WINDOW
+//	{
+//		*CLASSNAME IconButton
+//		*RGN 500, 440, 140, 32
+//		*TEXTCOLOR_BG 0xffffffff
+//		*ICONSURFACE GUI_Button_A_32
+//		*ABUTTONHELP "§LMENU_BRIEFINGQUIT"
+//		*SCRIPT_PRESSED "showbriefing 0; pause 0; cl_opengamemenu"
+//	}
+}
+
+*WINDOW "CHEATMENU"
+{
+	*CLASSNAME "P3GameMenu"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	*ACCELLERATOR_1 gui_cancel,,"cl_opengamemenu"
+	*ACCELLERATOR_2 gui_back,,"cl_opengamemenu"
+	*ACCELLERATOR_3 esc,,"cl_opengamemenu"
+	*SCRIPT_CREATE "pause 1"
+	*SCRIPT_DESTROY "pause 0"
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		//*RGN 210, 240, 220, 25
+		*RGN 210, 270, 220, 25
+		*TEXT "§Z20§LMENU_TOGGLENOCLIP"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cmd_forced noclip; cg_menu \"\""
+		*NO_PAINT_BACKGROUND
+	}
+
+/*	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 270, 220, 25
+		*TEXT "§Z20Toggle Noclip (player2)"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "pl2_cmd_forced noclip; cg_menu \"\""
+		*NO_PAINT_BACKGROUND
+	}*/
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 300, 220, 25
+		*TEXT "§Z20§LMENU_GODMODE"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "cmd_forced giveall; cg_menu \"\""
+		*NO_PAINT_BACKGROUND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 330, 220, 25
+		*TEXT "§Z20§LMENU_COMPLETEMISSION"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "endchallenge 1; cg_menu \"\""
+		*NO_PAINT_BACKGROUND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 210, 360, 220, 25
+		*TEXT "§Z20Flee mission"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "endchallenge 3; cg_menu \"\""
+		*NO_PAINT_BACKGROUND
+	}
+}
+
+*WINDOW "CONTROLLER"
+{
+	*CLASSNAME "P3ControllerMenu"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	*ACCELLERATOR_1 gui_cancel,,cl_opengamemenu
+	*ACCELLERATOR_2 gui_back,,cl_opengamemenu
+	*ACCELLERATOR_3 esc,,cl_opengamemenu
+
+	*WINDOW BlackBox
+	{
+		*CLASSNAME "P3OptionBox"
+		*RGN 230, 160, 220, 80
+		*COLOR_SHDW 0xc0000000
+		*COLOR_BG 0xc0000000
+		*STYLE BEHIND
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 170, 200, 25
+		*TEXT "§Z20Controller set 1"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "exec \"configXbox.mpp\"; cg_menu \"\""
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3Button"
+		*RGN 240, 200, 200, 25
+		*TEXT "§Z20Controller set 2"
+		*TEXTCOLOR_BG 0xffffffff
+		*SCRIPT_PRESSED "exec \"config2Xbox.mpp\"; cg_menu \"\""
+	}
+}
+
+*PAD_BUTTON_DESCRIPTOR
+{
+	/* Icon surfaces */
+
+	*BICONSURFACE "GUI_Button_B_32"
+	*AICONSURFACE "GUI_Button_A_32"
+
+	/* Icon positions */
+
+	*BICONPOSITION 15, 433
+	*AICONPOSITION 592, 433
+
+	/* Text configuration */
+
+	*BTEXTCONFIG "§Z20"
+	*ATEXTCONFIG "§Z20"
+
+	/* Text positions */
+
+	*BTEXTPOSITION 48, 423
+	*ATEXTPOSITION 592, 423
+}
+
+*WINDOW "PADEDIT"
+{
+	*CLASSNAME "P3PlaneFrame"
+	*RGN 0, 0, 200, 120
+	*STYLE HIDDENFOCUS
+	*STYLE NOCLIPPING
+
+	/* A-Z */
+
+	*WINDOW{*CLASSNAME "P3Button"*POS 10, 10*SIZE 20, 20*TEXT "§Z15A"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY A}
+	*WINDOW{*CLASSNAME "P3Button"*POS 30, 10*SIZE 20, 20*TEXT "§Z15B"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY B}
+	*WINDOW{*CLASSNAME "P3Button"*POS 50, 10*SIZE 20, 20*TEXT "§Z15C"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY C}
+	*WINDOW{*CLASSNAME "P3Button"*POS 70, 10*SIZE 20, 20*TEXT "§Z15D"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY D}	
+	*WINDOW{*CLASSNAME "P3Button"*POS 90, 10*SIZE 20, 20*TEXT "§Z15E"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY E}
+	*WINDOW{*CLASSNAME "P3Button"*POS 110, 10*SIZE 20, 20*TEXT "§Z15F"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY F}
+	*WINDOW{*CLASSNAME "P3Button"*POS 130, 10*SIZE 20, 20*TEXT "§Z15G"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY G}
+	*WINDOW{*CLASSNAME "P3Button"*POS 150, 10*SIZE 20, 20*TEXT "§Z15H"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY H}
+	*WINDOW{*CLASSNAME "P3Button"*POS 170, 10*SIZE 20, 20*TEXT "§Z15I"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY I}
+	*WINDOW{*CLASSNAME "P3Button"*POS 10, 30*SIZE 20, 20*TEXT "§Z15J"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY J}
+	*WINDOW{*CLASSNAME "P3Button"*POS 30, 30*SIZE 20, 20*TEXT "§Z15K"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY K}
+	*WINDOW{*CLASSNAME "P3Button"*POS 50, 30*SIZE 20, 20*TEXT "§Z15L"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY L}
+	*WINDOW{*CLASSNAME "P3Button"*POS 70, 30*SIZE 20, 20*TEXT "§Z15M"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY M}
+	*WINDOW{*CLASSNAME "P3Button"*POS 90, 30*SIZE 20, 20*TEXT "§Z15N"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY N}
+	*WINDOW{*CLASSNAME "P3Button"*POS 110, 30*SIZE 20, 20*TEXT "§Z15O"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY O}
+	*WINDOW{*CLASSNAME "P3Button"*POS 130, 30*SIZE 20, 20*TEXT "§Z15P"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY P}
+	*WINDOW{*CLASSNAME "P3Button"*POS 150, 30*SIZE 20, 20*TEXT "§Z15Q"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY Q}
+	*WINDOW{*CLASSNAME "P3Button"*POS 170, 30*SIZE 20, 20*TEXT "§Z15R"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY R}
+	*WINDOW{*CLASSNAME "P3Button"*POS 10, 50*SIZE 20, 20*TEXT "§Z15S"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY S}	
+	*WINDOW{*CLASSNAME "P3Button"*POS 30, 50*SIZE 20, 20*TEXT "§Z15T"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY T}
+	*WINDOW{*CLASSNAME "P3Button"*POS 50, 50*SIZE 20, 20*TEXT "§Z15U"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY U}
+	*WINDOW{*CLASSNAME "P3Button"*POS 70, 50*SIZE 20, 20*TEXT "§Z15V"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY V}
+	*WINDOW{*CLASSNAME "P3Button"*POS 90, 50*SIZE 20, 20*TEXT "§Z15W"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY W}
+	*WINDOW{*CLASSNAME "P3Button"*POS 110, 50*SIZE 20, 20*TEXT "§Z15X"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY X}
+	*WINDOW{*CLASSNAME "P3Button"*POS 130, 50*SIZE 20, 20*TEXT "§Z15Y"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY Y}
+	*WINDOW{*CLASSNAME "P3Button"*POS 150, 50*SIZE 20, 20*TEXT "§Z15Z"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY Z}
+	*WINDOW{*CLASSNAME "P3Button"*POS 170, 50*SIZE 20, 20*TEXT "§Z150"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY 0}
+
+	/* 1-9 */
+
+	*WINDOW{*CLASSNAME "P3Button"*POS 10, 70*SIZE 20, 20*TEXT "§Z151"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY 1}
+	*WINDOW{*CLASSNAME "P3Button"*POS 30, 70*SIZE 20, 20*TEXT "§Z152"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY 2}
+	*WINDOW{*CLASSNAME "P3Button"*POS 50, 70*SIZE 20, 20*TEXT "§Z153"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY 3}
+	*WINDOW{*CLASSNAME "P3Button"*POS 70, 70*SIZE 20, 20*TEXT "§Z154"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY 4}
+	*WINDOW{*CLASSNAME "P3Button"*POS 90, 70*SIZE 20, 20*TEXT "§Z155"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY 5}
+	*WINDOW{*CLASSNAME "P3Button"*POS 110, 70*SIZE 20, 20*TEXT "§Z156"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY 6}
+	*WINDOW{*CLASSNAME "P3Button"*POS 130, 70*SIZE 20, 20*TEXT "§Z157"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY 7}
+	*WINDOW{*CLASSNAME "P3Button"*POS 150, 70*SIZE 20, 20*TEXT "§Z158"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY 8}
+	*WINDOW{*CLASSNAME "P3Button"*POS 170, 70*SIZE 20, 20*TEXT "§Z159"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY 9}
+
+	/* Special */
+
+	*WINDOW{*CLASSNAME "P3Button"*POS 10, 90*SIZE 60, 20*TEXT "§Z15Space"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY " "}
+	*WINDOW{*CLASSNAME "P3Button"*POS 70, 90*SIZE 60, 20*TEXT "§Z15Back"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY EREASE}
+	*WINDOW{*CLASSNAME "P3Button"*POS 130, 90*SIZE 60, 20*TEXT "§Z15End"*TEXTCOLOR_BG 0xffffffff*PADEDIT_SCANKEY EXIT}
+}
+
+
+
+*WINDOW "BINDINGS"
+{
+	*CLASSNAME "P3MenuBindings"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+
+	*BACKGROUND_INTROBINK "GUI_OPT_KEYB"
+	*BACKGROUND_OUTROBINK "GUI_OPT_KEYB2"
+
+// Caption
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 170, 16, 300, 30  *STYLE TEXT_CENTER, HIDDENFOCUS   *TEXT "§Z30§LMENU_BINDING_CAPTION" *COLOR "WHITE"}
+
+// MOVE FWD
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 163, 60, 190, 32   *STYLE HIDDENFOCUS *TEXT "§Z20§LMENU_BINDING_FWD" *COLOR "YELLOW"}
+	*WINDOW { *CLASSNAME "P3BindingEdit" *RGN 374, 60, 113, 20   *ID KB_MOVE_FWD *VIDEO_FOCUS "GUI_OptFocus_1A" *VIDEO_FOCUSEDIT "GUI_OptFocus_1B" *COLOR "BLUE"}
+// MOVE_BWD
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 163, 88, 190, 32   *STYLE HIDDENFOCUS *TEXT "§Z20§LMENU_BINDING_BWD" *COLOR "YELLOW"}
+	*WINDOW { *CLASSNAME "P3BindingEdit" *RGN 374, 88, 113, 20   *ID KB_MOVE_BWD *VIDEO_FOCUS "GUI_OptFocus_1A" *VIDEO_FOCUSEDIT "GUI_OptFocus_1B" *COLOR "BLUE"}
+// MOVE LEFT
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 163, 116, 190, 32  *STYLE HIDDENFOCUS *TEXT "§Z20§LMENU_BINDING_LEFT" *COLOR "YELLOW"}
+	*WINDOW { *CLASSNAME "P3BindingEdit" *RGN 374, 116, 113, 20  *ID KB_MOVE_LEFT *VIDEO_FOCUS "GUI_OptFocus_1A" *VIDEO_FOCUSEDIT "GUI_OptFocus_1B" *COLOR "BLUE"}
+// MOVE RIGHT
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 163, 144, 190, 32  *STYLE HIDDENFOCUS *TEXT "§Z20§LMENU_BINDING_RIGHT" *COLOR "YELLOW"}
+	*WINDOW { *CLASSNAME "P3BindingEdit" *RGN 374, 144, 113, 20  *ID KB_MOVE_RIGHT *VIDEO_FOCUS "GUI_OptFocus_1A" *VIDEO_FOCUSEDIT "GUI_OptFocus_1B" *COLOR "BLUE"}
+// Crouch
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 163, 172, 190, 32  *STYLE HIDDENFOCUS *TEXT "§Z20§LMENU_BINDING_CROUCH" *COLOR "YELLOW"}
+	*WINDOW { *CLASSNAME "P3BindingEdit" *RGN 374, 172, 113, 20  *ID KB_CROUCH *VIDEO_FOCUS "GUI_OptFocus_1A" *VIDEO_FOCUSEDIT "GUI_OptFocus_1B" *COLOR "BLUE"}
+// Jump
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 163, 201, 190, 32  *STYLE HIDDENFOCUS *TEXT "§Z20§LMENU_BINDING_JUMP" *COLOR "YELLOW"}
+	*WINDOW { *CLASSNAME "P3BindingEdit" *RGN 374, 201, 113, 20  *ID KB_JUMP *VIDEO_FOCUS "GUI_OptFocus_1A" *VIDEO_FOCUSEDIT "GUI_OptFocus_1B" *COLOR "BLUE"}
+// Next Weapon
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 163, 229, 190, 32  *STYLE HIDDENFOCUS *TEXT "§Z20§LMENU_BINDING_WEAPON_NEXT" *COLOR "YELLOW"}
+	*WINDOW { *CLASSNAME "P3BindingEdit" *RGN 374, 229, 113, 20  *ID KB_WEAPON_NEXT *VIDEO_FOCUS "GUI_OptFocus_1A" *VIDEO_FOCUSEDIT "GUI_OptFocus_1B" *COLOR "BLUE"}
+// Prev Weapon
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 163, 258, 190, 32  *STYLE HIDDENFOCUS *TEXT "§Z20§LMENU_BINDING_WEAPON_PREV" *COLOR "YELLOW"}
+	*WINDOW { *CLASSNAME "P3BindingEdit" *RGN 374, 258, 113, 20  *ID KB_WEAPON_PREV *VIDEO_FOCUS "GUI_OptFocus_1A" *VIDEO_FOCUSEDIT "GUI_OptFocus_1B" *COLOR "BLUE"}
+// Use Weapon
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 163, 287, 190, 32  *STYLE HIDDENFOCUS *TEXT "§Z20§LMENU_BINDING_WEAPON_USE" *COLOR "YELLOW"}
+	*WINDOW { *CLASSNAME "P3BindingEdit" *RGN 374, 287, 114, 20  *ID KB_WEAPON_USE *VIDEO_FOCUS "GUI_OptFocus_1A" *VIDEO_FOCUSEDIT "GUI_OptFocus_1B" *COLOR "BLUE"}
+// Next Item
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 163, 315, 190, 32  *STYLE HIDDENFOCUS *TEXT "§Z20§LMENU_BINDING_ITEM_NEXT" *COLOR "YELLOW"}
+	*WINDOW { *CLASSNAME "P3BindingEdit" *RGN 374, 315, 114, 20  *ID KB_ITEM_NEXT *VIDEO_FOCUS "GUI_OptFocus_1A" *VIDEO_FOCUSEDIT "GUI_OptFocus_1B" *COLOR "BLUE"}
+// Prev Item
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 163, 344, 190, 32  *STYLE HIDDENFOCUS *TEXT "§Z20§LMENU_BINDING_ITEM_PREV" *COLOR "YELLOW"}
+	*WINDOW { *CLASSNAME "P3BindingEdit" *RGN 374, 344, 114, 20  *ID KB_ITEM_PREV *VIDEO_FOCUS "GUI_OptFocus_1A" *VIDEO_FOCUSEDIT "GUI_OptFocus_1B" *COLOR "BLUE"}
+// Use Item
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 163, 373, 190, 32  *STYLE HIDDENFOCUS *TEXT "§Z20§LMENU_BINDING_ITEM_USE" *COLOR "YELLOW"}
+	*WINDOW { *CLASSNAME "P3BindingEdit" *RGN 374, 373, 114, 20  *ID KB_ITEM_USE *VIDEO_FOCUS "GUI_OptFocus_1A" *VIDEO_FOCUSEDIT "GUI_OptFocus_1B" *COLOR "BLUE"}
+// Drink potion
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 163, 401, 190, 32  *STYLE HIDDENFOCUS *TEXT "§Z20§LMENU_BINDING_DRINK_POTION" *COLOR "YELLOW"}
+	*WINDOW { *CLASSNAME "P3BindingEdit" *RGN 374, 401, 114, 20  *ID KB_DRINK_POTION *VIDEO_FOCUS "GUI_OptFocus_1A" *VIDEO_FOCUSEDIT "GUI_OptFocus_1B" *COLOR "BLUE"}
+// Cyclecamera
+	*WINDOW	{ *CLASSNAME "P3BindingText" *RGN 163, 429, 190, 32  *STYLE HIDDENFOCUS *TEXT "§Z20§LMENU_BINDING_CYCLECAMERA" *COLOR "YELLOW"}
+	*WINDOW { *CLASSNAME "P3BindingEdit" *RGN 374, 429, 114, 20  *ID KB_CYCLECAMERA *VIDEO_FOCUS "GUI_OptFocus_1A" *VIDEO_FOCUSEDIT "GUI_OptFocus_1B" *COLOR "BLUE"}
+
+	
+
+}
+
+*WINDOW "CREDITS_MENU"
+{
+	*CLASSNAME "P3MenuScroller"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	
+	*SCROLL_EXIT_SCRIPT "cg_menu \"CREDITS_PC_STARBREEZE_M\""
+	*SCROLL_CANCEL_SCRIPT "quit"
+	
+	*SCROLL_BG_NAME "End_Credits_01"
+	*SCROLL_BG_IS_BINK 1
+	*SCROLL_BG_COLOR 0xff808080
+	*SCROLL_START_SCRIPT "stream_stop 1; stream_play \"End_Light\",\"\",1"
+	*SCROLL_ALLOW_SKIP 1
+	*SCROLL_FADE_OPTIONS IN, OUT
+	*SCROLL_FADE_TIME 2
+	*SCROLL_TIME 1
+	*SCROLL_TIME_WAIT_BEFORE 2
+	*SCROLL_TIME_WAIT_AFTER 2
+}
+
+// PC PORT: End credits shown from main menu
+*WINDOW "CREDITS_PC_STARBREEZE_M"
+{
+	*CLASSNAME "P3MenuScrollerPC"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	
+	*SCROLL_EXIT_SCRIPT "cg_menu \"CREDITS_LICENCE_M\""
+	*SCROLL_CANCEL_SCRIPT "quit"
+	
+	*SCROLL_TEXT_SHADOW UP, RIGHT, DOWN, LEFT
+	*SCROLL_TEXT_SHADOW_THICKNESS 0.8
+	
+	*SCROLL_BG_NAME "GUI_EndCredsSbz"
+	*SCROLL_BG_SCALE_X 0.8
+	*SCROLL_BG_SCALE_Y 0.8
+	*SCROLL_ALLOW_SKIP 1
+	*SCROLL_FADE_OPTIONS IN, OUT
+	*SCROLL_FADE_TIME 2
+	*SCROLL_FONT "SYSTEM"
+	*SCROLL_FONT_COLOR 0xffffffff
+	*SCROLL_FONT_SIZE 26
+	*SCROLL_FONT_ALIGNMENT CENTER
+	*SCROLL_TIME 21
+	*SCROLL_OFFSET 320
+	*SCROLL_TIME_WAIT_BEFORE 2
+	*SCROLL_TIME_WAIT_AFTER 2
+}
+
+*WINDOW "CREDITS_LICENCE_M"
+{
+	*CLASSNAME "P3MenuScrollerUS"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+
+//	*SCROLL_IGNORE_CONDITIONAL REGISTRY.ENV, MRTC_VERSION_PC_US, 0
+	
+	*SCROLL_EXIT_SCRIPT "cg_menu \"CREDITS_COPYRIGHT_M\""
+	*SCROLL_CANCEL_SCRIPT "quit"
+	
+	*SCROLL_BG_NAME "GUI_LICENCE"	
+	*SCROLL_BG_COLOR 0xff808080
+//	*SCROLL_BG_ORIGO 200,120
+	*SCROLL_BG_CLIP 0, 0, 640, 480
+//	*SCROLL_BG_SCALE_X 2.1333333
+//	*SCROLL_BG_SCALE_Y 2.1333333
+	*SCROLL_ALLOW_SKIP 1
+	*SCROLL_FADE_OPTIONS IN, OUT
+	*SCROLL_FADE_TIME 1
+	*SCROLL_TIME 2
+	*SCROLL_TIME_WAIT_BEFORE 1
+	*SCROLL_TIME_WAIT_AFTER 1
+}
+
+*WINDOW "CREDITS_COPYRIGHT_M"
+{
+	*CLASSNAME "P3MenuScroller"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	
+	*SCROLL_EXIT_SCRIPT "cg_menu \"CREDITS_BINK_M\""
+	*SCROLL_CANCEL_SCRIPT "quit"
+	*SCROLL_BG_NAME "GUI_COPYRIGHT"
+	*SCROLL_BG_COLOR 0xff808080
+//	*SCROLL_BG_ORIGO 200,120
+	*SCROLL_BG_CLIP 0, 0, 640, 480
+//	*SCROLL_BG_SCALE_X 2.1333333
+//	*SCROLL_BG_SCALE_Y 2.1333333
+	*SCROLL_ALLOW_SKIP 1
+	*SCROLL_FADE_OPTIONS IN, OUT
+	*SCROLL_FADE_TIME 1
+	*SCROLL_TIME 2
+	*SCROLL_TIME_WAIT_BEFORE 1
+	*SCROLL_TIME_WAIT_AFTER 1
+}
+
+*WINDOW "CREDITS_BINK_M"
+{
+	*CLASSNAME "P3MenuScroller"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	
+	*SCROLL_EXIT_SCRIPT "quit"
+	*SCROLL_CANCEL_SCRIPT "quit"
+	
+	*SCROLL_BG_NAME "GUI_BINK"
+	*SCROLL_BG_COLOR 0xff808080
+//	*SCROLL_BG_ORIGO 200,120
+	*SCROLL_BG_CLIP 0, 0, 640, 480
+//	*SCROLL_BG_SCALE_X 2.1333333
+//	*SCROLL_BG_SCALE_Y 2.1333333
+	*SCROLL_ALLOW_SKIP 1
+	*SCROLL_FADE_OPTIONS IN, OUT
+	*SCROLL_FADE_TIME 1
+	*SCROLL_TIME 2
+	*SCROLL_TIME_WAIT_BEFORE 1
+	*SCROLL_TIME_WAIT_AFTER 1
+}
+
+*WINDOW "CREDITS_LIGHT"
+{
+	*CLASSNAME "P3MenuScroller"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	
+	*SCROLL_BG_NAME "End_Credits_L"
+	*SCROLL_BG_IS_BINK 1
+	*SCROLL_BG_COLOR 0xff808080
+	*SCROLL_START_SCRIPT "stream_play \"End_Light\",\"\",1"
+	*SCROLL_EXIT_SCRIPT "cg_menu \"CREDITS_PC_STARBREEZE_C\""
+	*SCROLL_CANCEL_SCRIPT "stream_stop 1; cg_menu \"menu\""
+	*SCROLL_ALLOW_SKIP 1
+	*SCROLL_FADE_OPTIONS IN, OUT
+	*SCROLL_FADE_TIME 2
+	*SCROLL_TIME 1
+	*SCROLL_TIME_WAIT_BEFORE 2
+	*SCROLL_TIME_WAIT_AFTER 2
+}
+
+*WINDOW "CREDITS_DARK"
+{
+	*CLASSNAME "P3MenuScroller"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	
+	*SCROLL_BG_NAME "End_Credits_D"
+	*SCROLL_BG_IS_BINK 1
+	*SCROLL_BG_COLOR 0xff808080
+	*SCROLL_START_SCRIPT "stream_play \"End_Dark\",\"\",1"
+	*SCROLL_EXIT_SCRIPT "cg_menu \"CREDITS_PC_STARBREEZE_C\""
+	*SCROLL_CANCEL_SCRIPT "stream_stop 1; cg_menu \"menu\""
+	*SCROLL_ALLOW_SKIP 1
+	*SCROLL_FADE_OPTIONS IN, OUT
+	*SCROLL_FADE_TIME 2
+	*SCROLL_TIME 1
+	*SCROLL_TIME_WAIT_BEFORE 2
+	*SCROLL_TIME_WAIT_AFTER 2
+}
+
+// PC PORT: End credits Starbreeze
+*WINDOW "CREDITS_PC_STARBREEZE_C"
+{
+	*CLASSNAME "P3MenuScrollerPC"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	
+	*SCROLL_EXIT_SCRIPT "stream_stop 1; cg_menu \"CREDITS_LICENCE_C\""
+	*SCROLL_CANCEL_SCRIPT "stream_stop 1; cg_menu \"menu\""
+
+	*SCROLL_TEXT_SHADOW UP, RIGHT, DOWN, LEFT
+	*SCROLL_TEXT_SHADOW_THICKNESS 0.8
+	
+	*SCROLL_BG_NAME "GUI_EndCredsSbz"
+	*SCROLL_BG_SCALE_X 0.8
+	*SCROLL_BG_SCALE_Y 0.8
+	*SCROLL_ALLOW_SKIP 1
+	*SCROLL_FADE_OPTIONS IN, OUT
+	*SCROLL_FADE_TIME 2
+	*SCROLL_FONT "SYSTEM"
+	*SCROLL_FONT_COLOR 0xffffffff
+	*SCROLL_FONT_SIZE 26
+	*SCROLL_FONT_ALIGNMENT CENTER
+	*SCROLL_TIME 21
+	*SCROLL_OFFSET 320
+	*SCROLL_TIME_WAIT_BEFORE 2
+	*SCROLL_TIME_WAIT_AFTER 2	
+}
+
+*WINDOW "CREDITS_LICENCE_C"
+{
+	*CLASSNAME "P3MenuScrollerUS"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	
+//	*SCROLL_IGNORE_CONDITIONAL REGISTRY.ENV, MRTC_VERSION_PC_US, 0
+	
+	*SCROLL_EXIT_SCRIPT "cg_menu \"CREDITS_COPYRIGHT_C\""
+	*SCROLL_CANCEL_SCRIPT "cg_menu \"menu\""
+	
+	*SCROLL_BG_NAME "GUI_LICENCE"	
+	*SCROLL_BG_COLOR 0xff808080
+//	*SCROLL_BG_ORIGO 200,120
+	*SCROLL_BG_CLIP 0, 0, 640, 480
+//	*SCROLL_BG_SCALE_X 2.1333333
+//	*SCROLL_BG_SCALE_Y 2.1333333
+	*SCROLL_ALLOW_SKIP 1
+	*SCROLL_FADE_OPTIONS IN, OUT
+	*SCROLL_FADE_TIME 1
+	*SCROLL_TIME 2
+	*SCROLL_TIME_WAIT_BEFORE 1
+	*SCROLL_TIME_WAIT_AFTER 1
+}
+
+*WINDOW "CREDITS_COPYRIGHT_C"
+{
+	*CLASSNAME "P3MenuScroller"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	
+	*SCROLL_EXIT_SCRIPT "cg_menu \"CREDITS_BINK_C\""
+	*SCROLL_CANCEL_SCRIPT "cg_menu \"menu\""
+	*SCROLL_BG_NAME "GUI_COPYRIGHT"
+	*SCROLL_BG_COLOR 0xff808080
+//	*SCROLL_BG_ORIGO 200,120
+	*SCROLL_BG_CLIP 0, 0, 640, 480
+//	*SCROLL_BG_SCALE_X 2.1333333
+//	*SCROLL_BG_SCALE_Y 2.1333333
+	*SCROLL_ALLOW_SKIP 1
+	*SCROLL_FADE_OPTIONS IN, OUT
+	*SCROLL_FADE_TIME 1
+	*SCROLL_TIME 2
+	*SCROLL_TIME_WAIT_BEFORE 1
+	*SCROLL_TIME_WAIT_AFTER 1
+}
+
+*WINDOW "CREDITS_BINK_C"
+{
+	*CLASSNAME "P3MenuScroller"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+	
+	*SCROLL_EXIT_SCRIPT "cg_menu \"menu\""
+	*SCROLL_CANCEL_SCRIPT "cg_menu \"menu\""
+	
+	*SCROLL_BG_NAME "GUI_BINK"
+	*SCROLL_BG_COLOR 0xff808080
+//	*SCROLL_BG_ORIGO 200,120
+	*SCROLL_BG_CLIP 0, 0, 640, 480
+//	*SCROLL_BG_SCALE_X 2.1333333
+//	*SCROLL_BG_SCALE_Y 2.1333333
+	*SCROLL_ALLOW_SKIP 1
+	*SCROLL_FADE_OPTIONS IN, OUT
+	*SCROLL_FADE_TIME 1
+	*SCROLL_TIME 2
+	*SCROLL_TIME_WAIT_BEFORE 1
+	*SCROLL_TIME_WAIT_AFTER 1
+}
+
+*WINDOW "SELECTDIFFICULTY"
+{
+	*CLASSNAME "P3SelectDifficulty"
+	*RGN 0, 0, 640, 480
+	*CLIENTCLASS ""
+	*CAPTIONCLASS ""
+	*BORDERCLASS ""
+	*STYLE HIDDENFOCUS
+
+	*WINDOW
+	{
+		*CLASSNAME "P3SelectDifficultyButton"
+		*ID "MEDIUM"
+		*RGN 213, 220, 256, 64
+		*TEXTURE "GUI_Diff_focus2"
+		*TEXT "§Z22§LMENU_SELECT_MEDIUM"
+		*TEXTPOS 0, 0
+		*TEXTSIZE 220, 38
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3SelectDifficultyButton"
+		*ID "EASY"
+		*RGN 210, 163, 256, 64
+		*TEXTURE "GUI_Diff_focus1"
+		*TEXT "§Z22§LMENU_SELECT_EASY"
+		*TEXTPOS 0, 0
+		*TEXTSIZE 220, 38
+	}
+
+	*WINDOW
+	{
+		*CLASSNAME "P3SelectDifficultyButton"
+		*ID "HARD"
+		*RGN 210, 278, 256, 64
+		*TEXTURE "GUI_Diff_focus3"
+		*TEXT "§Z22§LMENU_SELECT_HARD"
+		*TEXTPOS 0, 0
+		*TEXTSIZE 220, 38
+	}
+}
+
+*WINDOW "DIALOG" 
+{  
+	*ID MemCardDialog  
+	*CLASSNAME "MemCardDialog" 
+
+	*RGN 0, 0, 640, 480  
+	*CLIENTCLASS "" 
+
+	*CAPTIONCLASS ""  
+	*BORDERCLASS ""  
+	*STYLE HIDDENFOCUS 
+ 
+ 
+ 	*WINDOW 
+ 	{ 
+ 		*ID Yes  
+ 		*CLASSNAME "DialogButton"  
+ 		*RGN 245, 240, 50, 22  
+ 		*TEXT "§Z20§LMENU_YES" 
+ 		*TEXTCOLOR_BG 0x80808080  
+ 		*STYLE ONTOP 
+ 	} 
+ 
+ 	*WINDOW 
+ 	{ 
+ 		*ID No  
+ 		*CLASSNAME "DialogButton"  
+ 		*RGN 370, 240, 50, 22  
+ 		*TEXT "§Z20§LMENU_NO" 
+ 		*TEXTCOLOR_BG 0x80808080  
+ 		*STYLE ONTOP 
+ 	} 
+
+}

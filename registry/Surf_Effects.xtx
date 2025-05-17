@@ -1,0 +1,1401 @@
+{
+	"CLASSNAME" "SURFACES"
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "S_DEBRISTRAIL_zale"
+		"FLAGS" "transparent+nocull"
+		"DURATION" "0.1;0.5;0.6;2.8;0.1"
+		"REPEAT" "0, 4"
+		{
+			"CLASSNAME" "TLAYER"
+			"FLAGS" "NoZWrite"
+			"RASTERMODE" "alphaadd"
+			"COLOR" "0x7f7f7f;0xc8ffffff;0xffffffff;0x0;0x0"
+			"TEXTURE" "b_trail01"
+			"SCALE" "1.0, 0.5"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "S_SkyLighting"
+		"FLAGS" "transparent+nocull"
+		"DURATION" "0.1;0.5;0.6;2.8;0.1"
+		"REPEAT" "0, 4"
+		{
+			"CLASSNAME" "TLAYER"
+			"FLAGS" "NoZWrite"
+			"RASTERMODE" "Add"
+			"COLOR" "0x5c5c5c;0x96ffffff;0xb4ffffff;0x0;0x0"
+			"TEXTURE" "p_zapper01"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "S_SKYLIGHTING2"
+		"FLAGS" "transparent+nocull"
+		"DURATION" "0.1;0.5;0.6;2.8;0.1"
+		"REPEAT" "0, 4"
+		{
+			"CLASSNAME" "TLAYER"
+			"FLAGS" "NoZWrite+Group"
+			"COLOR" "0x0;0x96ffffff;0xb4ffffff;0x0"
+			"TEXTURE" "p_zapper01"
+			"SCALE" "0.5,0.5"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "sky_thunder03"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xffffffff;0xffffffff;0xffffffff;0xffffff"
+			"FLAGS" "NoZWrite"
+			"ZFUNC" "Always"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "s_zapperexpl"
+		"FLAGS" "transparent+nocull"
+		"DURATION" "0.25;0.25;0.20;0.8"
+		{
+			"CLASSNAME" "TLAYER"
+			"FLAGS" "nozwrite"
+			"RASTERMODE" "add"
+			"COLOR" "0xff808080;0xff404040;0xff000000;0xff000000"
+			"TEXTURE" "p_zapper01"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"FLAGS" "nozwrite"
+			"RASTERMODE" "add"
+			"COLOR" "0xff000000;0xff808080;0xff303030;0xff000000"
+			"TEXTURE" "p_zapper02"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "S_ZAPPEREXPL_zale"
+		"FLAGS" "transparent+nocull"
+		"DURATION" "0.25;0.25;0.20;0.8"
+		{
+			"CLASSNAME" "TLAYER"
+			"FLAGS" "nozwrite"
+			"RASTERMODE" "add"
+			"COLOR" "0xffff3200;0xff5a2500;0xff000000;0xff000000"
+			"TEXTURE" "p_zapper01"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"FLAGS" "nozwrite"
+			"RASTERMODE" "add"
+			"COLOR" "0xff000000;0xffff3200;0xff441c00;0xff000000"
+			"TEXTURE" "p_zapper02"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "s_explmark01"
+		"FLAGS" "0"
+		"POLYGONOFFSET" "-2, -20"
+		{
+			"CLASSNAME" "TLAYER"
+			"FLAGS" "nozwrite"
+			"RASTERMODE" "alphablend"
+			"COLOR" "0xdf7f7f7f"
+			"TEXTURE" "p_explmark01"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "s_dropshadow"
+		"POLYGONOFFSET" "-10, -100"
+		"DURATION" "1;1"
+		{
+			"CLASSNAME" "TLAYER"
+			"FLAGS" "nozwrite+lighting"
+			"RASTERMODE" "alphablend"
+			"COLOR" "0xff7f7f7f;0x00000000"
+			"TEXTURE" "p_blackalpha"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "s_shadowdecal"
+		"FLAGS" "0"
+		"POLYGONOFFSET" "-10, -100"
+		"DURATION" "1;1"
+		{
+			"CLASSNAME" "TLAYER"
+			"FLAGS" "nozwrite,lighting,nofog"
+			"RASTERMODE" "2"
+			"COLOR" "0xffa0a0a0;0x00000000"
+			"TEXTURE" "$TEXTUREMAP0"
+			"OFFSET" "1, 0"
+			"SCALE" "-1,1"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "Trail_Sword01"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "edgetrail03"
+			"RASTERMODE" "AlphaAdd"
+			"FLAGS" "Lighting+NoZWrite"
+			"COLOR" "0xff404040"
+			"_OPERATOR0" "GenColorViewN r+g+b"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "TRAIL_SWORD02"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "edgetrail05"
+			"RASTERMODE" "AlphaAdd"
+			"FLAGS" "Lighting+NoZWrite"
+			"COLOR" "0xff606060"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "TRAIL_DWARVENSWORD"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "edgetrail06"
+			"RASTERMODE" "AlphaAdd"
+			"FLAGS" "Lighting+NoZWrite"
+			"COLOR" "0xff707070"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "Ring_Green"
+		"DURATION" "0.1;0.01;0.09;0.01"
+		"REPEAT" "0, 3"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "ring"
+			"FLAGS" "Lighting"
+			"COLOR" "0xffa3fc78;0xffa3fc78;0xa3fc78;0xa3fc78"
+			"RASTERMODE" "Alphablend"
+			"ZFUNC" "Always"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "s_targetgizmo01"
+		"FLAGS" "transparent"
+		"DURATION" "0.25"
+		{
+			"CLASSNAME" "TLAYER"
+			"FLAGS" "nozwrite"
+			"RASTERMODE" "alphaadd"
+			"COLOR" "0xff000000;0xff083008;0xff106010;0xff106010;0xff600000"
+			"TEXTURE" "GUI_Select_Ring64"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"FLAGS" "nozwrite"
+			"RASTERMODE" "alphaadd"
+			"SCALE" "1,1;1,1;1.5,1.5;2,2;4,4;8,8"
+			"OFFSET" "0,0;0,0;-0.25,-0.25;-0.5,-0.5;-1.5,-1.5;-3.5,-3.5"
+			"COLOR" "0x00000000;0xff083008;0xff106010;0xff106010;0xff600000"
+			"TEXTURE" "GUI_Select_Ring64"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "Electric1"
+		"FLAGS" "NoCull+transparent"
+		"DURATION" "1.0"
+		"REPEAT" "0, 0"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "Electric1"
+			"RASTERMODE" "AlphaAdd"
+			"FLAGS" "Lighting+NoZWrite"
+			"COLOR" "0xff868686"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "Glimmer1"
+		"FLAGS" "NoCull+transparent"
+		"DRAWORDER" "0.01"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "effects_flare01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xffffffff"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "Glimmer2"
+		"FLAGS" "NoCull+transparent"
+		"DRAWORDER" "0.01"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "Glimmer2"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff8f7f5f"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "FireBlade01"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "FireBlade01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff7e7e7e"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "DebrisSparks01"
+		"FLAGS" "Transparent+NoCull"
+		"REPEAT" "0, 0"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "firestripe01"
+			"COLOR" "0xff7e7e7e"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "BoltTrail04"
+		"FLAGS" "NoCull+transparent"
+		"DURATION" "1.0"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "b_trail03"
+			"FLAGS" "Lighting+NoZWrite"
+			"COLOR" "0x28b6bbc0;0x144b535a"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "ICEBOLTTRAIL"
+		"FLAGS" "NoCull+transparent"
+		"DURATION" "1.0"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "b_trail03"
+			"FLAGS" "Lighting+NoZWrite"
+			"COLOR" "0xa37aaff;0x54b535a"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "Shockwave1"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "Shockwave1"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff7f7f7f"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "SHOCKWAVE2"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "Shockwave2"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff7f7f7f"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "SHOCKWAVE4"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "Shockwave4"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff7f7f7f"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "FireBall01"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "FireBall01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff7f7f7f"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "FireBall02"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "FireBall02"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff7f7f7f"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "ExplosionFire"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "Explosion01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff7f7f7f"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "EXPLOSIONSMOKE"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "Explosion01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+			"COLOR" "0xff7f7f7f"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "ExplosionFlash"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "effects_flare01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "FuseWire"
+		"FLAGS" "NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "dm01_07_35"
+			"FLAGS" "Lighting"
+			"COLOR" "0xff353535"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "FuseSparks"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "firestripe01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff7f7f7f"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "CROSSHAIR04"
+		"POLYGONOFFSET" "10"
+		"FLAGS" "Transparent+NoCull+nofog"
+		"DURATION" "1;1"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "CrossHair10"
+			"RASTERMODE" "Alphablend"
+			"COLOR" "0xff06fd00;0xfffd0600"
+			"ZFUNC" "Always"
+			"FLAGS" "NoZWrite+Invisible"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "TARGETRING02"
+		"POLYGONOFFSET" "-10"
+		"FLAGS" "Transparent+NoCull"
+		"DURATION" "1;1"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "TargetRing02"
+			"FLAGS" "NoZWrite"
+			"RASTERMODE" "Alphablend"
+			"COLOR" "0x2006fd00;0xfffd0600"
+			"ZFUNC" "Always"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "WizWall"
+		"FLAGS" "Transparent+NoCull+NoDynamicLight+NoWallMark"
+		"DURATION" "2"
+		"REPEAT" "0, 0"
+		"MEDIUM_FLAGS" "Vis"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "illusion02"
+			"RASTERMODE" "Add"
+			"ALPHAREF" "1"
+			"COLOR" "0x858585"
+			"FLAGS" "NoZWrite"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "WIZWALL2"
+		"FLAGS" "Transparent+NoCull+NoDynamicLight+NoWallMark"
+		"DURATION" "2"
+		"REPEAT" "0, 0"
+		"MEDIUM_FLAGS" "Vis"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "illusion03"
+			"ALPHAFUNC" "LessEqual"
+			"FLAGS" "NoZWrite"
+			"RASTERMODE" "Add"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "WIZWALL3"
+		"FLAGS" "Transparent+NoCull+NoDynamicLight+NoWallMark"
+		"DURATION" "2"
+		"REPEAT" "0, 0"
+		"MEDIUM_FLAGS" "Vis"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "illusion04"
+			"ALPHAFUNC" "LessEqual"
+			"RASTERMODE" "Add"
+			"FLAGS" "NoZWrite"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "WIZWALL4"
+		"FLAGS" "Transparent+NoCull+NoDynamicLight+NoWallMark"
+		"DURATION" "2"
+		"REPEAT" "0, 0"
+		"MEDIUM_FLAGS" "Vis"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "illusion04"
+			"ALPHAFUNC" "LessEqual"
+			"RASTERMODE" "Add"
+			"FLAGS" "NoZWrite"
+			"COLOR" "0xff326e00"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "illusion01"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "illusion01"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "FlameFire01"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "FlameFire01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff7f7f7f"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "FlameFire02"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "FlameFire02"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff7f7f7f"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "FlameFire03"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "FlameFire03"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff7f7f7f"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "FlameSmoke01"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "FlameSmoke01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+			"COLOR" "0xff7f7f7f"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "BombTrail01"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "b_smoke01"
+			"FLAGS" "Lighting+NoZWrite"
+			"COLOR" "0x28d5a926"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "ARROWTRAIL01"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "arrowtrail"
+			"FLAGS" "Lighting+NoZWrite"
+			"COLOR" "0x3caab4df"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "WRAITH_PARTICLE0"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "Wraith_Particle"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "Wraith_Particle1"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "Wraith_Particle"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaMul"
+			"COLOR" "0xff000000"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "Wraith_Particle2"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "Wraith_Particle"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff0fe600"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "Wraith_Particle3"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "Wraith_Particle"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xffff4000"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "WaterBeed"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "WaterBeed"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_SmokeBlob01"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_SmokeBlob01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_SmokeBlob01b"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_SmokeBlob01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_SmokeBlob02"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_SmokeBlob02"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_SmokeBlob02b"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_SmokeBlob02"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_SmokeBlob03"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_SmokeBlob03"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_SmokeBlob03b"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_SmokeBlob03"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_SmokeBlob04"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_SmokeBlob04"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_SmokeBlob04b"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_SmokeBlob04"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "CloudBall"
+		"FLAGS" "transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "DustCloud1"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "FireBallSmoke"
+		"FLAGS" "NoCull+transparent"
+		"DRAWORDER" "0"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_smoke02abc"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "FireBallFire"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "effects_flare01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "DotParticle"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "effects_flare01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "DOTPARTICLEZ"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "Wraith_Particle"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+			"COLOR" "0xff000000"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "SphereMap01"
+		"FLAGS" "Transparent+NoCull"
+		"DURATION" "3"
+		"REPEAT" "0, 0"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "SphereMap01"
+			"RASTERMODE" "AlphaAdd"
+			"FLAGS" "Lighting+NoZWrite"
+			"COLOR" "0xffffffff"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "SPHEREMAP02"
+		"FLAGS" "Transparent+NoCull"
+		"DURATION" "3"
+		"REPEAT" "0, 0"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "env_06"
+			"FLAGS" "Lighting+NoZWrite"
+			"MAPPING" "Env"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0x80ffffff"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "SphereMap01"
+			"RASTERMODE" "AlphaAdd"
+			"FLAGS" "Lighting+NoZWrite"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "ICESHIELD"
+		"FLAGS" "Transparent"
+		"DURATION" "3"
+		"REPEAT" "0, 0"
+		"MEDIUM_FLAGS" "0"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "env_18"
+			"FLAGS" "Lighting"
+			"MAPPING" "Env"
+			"RASTERMODE" "Alphablend"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "IceSphere01"
+			"RASTERMODE" "Alphablend"
+			"FLAGS" "Lighting"
+			"COLOR" "0xc4fdfdfd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "SPHEREMAP03"
+		"FLAGS" "Transparent+NoCull"
+		"DURATION" "3"
+		"REPEAT" "0, 0"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "ElectricSphere1"
+			"RASTERMODE" "AlphaAdd"
+			"FLAGS" "Lighting+NoZWrite"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "SPHEREMAP04"
+		"FLAGS" "Transparent+NoCull"
+		"DURATION" "3"
+		"REPEAT" "0, 0"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "env_07"
+			"FLAGS" "Lighting+NoZWrite"
+			"MAPPING" "Env"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0x80ffffff"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "ElectricSphere1"
+			"RASTERMODE" "AlphaAdd"
+			"FLAGS" "Lighting+NoZWrite"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "WaterPool"
+		"FLAGS" "Transparent"
+		"POLYGONOFFSET" "-2, -20"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "WaterPoolWM"
+			"FLAGS" "NoZWrite+Group"
+			"COLOR" "0x800370e7"
+			"RASTERMODE" "Alphablend"
+			"TEXENV" "Blend"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "WaterPoolWMEnv"
+			"RASTERMODE" "Alphablend"
+			"MAPPING" "Env2"
+			"FLAGS" "NoZWrite"
+			"COLOR" "0x807d99cc"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "waterpoolwm"
+			"FLAGS" "NoZWrite+Lighting"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "WaterPool02"
+		"FLAGS" "Transparent"
+		"POLYGONOFFSET" "-2, -20"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_waterpuddle01"
+			"FLAGS" "NoZWrite+Group"
+			"COLOR" "0x800370e7"
+			"RASTERMODE" "Alphablend"
+			"TEXENV" "Blend"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "WaterPoolWMEnv"
+			"RASTERMODE" "Alphablend"
+			"MAPPING" "Env2"
+			"FLAGS" "NoZWrite"
+			"COLOR" "0x807d99cc"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_waterpuddle01"
+			"FLAGS" "NoZWrite+Lighting"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "WATERPOOLBUMP"
+		"FLAGS" "Transparent"
+		"POLYGONOFFSET" "-2, -20"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "WaterPoolWMEnv"
+			"FLAGS" "Group"
+			"RASTERMODE" "Alphablend"
+			"TEXENV" "Blend"
+			"COLOR" "0x80fbfdff"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "WaterPoolWMBump"
+			"RASTERMODE" "Alphablend"
+			"COLOR" "0x80ffffff"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "WaterPoolWMBump2"
+		"MEDIUM_FLAGS" "Vis+DualSided+Navigation"
+		"MEDIUM_THICKNESS" "0.1"
+		"MEDIUM_DENSITY" "1"
+		"FLAGS" "lighting+transparent+nowallmark+nodynamiclight"
+		"POLYGONOFFSET" "-2, -20"
+		{
+			"CLASSNAME" "TLAYER"
+			"FLAGS" "group"
+			"TEXTURE" "CUBE_09_0"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "WaterPoolWMBump"
+			"OPERATOR00" "nv20_genenv x+y+z, 1.0"
+			"RASTERMODE" "alphablend"
+			"COLOR" "0xa0909090"
+			"FLAGS" "nozwrite"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "WaterPoolWMBump2"
+		"MEDIUM_FLAGS" "vis+dualsided+navigation"
+		"MEDIUM_THICKNESS" "0.1"
+		"MEDIUM_DENSITY" "1"
+		"FLAGS" "lighting+transparent+nowallmark+nodynamiclight"
+		"POLYGONOFFSET" "-2, -20"
+		{
+			"CLASSNAME" "TLAYER"
+			"FLAGS" "nozwrite"
+			"RASTERMODE" "alphablend"
+			"COLOR" "0x5f7f7f7f"
+			"TEXTURE" "cwm_01"
+			"OPERATOR01" "textureanim attrib, 64, -1.6"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "MindShield"
+		"FLAGS" "Transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "env_10"
+			"FLAGS" "Lighting"
+			"RASTERMODE" "Alphablend"
+			"MAPPING" "Env2"
+			"COLOR" "0x40ffffff"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "z_white"
+			"FLAGS" "Lighting"
+			"RASTERMODE" "Alphablend"
+			"COLOR" "0x407946ff"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "DarkDeath"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "DarkDeath"
+			"FLAGS" "Lighting+Alphacompare"
+			"RASTERMODE" "Alphablend"
+			"COLOR" "0xff313131"
+			"ALPHAREF" "32"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_WaterBeed02"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_WaterBeed02"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff808080"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_WaterBeed03"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_WaterBeed03"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff808080"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_WaterBeed04"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_WaterBeed04"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff808080"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_WaterBeed05"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_WaterBeed05"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff808080"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_WaterBeed06"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_WaterBeed06"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_WaterBeed07"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_WaterBeed07"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_WaterBeed08"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_WaterBeed08"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_WaterBeed09"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_WaterBeed09"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "wc1"
+		"FLAGS" "NoCull+transparent"
+		"DRAWORDER" "30"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "wc1"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_FireBlob01"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_FireBlob01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff808080"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_FireBlob02"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_FireBlob02"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff808080"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_FireBlob03"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_FireBlob03"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff808080"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "p_FireBlob04"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_FireBlob04"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff808080"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "AngelWings"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "AngelWings"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "SniperArrowTrail"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "b_trail01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0x14ffffff"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "MindEnv"
+		"FLAGS" "Transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "MindEnv"
+			"FLAGS" "Lighting+nozwrite"
+			"COLOR" "0x40ffffff"
+			"RASTERMODE" "Alphablend"
+			"MAPPING" "Env2"
+		}
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "z_white"
+			"FLAGS" "Lighting+nozwrite"
+			"COLOR" "0x408853a8"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "ahp"
+		"FLAGS" "NoCull+transparent"
+		"OPTIONS" "0"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "DustCloud1"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+			"COLOR" "0xff000000"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "smb1"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_SmokeBlob02"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "BoneShield"
+		"OPTIONS" "0"
+		"FLAGS" "NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "BoneShield"
+			"FLAGS" "Lighting+Alphacompare"
+			"RASTERMODE" "Lightmapblend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "MagicArrow01"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "MagicArrow01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff7a5cf3"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "arrowtrail02"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "arrowtrail"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0x3c15a600"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "boltpoison"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "b_trail01"
+			"FLAGS" "Lighting+NoZWrite"
+			"COLOR" "0x282ba415"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "MagicArrowTrail"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "b_trail01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0x32fd0006"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "Trail_Sword04"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "edgetrail05"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff20870e"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "arrowtrail03"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "arrowtrail"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0x3c7764e3"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "afire01"
+		"FLAGS" "transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "afire01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "DP1"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "DotParticle01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "DP1A"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "DotParticle01A"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "Aleaf01"
+		"FLAGS" "NoCull+transparent"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "leaf01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+			"COLOR" "0xff888daa"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "ASMB01"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "p_smokeblob02"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "AlphaAdd"
+		}
+	}
+	{
+		"CLASSNAME" "SURFACE"
+		"NAME" "WaterRipple01"
+		"FLAGS" "Transparent+NoCull"
+		{
+			"CLASSNAME" "TLAYER"
+			"TEXTURE" "waterripple01"
+			"FLAGS" "Lighting+NoZWrite"
+			"RASTERMODE" "Alphablend"
+		}
+	}
+}

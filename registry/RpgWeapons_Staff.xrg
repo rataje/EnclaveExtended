@@ -1,0 +1,697 @@
+//----------------------------------------------------------------------
+//- STAFF --------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*template_staff
+{
+//	*classname template_weapon_magic
+
+	*skill magic
+	*damagetype magic+blockable
+
+	*attachangles 0,0.25,0
+
+	*flags aiming+rpgmodelflags
+
+	*range 2048
+
+	*linkeditemtypes 0x109
+
+	*attachrottrack 15
+
+	*anim_stance animlist:196
+	*anim_raise animlist:208
+	*anim_cast animlist:209
+	*anim_lower animlist:210
+	*anim_summon animlist:211
+	*anim_shield animlist:217
+	*anim_shockwave animlist:216
+	*anim_equip animlist:231
+
+	*sound_attack 
+	*sound_summon forc_magicc04b
+	*sound_shieldstart 
+	*sound_shieldloop 
+	*sound_shieldend 
+	*sound_shieldimpact 
+	*sound_shockwave 
+	*sound_outofmana eq_misc8
+	*sound_pickup eq_misc5
+
+	*outofmana_sounddelay 2
+	*outofmana_barflashdelay 1
+
+	*manareg_amount 4
+	*manareg_rate 0.1
+	*manareg_delay 3.0
+
+	*attack_manacost 0
+	*shield_manacost 4
+	*shield_manadrawdelay 0.2
+	*shockwave_manacost 150
+
+	*attack_reloadtime 1.0
+	*shield_duration 0
+	*shockwave_reloadtime 5.0
+	*shockwave_stalltime 1.5
+	*shockwave_delay 0.7
+
+	*attack_camerashake 0, 0, 0
+	*shockwave_camerashake 12, 3, 6
+
+	*attack_posspread 0
+	*attack_dirspread 0
+
+	*attack 
+	*attackeffect 
+	*shield 
+	*shieldimpact 
+	*shockwave
+
+	*shield_model "Particles:MP=10,CO=0,TC=10,FL=nh+hf+ct"
+
+	*shieldattachbone 0
+
+	*magiclight_fadeduration 2
+	*attachmodel "DynLight"
+
+	*ai_type RANGED_MAGICSTAFF
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_cold
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*itemtype 0x10
+	*price 0
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*model "weapons\\ColdStaff"
+	*iconsurface gui_icon_coldstaff
+	*shield_iconsurface gui_icon_shieldcold
+	*shield_attachmodel
+	
+	*attachmodel "DynLight:LO=0 0 50,C0=0xFFA0A0F0,C1=0xFF80A0F0,CFS=1,R0=200,R1=300,RFS=2"
+
+	*sound_attack Stave_Cold01
+	*sound_shieldstart Stave_Cold06
+	*sound_shieldloop Stave_Cold04
+	*sound_shieldend Stave_Cold06
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_Cold07
+
+	*attack_damage 15, cold+blockable
+	*attack_manacost 5
+	*attack_reloadtime 0.2
+
+	*shockwave_manacost 25
+	*shockwave_reloadtime 1.5
+	
+	*attack_camerashake 1, 1, 10
+
+	*attack_posspread 4
+	*attack_dirspread 2
+
+	*attack IceBolt
+//	*attackeffect IceBoltRelease // This is to expensive due to the hi firerate
+	*shield IceShield
+	*shieldimpact IceShieldFlash
+	*shockwave IceNova
+
+	*ai_type RANGED_MAGICSTAFF_COLD
+}
+
+*weapon_staff_cold2
+{
+	*classname weapon_staff_cold
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_poison
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*itemtype 0x10
+	*price 0
+
+	*flags aiming+rpgmodelflags
+
+	*model "weapons\\PoisonStaff"
+	*iconsurface gui_icon_poisonstaff
+	*shield_iconsurface gui_icon_shieldacid
+
+//	*attachmodel "Particles:,,SU=wraith_particle2,,,DUN=4,FI=1,VE=2,VEN=2,AX=0 0 1,AXN=0 0 1,DI=cylinder,,,,,OFN=1,MV0=-2,MV1=2,MV2=-2,MV3=2,MV4=0.2,SZ0=2,SZ1=4,SZ2=0.7,SZ3=1,SZ4=6,RT0=-1,RT1=1,RT2=-1,RT3=1,RT4=0.1,AL0=0.4,,SPA=90,SPB=0,,,,,,,,,,,FS=1"
+//	*attachmodel "Particles:SU=wraith_particle2,MP=100,CO=0x8080F080,DU=2,DUN=1,FI=0.2,AX=0 0 10,OF=50,MV0=-5,MV1=5,MV2=-5,MV3=5,MV4=1,SZ0=3,SZ1=5,SZ2=5,SZ3=7,SZ4=6,RT0=-1,RT1=1,RT2=-1,RT3=1,RT4=0.1,SPA=0,SPB=0,OFB=0.25,TC=0.05,PP=1,FL=quads+ctime"
+//	*attachmodel "Particles:MP=400,SU=wraith_particle2,TS=1,DU=2,DUN=3,FI=0.2,AX=0 0 6,AXN=0 0 2,OF=50,MV0=-3,MV1=3,MV2=-15,MV3=15,MV4=0.3,SZ0=2,SZ1=4,SZ2=5,SZ3=7,SZ4=6,RT0=-1,RT1=1,RT2=-1,RT3=1,RT4=0.1,AL0=0.2,SPA=0,SPB=0,OFB=0.25,PP=2,FS=1,FL=ctime+early"
+	*attachmodel "Particles:MP=200,SU=wraith_particle2,DU=2,DUN=3,FI=0.2,AL0=0.3,LO=0 0 50,AX=0 0 6,AXN=0 0 2,MV0=-3,MV1=3,MV2=-15,MV3=15,MV4=0.3,SZ0=3,SZ1=5,SZ2=5,SPA=0,SPB=0,TC=0.02,FL=ctime"
+	*attachmodel "DynLight:LO=0 0 50,C0=0xFF40F040,C1=0xFF60F060,CFS=2,R0=200,R1=300,RFS=2"
+	
+	*sound_attack Stave_poison01
+
+	*sound_shieldstart Stave_poison06
+	*sound_shieldloop Stave_poison04
+	*sound_shieldend Stave_poison06
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_poison07
+
+	*attack_damage 25, poison+blockable
+	*attack_manacost 15
+	*attack_reloadtime 0.3
+
+	*shockwave_manacost 150
+
+	*attack_camerashake 2, 0.5, 2
+
+	*attack AcidBolt
+	*attackeffect AcidBoltRelease
+	*shield PoisonCloud
+	*shieldimpact 
+	*shockwave AcidWave
+
+	*ai_type RANGED_MAGICSTAFF_POISON
+}
+
+*weapon_staff_poison2
+{
+	*classname weapon_staff_poison
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_lightning
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*itemtype 0x10
+	*price 0
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*model "weapons\\LightStaff"
+	*iconsurface gui_icon_lightstaff
+	*shield_iconsurface gui_icon_shieldlight
+	
+	*attachmodel "DynLight:LO=0 0 18,C0=0xFFA0C0F0,C1=0xFF4060F0,CFS=2,R0=200,R1=300,RFS=2"
+
+	*sound_attack Stave_light01
+
+	*sound_shieldstart Stave_light06
+	*sound_shieldloop Stave_light04
+	*sound_shieldend Stave_light06
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_light07
+
+	*attack_damage 40, magic+blockable
+	*attack_manacost 30
+	*attack_reloadtime 0.8
+
+	*shockwave_manacost 150
+
+//	*attack_camerashake 10, 1, 6
+
+	*attack LightningStrike
+	*attackeffect LightningStrikeRelease
+	*shield ElectricShield
+	*shieldimpact ElectricImpact
+	*shockwave ElectricShockwave
+
+	*ai_type RANGED_MAGICSTAFF_LIGHTNING
+}
+
+*weapon_staff_lightning2
+{
+	*classname weapon_staff_lightning
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_darkness
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*price 0
+	*itemtype 0x10
+
+	*model "weapons\\DoomStaff"
+	*iconsurface gui_icon_doomstaff
+	*shield_iconsurface gui_icon_shielddark
+	
+	*attachmodel "DynLight:LO=0 0 25,C0=0xFFF04040,C1=0xFFF08080,CFS=2,R0=200,R1=300,RFS=2"
+
+	*sound_attack Stave_dark01a
+
+	*sound_shieldstart Stave_dark05
+	*sound_shieldloop Stave_dark04
+	*sound_shieldend Stave_dark05
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_dark07
+
+	*attack_damage 45, magic+blockable
+	*attack_manacost 30
+	*attack_reloadtime 0.7
+
+	*shockwave_manacost 150
+
+	*attack_camerashake 1, 0.5, 1
+
+	*attack DarknessBlast
+	*attackeffect DarknessRelease
+	*shield DarknessShield
+	*shieldimpact DarknessShieldImpact
+	*shockwave DarknessWave
+
+	*ai_type RANGED_MAGICSTAFF_DARKNESS
+}
+
+*weapon_staff_darkness2
+{
+	*classname weapon_staff_darkness
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_mind
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*price 0
+	*itemtype 0x10
+
+	*model "weapons\\MindStaff"
+	*iconsurface gui_icon_Mindstaff
+	*shield_iconsurface gui_icon_shieldmind
+	
+	*attachmodel "DynLight:LO=0 0 50,C0=0xFFC080F0,C1=0xFFC080F0,CFS=2,R0=200,R1=250,RFS=1"
+
+	*sound_attack Stave_mind01a
+
+	*sound_shieldstart Stave_mind05
+	*sound_shieldloop Stave_mind04
+	*sound_shieldend Stave_mind05
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_mind07
+
+	*attack_damage 55, magic+blockable
+	*attack_manacost 50
+	*attack_reloadtime 0.4
+
+	*shockwave_manacost 175
+
+	*attack_camerashake 1.5, 0.3, 1.5
+
+	*attack MindBlast
+	*attackeffect MindRelease
+	*shield MindShield
+	*shieldimpact MindShieldImpact
+	*shockwave MindWave
+
+	*ai_type RANGED_MAGICSTAFF_MIND
+}
+
+*weapon_staff_mind2
+{
+	*classname weapon_staff_mind
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_fire
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*flags aiming+rpgmodelflags	
+
+	*price 0
+	*itemtype 0x10
+
+	*model "weapons\\SunStaff"
+	*iconsurface gui_icon_sunstaff
+	*shield_iconsurface gui_icon_shieldfire
+	
+	*attachmodel "DynLight:LO=0 0 50,C0=0xFFF08040,C1=0xFFF0A040,CFS=4,R0=200,R1=300,RFS=4"
+
+	*sound_attack Stave_Fire01
+
+	*sound_shieldstart Stave_Fire06
+	*sound_shieldloop Stave_Fire04
+	*sound_shieldend Stave_Fire06
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave 
+
+	*attack_damage 65, fire+blockable
+	*attack_manacost 30
+	*attack_reloadtime 1.0
+
+	*shockwave_manacost 200
+
+	*attack_camerashake 2, 2, 4
+
+	*attack FireBall
+	*attackeffect FireBallRelease
+	*shield FireAura
+	*shieldimpact FireAuraFlash
+	*shockwave FireWave
+
+	*ai_type RANGED_MAGICSTAFF_FIRE
+}
+
+*weapon_staff_fire2
+{
+	*classname weapon_staff_fire
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_spirit
+{
+	*classname template_staff
+	*rpgclass StaffSummon
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*price 0
+	*itemtype 0x10
+
+	*skill summon
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+	*shield_iconsurface gui_icon_shielddruid
+	
+	*attachmodel "DynLight:LO=0 0 20,C0=0xFF80C0F0,C1=0xFFF0F000,CFS=1,R0=200,R1=300,RFS=1"
+
+	*sound_attack stave_spirit01a
+	*sound_summonfail 
+	*sound_shieldstart stave_spirit05
+	*sound_shieldloop stave_spirit04
+	*sound_shieldend stave_spirit05
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave stave_spirit07
+
+	*attack_manacost 50
+	*attack_reloadtime 0.3
+
+	*shockwave_manacost 50
+	*shockwave_reloadtime 1.5
+
+	*summon_maxcompisar 1
+	*summon_compisduration 20
+
+	*summon_threshold 0.6 // 
+	*summon_manacost 150
+	*summon_reloadtime 2.0
+	*summon_stalltime 3.5
+	*summon_delay 3.5 // Sync with animation
+	*summon_minrange 50 // Minimum distance away from caster where companion can be spawned.
+	*summon_maxrange 150 // Maximum distance away from caster where companion can be spawned.
+	*summon_margin 30 // Margin distance away from any nearby wall that the companion needs.
+
+	*attack_camerashake 2, 1, 6
+	*summon_camerashake 4, 1, 6
+
+	*attack VultureSpirit
+	*attackeffect VultureRelease
+	*summon AI_Golem_Summon
+	*summoneffect SpiritSummonStream
+	*summonfail hiteffect_electric
+//	*shield SpiritShield
+//	*shieldimpact SpiritShieldImpact
+//	*shockwave SpiritShockwave
+
+	*shield LeafShield
+	*shockwave DivineStrike
+
+	*shield_model "Particles:MP=200,CO=0xF08080F0,CON=0x00202020,DU=0.8,DUN=0.8,FI=0.1,VE=1,VEN=2,MV0=-2,MV1=2,MV2=-5,MV3=5,MV4=0.5,SZ0=2,SZ1=7,SZ2=2,SZ3=7,SZ4=3,TC=0.02,FL=hf+ct+sof"
+
+//	*shieldattachbone 8
+
+	*ai_type RANGED_MAGICSTAFF_SPIRIT
+}
+
+*weapon_staff_spirit2
+{
+	*classname weapon_staff_spirit
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_doom
+{
+	*classname template_staff
+	*rpgclass StaffSummon
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*price 0
+	*itemtype 0x10
+
+	*skill summon
+
+	*model "weapons\\StaffofDoom"
+	*iconsurface gui_icon_staffofdoom
+	*shield_iconsurface gui_icon_shielddoom
+
+	*attachmodel "DynLight:LO=0 0 50,C0=0xFFF04040,C1=0xFFF08080,CFS=2,R0=200,R1=300,RFS=2"
+
+	*sound_attack stave_doom01a
+	*sound_summonfail
+	*sound_shieldstart stave_doom05
+	*sound_shieldloop stave_doom04
+	*sound_shieldend stave_doom05
+	*sound_shieldimpact Forc_fire206 
+	*sound_shockwave stave_doom07
+
+	*attack_manacost 50
+	*attack_reloadtime 0.3
+
+	*shockwave_manacost 50
+	*shockwave_reloadtime 1.5
+
+	*summon_maxcompisar 1
+	*summon_compisduration 20
+
+	*summon_threshold 0.6
+	*summon_manacost 150
+	*summon_reloadtime 2.0
+	*summon_stalltime 3.5
+	*summon_delay 3.5 // Sync with animation
+	*summon_minrange 50 // Minimum distance away from caster where companion can be spawned.
+	*summon_maxrange 150 // Maximum distance away from caster where companion can be spawned.
+	*summon_margin 30 // Margin distance away from any nearby wall that the companion needs.
+
+	*attack_camerashake 4, 1.0, 6
+	*summon_camerashake 6, 2.5, 8
+
+	*attack WraithSpirit
+	*attackeffect WraithRelease
+	*summon AI_Skeleton_Summon
+	*summoneffect DoomSummonStream
+	*summonfail DoomShieldImpact
+	*shield DoomShield
+	*shieldimpact DoomShieldImpact
+	*shockwave DoomShockwave
+	*shield_model "Particles:SU=CloudBall,MP=200,CO=0x80000000,CON=0x00202020,DU=0.8,DUN=0.8,FI=0.1,VE=1,VEN=2,MV0=-2,MV1=2,MV2=-5,MV3=5,MV4=0.5,SZ0=2,SZ1=7,SZ2=2,SZ3=7,SZ4=3,TC=0.02,FL=hf+ct+sof"
+				
+	*ai_type RANGED_MAGICSTAFF_SPIRIT
+}
+
+*weapon_staff_doom2
+{
+	*classname weapon_staff_doom
+	*itemtype 0x11
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_assembly
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*model "weapons\\AssemblyStaff"
+	*iconsurface gui_icon_AssemblyStaff
+	*shield_iconsurface gui_icon_shieldassembly
+	
+	*sound_attack Stave_mag101a
+
+	*sound_shieldstart Stave_mag105
+	*sound_shieldloop Stave_mag104
+	*sound_shieldend Stave_mag105
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_mag107
+
+	*attack_damage 40, magic+blockable
+	*attack_manacost 10
+	*attack_reloadtime 1.0
+
+	*attack_camerashake 2, 0.5, 2
+
+	*attack AssemblyBlast
+	*attackeffect AssemblyRelease
+	*shield AssemblyShield
+	*shieldimpact AssemblyShieldImpact
+	*shockwave AssemblyWave
+
+	*ai_type RANGED_MAGICSTAFF_ASSEMBLY
+}
+
+
+//----------------------------------------------------------------------
+
+*weapon_staff_queen
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*model "weapons\\Sceptre"
+	*iconsurface gui_icon_QueenStaff
+	*shield_iconsurface gui_icon_shieldqueen
+	
+	*sound_attack Stave_mag101a
+
+	*sound_shieldstart Stave_mag105
+	*sound_shieldloop Stave_mag104
+	*sound_shieldend Stave_mag105
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_mag107
+
+	*attack_damage 100, magic+blockable
+	*attack_manacost 10
+	*attack_reloadtime 1.0
+
+	*attack_camerashake 2, 0.5, 2
+
+	*attack QueenBlast
+	*attackeffect QueenRelease
+	*shield QueenShield
+	*shieldimpact QueenShieldImpact
+	*shockwave QueenWave
+
+	*ai_type RANGED_MAGICSTAFF_QUEEN
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_mordessa
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*flags aiming+autoaim+rpgmodelflags
+
+	*itemtype 0x11
+	// new characters - adding price
+	*price 0
+
+	*model "weapons\\MordessaStaff"
+	*iconsurface gui_icon_MordessaStaff
+	*shield_iconsurface gui_icon_shieldfire
+
+	// adding the fire color glow
+	*attachmodel "DynLight:LO=0 0 50,C0=0xFFF08040,C1=0xFFF0A040,CFS=4,R0=200,R1=300,RFS=4"
+	
+	*sound_attack Stave_mag201a
+
+	*sound_shieldstart Stave_mag205
+	*sound_shieldloop Stave_mag204
+	*sound_shieldend Stave_mag205
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_mag207
+
+	*attack_damage 45, magic+blockable
+	*attack_manacost 45
+	*attack_reloadtime 1.5
+
+	*attack_camerashake 2, 2, 4
+
+	*attack mordessa_ball
+	*attackeffect mordessa_ball_release
+	*shield mordessa_aura
+	*shieldimpact mordessa_aura_flash
+	*shockwave mordessa_wave
+
+	*ai_type RANGED_MAGICSTAFF_MORDESSA
+}
+// For characters with it in main-hand
+*weapon_staff_mordessa1
+{
+	*classname weapon_staff_mordessa
+	*itemtype 0x10
+}
+
+//----------------------------------------------------------------------
+
+*weapon_staff_earthspirit
+{
+	*classname template_staff
+	*rpgclass StaffFire
+
+	*flags aiming+rpgmodelflags
+
+	*itemtype 0x16
+
+	*model "weapons\\earthspirit"
+	*iconsurface gui_icon_earthspirit
+	*shield_iconsurface gui_icon_shieldzale
+
+	// add astral staff glow
+	*attachmodel "DynLight:LO=0 0 20,C0=0xFF80C0F0,C1=0xFFF0F000,CFS=1,R0=200,R1=300,RFS=1"
+		
+	*sound_attack Stave_mag209
+	
+	*sound_shieldstart Stave_mag205
+	*sound_shieldloop Stave_mag204
+	*sound_shieldend Stave_mag205
+	*sound_shieldimpact Forc_metal06
+	*sound_shockwave Stave_mag207
+
+	*attack_camerashake 2, 2, 4
+
+	*attack_damage 75, magic+special+blockable
+	*attack_manacost 20
+	*attack_reloadtime 1.25
+
+	*attack zale_projectile
+	*attackeffect zale_release
+	*shield zale_shield
+	*shieldimpact zale_shieldimpact
+	*shockwave zale_shockwave
+
+	*ai_type RANGED_MAGICSTAFF_ZALE
+}
+*weapon_staff_earthspirit1
+{
+	*classname weapon_staff_earthspirit
+	*itemtype 0x10
+	*price 0
+}
+*weapon_staff_earthspirit2
+{
+	*classname weapon_staff_earthspirit1
+	*itemtype 0x11
+}
