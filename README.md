@@ -10,6 +10,7 @@
 <br>-A "No Shield Slot" option that represents an invisible shield to ensure 100% playability without
 <br>+includes the "wizard bugfix" which prevents Wizard class from obtaining a damage bonus, like Sorceress
 <br>+includes a complete new challenge map for Light Side, "[Northern Watch](https://github.com/landonrivers/EnclaveRegistry/tree/northern-watch)" (Unlocked from start)
+<br>+No Startup Logo Videos
 <br>**OPTIONAL**
 <br>-Everything is free! Weapons, Armors, Shields, Staffs, Bows, Crossbows, Ammo and Potions.
 <br>-Play each level from the beginning, all levels unlocked
