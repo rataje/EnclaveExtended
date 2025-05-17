@@ -1,0 +1,716 @@
+//----------------------------------------------------------------------
+//- JUNK? -------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*weapon_sword_particles
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 150
+
+	*model "weapons\\FrostSword"
+	*iconsurface gui_icon_frostsword
+
+	*attachmodel "Particles:SU=Glimmer1,MP=500,DU=0.3,FI=0.0,OF=22,OFN=25,MV0=-1,MV1=1,MV2=-2,MV3=2,MV4=1,SZ0=3,SZ1=5,SZ2=3,SZ3=5,SZ4=3,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,SPA=0,SPB=0,OFB=0.25,TC=0.01,PP=1,FL=spline+ctime+early"
+	*attachangles 0,0.24,0.92	
+}
+
+//----------------------------------------------------------------------
+
+*weapon_dragonbreath
+{
+//	*classname template_weapon_magic
+	*rpgclass summon
+
+	*itemtype 0
+
+	*skill magic
+	*damagetype magic+fire+blockable
+
+	*spawn projectile_dragonbreathflame
+	*damage 20, fire, 0.1
+	*reloadtime 0.1
+
+	*sound_cast firebolt1
+
+	*model "weapons\\Invisible"
+	*attachpoint 5
+	*attachrottrack 12
+	*muzzleattachpoint 0
+	*anim_stance animlist:196
+	*anim_attack animlist:218
+
+	*ai_type RANGED_DRAGONBREATH
+}
+
+*weapon_dragonball
+{
+//	*classname template_weapon_magic
+	*rpgclass summon
+
+	*itemtype 1
+
+	*skill magic
+	*damagetype explosive+fire+blockable
+
+	*spawn projectile_dragonball
+	*damage 100, fire+explosive
+
+	*reloadtime 1.0
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_DRAGONBALL
+	*anim_stance animlist:196
+	*anim_attack animlist:218
+
+	*model "weapons\\Invisible"
+	*attachpoint 5
+	*attachrottrack 12
+	*muzzleattachpoint 0
+}
+
+//----------------------------------------------------------------------
+
+*weapon_lavaball
+{
+	*anim_stance animlist:112
+	*anim_attack animlist:134
+	
+	*rpgclass summon
+	*spawn lavaball
+
+	*damagetype explosive+fire
+	*skill magic
+
+	*flags aiming
+
+	*price 0
+	*itemtype 1
+	*attachpoint 0
+	*attachrottrack 15
+	*muzzleattachpoint 2
+	*model "weapons\\Invisible"
+
+	*attachangles 0,0.25,0
+		
+	*reloadtime 3
+	*summondelay 1.05
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_MAGICBALL
+}
+
+*weapon_lavaball_spawn
+{
+	*classname weapon_lavaball
+	*itemtype 0
+	*spawn lavaball_spawn
+	*ai_type RANGED_SPAWNBALL
+}
+
+
+*weapon_quakefist
+{
+	*anim_stance animlist:112
+	*anim_attack animlist:137
+
+	*rpgclass summon
+	*spawn quakestrike
+
+	*skill unarmed
+
+	*sound_hitworld IMP_Magic2
+	*sound_hitchar IMP_Magic2
+	*sound_anim1 mel_magic02
+
+	*damagetype explosive+fire
+
+	*price 0
+	*itemtype 2
+
+	*attachangles 0,0.25,0
+	
+	*reloadtime 4
+	*summondelay 1.7
+
+	*ai_type MELEE_QUAKEFIST
+}
+
+// --------------------------------------------------------------------------
+
+*weapon_vatarprojectile
+{
+
+	*rpgclass summon
+	*spawn vatarprojectile
+	*model "weapons\\Invisible"
+
+	*damagetype explosive+fire
+	*skill magic
+
+	*flags aiming
+
+	*itemtype 2
+
+	*attachangles 0,0.25,0
+	
+	*reloadtime 1.5
+	*summondelay 0.8
+	*attachpoint 0
+	*attachrottrack 15
+	*muzzleattachpoint 2
+
+
+	*anim_stance animlist:112
+	*anim_attack animlist:134
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_MAGICBALL
+}
+
+*weapon_vatarhoming
+{
+
+	*rpgclass summon
+	*spawn vatarhoming
+	*model "weapons\\Invisible"
+
+	*damagetype explosive+fire
+	*skill magic
+
+	*flags aiming
+
+	*itemtype 1
+
+	*attachangles 0,0.25,0
+	
+	*reloadtime 1.5
+	*summondelay 0.8
+	*attachpoint 0
+	*attachrottrack 15
+	*muzzleattachpoint 2
+
+
+	*anim_stance animlist:112
+	*anim_attack animlist:134
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_MAGICBALL
+}
+
+
+*weapon_vatarstomp
+{
+
+	*rpgclass summon
+	*spawn vatarstomp
+
+	*damagetype explosive+fire
+	*skill magic
+
+	*itemtype 4
+	*attachpoint 1
+	*attachrottrack 19
+
+	*attachangles 0,0.25,0
+	
+	*reloadtime 1
+	
+	*anim_stance animlist:112
+	*anim_attack animlist:137
+
+	*summondelay 0.8
+
+	*ai_type MELEE_VATARSTOMP
+}
+
+*weapon_vatarbomb
+{
+	*rpgclass releasesummon
+	*spawn vatarbomb
+	
+	*damagetype explosive
+	*skill magic
+
+	*model1 "Particles:MP=200,SU=FireBallFire,CO=0x30009000,DU=0.5,FI=0.1,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-4,MV1=4,MV2=-10,MV3=10,MV4=2,SZ0=20,SZ1=30,SZ2=30,SZ3=40,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,PP=2,FS=0.01,FL=quads+fadestill"
+	*model0 "Particles:MP=100,SU=FireBallSmoke,CO=0xFF009000,DU=1,FI=0.5,VE=15,VEN=10,AX=0 0 50,AXN=0 0 20,MV0=-10,MV1=10,MV2=-10,MV3=10,MV4=2,SZ0=20,SZ1=30,SZ2=60,SZ3=80,SZ4=1,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,FS=0.01,FL=quads+fadestill"
+
+	*attachangles 0,0.24,0.92
+
+	*chargetime 1
+	*reloadtime 1
+
+	*itemtype 3
+
+	*flags aiming
+
+	*attachangles 0,0.25,0
+	
+	*reloadtime 3
+	*summondelay 0.5
+	*attachpoint 0
+	*attachrottrack 15
+	*muzzleattachpoint 2
+
+	*anim_stance animlist:112
+	*anim_attack animlist:134
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_BOMB
+
+}
+
+//--------------------------------------------------------
+
+*weapon_fire_bolt
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*spawn projectile_firebolt
+
+	*flags autoaim
+
+	*price 0
+	*itemtype 1
+
+	*model "weapons\\SunStaff"
+	*iconsurface gui_icon_sunstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 1.5
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_MAGICBOLT
+}
+
+*weapon_fire_ball
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*spawn projectile_rocketlauncher
+
+	*flags autoaim
+
+	*price 0
+	*itemtype 0
+
+	*reloadtime 3
+
+	*model "weapons\\SunStaff"
+	*iconsurface gui_icon_sunstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+
+	*sound_cast firebolt1
+
+	*ai_type RANGED_MAGICBALL
+}
+
+*weapon_fire_wall
+{
+	*classname template_weapon_magic
+	*rpgclass targetsummon
+	*spawn circle_fire
+
+	*price 0
+	*itemtype 1
+
+	*effect effect_fireray
+	*range 512
+	*time 40
+
+	*model "weapons\\SunStaff"
+	*iconsurface gui_icon_sunstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+
+	*sound_cast firewall1
+
+	*ai_type RANGED_MAGICWALL
+}
+
+*weapon_MordessaStaff2
+{
+	*classname template_weapon_magic
+	*rpgclass multiraysummon
+	*spawn ZapperExplosion
+	*effect ray_zapper
+
+	*flags autoaim
+
+	*price 0
+	*itemtype 1
+
+	*model "weapons\\Mordessastaff"
+	*iconsurface gui_icon_mordessastaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+
+	*rays 1
+	*damage 80
+	*scatter 0
+	*impactforce 10
+	*range 4096
+	*reloadtime 2
+	*spawntype 1
+
+	*sound_cast Zapp1
+
+	*ai_type RANGED_MAGICZAP
+}
+
+*weapon_lightning_strike
+{
+	*classname template_weapon_magic
+	*rpgclass multiraysummon
+	*spawn ZapperExplosion
+	*effect ray_zapper
+
+	*flags autoaim
+
+	*price 0
+	*itemtype 0
+
+	*model "weapons\\DoomStaff"
+	*iconsurface gui_icon_doomstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+
+	*rays 1
+	*damage 40
+	*scatter 0
+	*impactforce 10
+	*range 4096
+	*reloadtime 2
+	*spawntype 1
+
+	*sound_cast Zapp1
+
+	*ai_type RANGED_MAGICZAP
+}
+
+*weapon_lightning_strike_wizard
+{
+	*classname template_weapon_magic
+	*rpgclass multiraysummon
+	*spawn ZapperExplosion
+	*effect ray_zapper
+
+	*flags autoaim
+
+	*price 0
+	*itemtype 0
+
+	*model "weapons\\LightStaff"
+	*iconsurface gui_icon_lightstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+
+	*rays 1
+	*damage 80
+	*scatter 0
+	*impactforce 25
+	*range 4096
+	*reloadtime 1.5
+	*spawntype 1
+
+	*sound_cast Zapp1
+
+	*ai_type RANGED_MAGICZAP
+}
+
+*weapon_lightning_strike_zale
+{
+	*classname template_weapon_magic
+	*rpgclass multiraysummon
+	*spawn ZapperExplosion_zale
+	*effect ray_zapper_zale
+
+	*flags autoaim
+
+	*price 0
+	*itemtype 0
+
+	*model "weapons\\sunstaff"
+	*iconsurface gui_icon_sunstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+
+	*rays 1
+	*damage 180
+	*scatter 0
+	*impactforce 25
+	*range 4096
+	*reloadtime 2
+	*spawntype 1
+
+	*sound_cast Zapp1
+
+	*ai_type RANGED_MAGICZAP
+}
+
+*weapon_lightning_strike_zaleboss
+{
+	*classname template_weapon_magic
+	*rpgclass multiraysummon
+	*spawn ZapperExplosion_zale
+	*effect ray_zapper_zale
+
+	*flags autoaim
+
+	*price 0
+	*itemtype 0
+
+	*model "weapons\\poisonstaff"
+	*iconsurface gui_icon_sunstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+
+	*rays 1
+	*damage 50
+	*scatter 0
+	*impactforce 25
+	*range 4096
+	*reloadtime 2
+	*spawntype 1
+
+	*sound_cast Zapp1
+
+	*ai_type RANGED_MAGICZAP
+}
+
+*weapon_mind_daggers
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*spawn projectile_minddagger
+
+	*flags autoaim
+
+	*model "weapons\\LightStaff"
+	*iconsurface gui_icon_lightstaff
+	*attachangles 0,0.25,0
+	*itemtype 3
+
+	*reloadtime 0.2
+
+	*ai_type RANGED_MAGICBOLT
+}
+
+*weapon_cold_storm
+{
+	*classname template_weapon_magic
+	*rpgclass targetsummon
+	*spawn circle_blizzard
+	*effect effect_iceray
+
+	*price 0
+	*itemtype 1
+
+	*model "weapons\\DoomStaff"
+	*iconsurface gui_icon_doomstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	*reloadtime 1.5
+
+	*range 512
+	*time 40
+
+	*sound_cast IceRain1
+
+	*ai_type RANGED_MAGICWALL
+}
+
+*weapon_test_dustcloud
+{
+	*classname template_weapon_magic
+	*rpgclass targetsummon
+	*range 512
+	*spawn test_dustcloud
+
+	*price 0
+	*itemtype 5
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 0.2
+}
+
+*weapon_test_glimmer
+{
+	*classname template_weapon_magic
+	*rpgclass targetsummon
+	*range 512
+	*spawn test_glimmer
+
+	*price 0
+	*itemtype 6
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 0.2
+}
+
+*weapon_test_electric
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*range 512
+	*spawn test_electric
+
+	*price 0
+	*itemtype 2
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 0.2
+}
+
+*weapon_test_teleportsuck
+{
+	*classname template_weapon_magic
+	*rpgclass targetsummon
+	*range 512
+	*spawn test_teleportsuck
+
+	*price 0
+	*itemtype 3
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 0.2
+}
+
+*weapon_test_leafdripper
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*range 512
+	*spawn leafdripper
+
+	*price 0
+	*itemtype 4
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 0.2
+}
+
+*weapon_sword_test
+{
+	*classname weapon_sword_long
+	*attachmodel0 "Particles:DU=1,CO=0xFFFF0000,VE=5,FL=ct"
+	*attachmodel1 "Particles:DU=1,CO=0xFF00FF00,VE=10,FL=ct"
+	*attachmodel2 "FireTorch:100,0,1"
+}
+
+*weapon_test_fire
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*range 512
+	*spawn test_fire
+
+	*price 0
+	*itemtype 1
+
+	*model "weapons\\SunStaff"
+	*iconsurface gui_icon_sunstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 1.0
+}
+
+*weapon_shockwave
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*range 512
+//	*spawn shockwave
+	*spawn butterfly
+
+	*price 0
+	*itemtype 0
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 0.05
+}
+
+*weapon_test_explosion
+{
+	*classname template_weapon_magic
+	*rpgclass summon
+	*range 4096
+	*spawn instant_explosion
+
+	*price 0
+	*itemtype 0
+
+	*model "weapons\\MagicStaff1"
+	*iconsurface gui_icon_magicstaff
+//	*attachpoint 1
+//	*attachrottrack 19
+	*attachangles 0,0.25,0
+	
+	*reloadtime 0.2
+}
+
+*weapon_wraith
+{
+	*rpgclass spheredamage
+
+	*damagetype magic
+	
+	*sound_hitchar Wra_atksml01
+
+	*damage 10
+	*force 5
+	*hitradius 8
+	*itemtype 0
+	*reloadtime 1
+
+	*ai_type MELEE_WRAITH
+}

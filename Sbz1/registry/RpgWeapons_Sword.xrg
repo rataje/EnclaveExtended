@@ -1,0 +1,392 @@
+//----------------------------------------------------------------------
+//- SWORD -------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*weapon_sword_short
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 20
+	*impactforce 5
+	
+	*animtimescale 0.9
+
+	*model "weapons\\ShortSword"
+	*iconsurface gui_icon_shortsword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+
+	*spawn_hit hiteffect_shortsword
+	*spawn_special hiteffect_shortsword_special
+}
+
+*weapon_sword_lightshort
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 20
+	*impactforce 5
+
+	*animtimescale 0.91
+
+	*model "weapons\\LightShortSword"
+	*iconsurface gui_icon_lightshsword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.8
+
+	*spawn_hit hiteffect_shortsword
+	*spawn_special hiteffect_shortsword_special
+}
+
+*weapon_sword_broad
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 30
+	*impactforce 6
+
+	*animtimescale 0.92
+
+	*model "weapons\\BroadSword"
+	*iconsurface gui_icon_broadsword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.75
+
+	*spawn_hit hiteffect_broadsword
+	*spawn_special hiteffect_broadsword_special
+}
+
+*weapon_sword_long
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 40
+	*impactforce 7
+
+	*animtimescale 0.93
+
+	*model "weapons\\IronSword"
+	*iconsurface gui_icon_ironsword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.7
+
+	*spawn_hit hiteffect_longsword
+	*spawn_special hiteffect_longsword_special
+}
+
+*weapon_sword_scimitar
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 60
+	*impactforce 8
+
+	*animtimescale 0.94
+
+	*model "weapons\\Scimitar"
+	*iconsurface gui_icon_scimitar
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.7
+
+	*spawn_hit hiteffect_scimitar
+	*spawn_special hiteffect_scimitar_special
+}
+
+*weapon_sword_dwarven
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 70
+	*impactforce 9
+
+	*animtimescale 0.95
+
+	*model "weapons\\LightSword"
+	*iconsurface gui_icon_lightsword
+	*attachmodel "DoubleTrail:TRAIL_DWARVENSWORD,2,3"
+	*attachangles 0,0.24,0.92
+	
+	*sound_cast MEL_SWING01
+	*sound_hitworld IMP_GRND01
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.65
+
+	*spawn_hit hiteffect_dwarvensword
+	*spawn_special hiteffect_dwarvensword_special
+}
+
+*weapon_sword_sabre
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 80
+	*impactforce 11
+
+	*animtimescale 0.96
+
+	*model "weapons\\Sabre"
+	*iconsurface gui_icon_Sabre
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.6
+
+	*spawn_hit hiteffect_sabre
+	*spawn_special hiteffect_sabre_special
+}
+
+*weapon_sword_falchion
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 90
+	*impactforce 12
+
+	*animtimescale 0.97
+
+	*model "weapons\\Falchion"
+	*iconsurface gui_icon_falchion
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.6
+
+	*spawn_hit hiteffect_falchion
+	*spawn_special hiteffect_falchion_special
+}
+
+*weapon_sword_bastard
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 140
+	*impactforce 13
+
+	*animtimescale 0.98
+
+	*model "weapons\\BastardSword"
+	*iconsurface gui_icon_bastardsword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.75
+	//*melee_combomultiplier2 2.5
+	//*melee_combotimegap 0.55
+
+	*spawn_hit hiteffect_bastard
+	*spawn_special hiteffect_bastard_special
+}
+
+*weapon_sword_warrior
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 200
+	*impactforce 14
+
+	*animtimescale 0.99
+		
+	*model "weapons\\warriorblade"
+	*iconsurface gui_icon_warriorblade
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 3.0
+	//*melee_combotimegap 0.55
+
+	*spawn_hit hiteffect_ehrick
+	*spawn_special hiteffect_ehrick_special
+}
+
+*weapon_sword_fire
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 300
+	*damagetype fire+blockable
+	*impactforce 15
+	
+	*animtimescale 1.0
+
+	*sound_anim1 mel_fire01
+	*sound_hitchar imp_fire
+
+	*iconsurface gui_icon_firesword
+	*model "weapons\\FireSword"
+
+	*attachmodel0 "Particles:MP=500,CO=0x60C06020,DU=0.2,DUN=0.3,FI=0.05,AX=0 0 80,AXN=0 0 80,OF=34,OFN=50,MV0=-1,MV1=1,MV2=-2,MV3=2,MV4=1,SZ0=5,SZ2=5,,SZ4=3,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,SPA=0,SPB=0,OFB=0.25,TC=0.005,PP=10,FL=quads+ctime+early"
+	*attachangles 0,0.24,0.92
+
+	*damage_effect attach_firesword
+	*spawn_hit hiteffect_firesword
+	*spawn_special hiteffect_firesword_special
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.5
+}
+
+*weapon_sword_frost
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 60
+	*damagetype cold+blockable
+	*impactforce 15
+
+	*animtimescale 1.0
+
+	*itemtype 0x12
+	*flags none
+
+	*sound_anim1 mel_frost01
+	*sound_hitchar imp_frost
+
+	*model "weapons\\FrostSword"
+	*iconsurface gui_icon_frostsword
+
+	*attachmodel0 "Particles:SU=CloudBall,MP=250,CO=0x10A0C0F0,DU=0.4,DUN=0.1,FI=0.05,OF=34,OFN=50,MV0=-2,MV1=2,MV2=-2,MV3=2,MV4=1,SZ0=10,SZ1=10,SZ2=15,SZ3=15,SZ4=3,RT0=-2,RT1=2,RT2=-2,RT3=2,RT4=1,SPA=0,SPB=0,OFB=0.25,TC=0.005,PP=4,FS=0.35,FL=qd+ct+erl"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 2.0
+	//*melee_combotimegap 0.5
+
+	*spawn_hit hiteffect_frostsword
+	*spawn_special hiteffect_frostsword_special
+}
+
+*weapon_sword_frost2
+{
+	*classname weapon_sword_frost
+
+	*itemtype 0
+}
+
+*weapon_sword_shortancient
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 20
+	*impactforce 5
+
+	*model "weapons\\AncientShortSword"
+	*iconsurface gui_icon_ancientshortsw
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+	
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.3
+	
+	*spawn_hit hiteffect_shortsword
+	*spawn_special hiteffect_shortsword_special
+}
+
+*weapon_sword_ancient
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 30
+	*impactforce 7
+
+	*model "weapons\\AncientSword"
+	*iconsurface gui_icon_ancientsword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.3
+	
+	*spawn_hit hiteffect_longsword
+	*spawn_special hiteffect_longsword_special
+}
+
+*weapon_sword_mordessa
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 100
+	*impactforce 8
+
+	*animtimescale 1.2
+
+	*model "weapons\\MordSword"
+	*iconsurface gui_icon_mordessasword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.25
+	//*melee_combomultiplier2 1.5
+	//*melee_combotimegap 0.5
+	
+	*spawn_hit hiteffect_mordessa
+	*spawn_special hiteffect_mordessa_special
+}
+
+*weapon_sword_assembly
+{
+	*classname template_weapon_sword
+	*price 0
+	*damage 50
+	*impactforce 9
+
+	*animtimescale 1.1
+
+	*model "weapons\\AssemblySword"
+	*iconsurface gui_icon_AssemblySword
+	*attachmodel "DoubleTrail:Trail_Sword02,2,3"
+	*attachangles 0,0.24,0.92
+
+	//*melee_combomultiplier0 1.0
+	//*melee_combomultiplier1 1.5
+	//*melee_combomultiplier2 3.0
+	//*melee_combotimegap 0.5
+	
+	*spawn_hit hiteffect_assembly
+	*spawn_special hiteffect_assembly_special
+}
+

@@ -1,0 +1,154 @@
+//----------------------------------------------------------------------
+//- CROSSBOW -----------------------------------------------------------
+//----------------------------------------------------------------------
+
+*weapon_crossbow_light
+{
+	*classname template_weapon_crossbow
+	*price 0
+
+	*model weapons\LightCrossbow
+	*iconsurface gui_icon_lightcrossbow
+	*attachangles 0,0.25,-0.10
+	*sound_cast cbw_cross02
+	//*sound_hitworld IMP_ARROW
+	//*sound_lrp LRP01
+	
+	*range 1024
+
+	*scatter 0.005
+	*reloadtime 1.25
+	*damage 35, pierce+blockable
+	*magazinesize 1
+	*impactforce 10
+}
+
+*weapon_crossbow_dwarven
+{
+	*classname template_weapon_crossbow
+	*price 0
+
+	*model weapons\Crossbow2
+	*iconsurface gui_icon_dwarvencrossbo
+	*attachangles 0,0.25,-0.10
+	*sound_cast cbw_cross04
+	//*sound_hitworld IMP_ARROW
+	//*sound_lrp LRP01
+
+	*range 1024
+
+	*scatter 0.01
+	*reloadtime 0.7
+	*damage 40, pierce+blockable
+	*magazinesize 2
+	*impactforce 12
+}
+
+*weapon_crossbow_heavy
+{
+	*classname template_weapon_crossbow
+	*price 0
+
+	*model weapons\HeavyCrossbow
+	*iconsurface gui_icon_heavycrossbow
+	*attachangles 0,0.25,-0.10
+	*sound_cast cbw_cross03
+	//*sound_hitworld IMP_ARROW2
+	//*sound_lrp LRP02
+
+	*range 2048
+
+	*scatter 0.01
+	*reloadtime 0.8
+	*damage 65, pierce+blockable
+	*magazinesize 1
+	*impactforce 20
+}
+
+*weapon_crossbow_repeating
+{
+	*classname template_weapon_crossbow
+	*price 0
+
+	*model weapons\RepeatingCrossbow
+	*iconsurface gui_icon_repeatingcross
+	*attachangles 0,0.25,-0.10
+	*sound_cast cbw_cross05
+	//*sound_hitworld IMP_ARROW3
+	//*sound_lrp LRP03
+
+	*range 512
+
+	*scatter 0.02
+	*reloadtime 0.5
+	*damage 55, pierce+blockable
+	*magazinesize 8
+	*impactforce 5
+}
+
+*weapon_crossbow_magic
+{
+	*classname template_weapon_crossbow
+	*price 0
+
+	*model weapons\MagicCrossBow
+	*iconsurface gui_icon_magiccrossbow
+	*attachangles 0,0.25,-0.10
+
+	*range 4096
+
+	*scatter 0.01
+	*reloadtime 0.8
+	*damage 80, pierce+blockable
+	*magazinesize 240
+	*impactforce 20
+}
+
+*weapon_crossbow_special
+{
+	*classname template_weapon_crossbow
+	*price 0
+	
+	*range 4096
+
+	*model weapons\LightCrossbow
+	*iconsurface gui_icon_lightcrossbow
+	*attachangles 0,0.25,-0.10
+	*sound_cast cbw_cross02
+	//*sound_hitworld IMP_ARROW
+	//*sound_lrp LRP01
+	
+	*scatter 0.0
+	*reloadtime 3
+	*damage 100, pierce+blockable
+	*magazinesize 300
+	*impactforce 12
+}
+
+*weapon_rocketlauncher
+{
+	*classname template_weapon_crossbow
+
+	*itemtype 0x17
+
+	*damagetype explosive
+	*flags aiming+autoreload+keepaftermission
+
+	*linkeditemtypes 0x130
+
+	*spawn projectile_rocket
+	*sound_cast dem_expl18c
+
+	*model weapons\RocketLauncher
+	*iconsurface gui_icon_rocketlauncher
+	*attachangles 0,0.25,-0.10
+
+	*range 512
+
+	*velocity 400
+
+	*scatter 0.00
+	*reloadtime 0.8
+	*damage 100, pierce+blockable
+	*impactforce 50
+}

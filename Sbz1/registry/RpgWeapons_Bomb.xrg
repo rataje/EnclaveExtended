@@ -1,0 +1,372 @@
+//----------------------------------------------------------------------
+//- BOMB ---------------------------------------------------------------
+//----------------------------------------------------------------------
+
+*template_weapon_bomb
+{
+	*rpgclass thresholdsummon
+	*spawn projectile_bomb_normal
+	
+	*damagetype explosive
+	*skill bomb
+
+	*range 512
+
+	*itemtype 3
+	*linkeditemtypes 0x101
+
+	*flags renderquantity+autopickup+needammo+consume
+	*model weapons\dabomb
+	*iconsurface gui_icon_bomb
+
+	*attachrottrack 15
+	*attachangles 0,0.24,0.92
+
+	*sound_equip EQ_MISC1
+	*sound_unequip EQ_MISC2
+	*sound_pickup eq_misc2
+	
+	*anim_stance animlist:56
+	*anim_equip animlist:231
+
+	*anim_charge animlist:230
+	*anim_throw animlist:226
+	*anim_shortthrow animlist:243
+	*anim_reload animlist:231
+
+	*longthrowthreshold 0.2
+
+	*summondelay 0.64
+	*quicksummondelay 0.4
+
+	*startoffset 20
+
+	*ai_type RANGED_BOMB
+}
+
+*weapon_bomb_elm5gob
+{
+	*classname template_weapon_bomb
+
+	*magazinesize 1
+	*numitems 150
+}
+
+*weapon_bomb_normal
+{
+	*classname template_weapon_bomb
+	*numitems 10
+}
+
+*weapon_bomb_2
+{
+	*classname template_weapon_bomb
+	*numitems 2
+	*price 0
+}
+
+*weapon_bomb_4
+{
+	*classname template_weapon_bomb
+	*numitems 4
+	*price 0
+}
+
+*weapon_bomb_6
+{
+	*classname template_weapon_bomb
+	*numitems 6
+	*price 0
+}
+
+*weapon_bomb_8
+{
+	*classname template_weapon_bomb
+	*numitems 8
+	*price 0
+}
+
+*weapon_bomb_16
+{
+	*classname template_weapon_bomb
+	*numitems 16
+	*price 0
+}
+
+//----------------------------------------------------------------------
+
+*template_weapon_hebomb
+{
+	*rpgclass thresholdsummon
+	*spawn projectile_bomb_heavy
+	
+	*damagetype explosive
+	*skill bomb
+
+	*range 512
+
+	*itemtype 3
+	*linkeditemtypes 0x101
+
+	*flags renderquantity+autopickup+needammo+consume
+	*model weapons\hebomb
+	*iconsurface gui_icon_hebomb
+
+	*attachrottrack 15
+	*attachangles 0,0.24,0.92
+
+	*sound_equip EQ_MISC1
+	*sound_unequip EQ_MISC2
+	*sound_pickup eq_misc2
+	
+	*anim_stance animlist:56
+	*anim_equip animlist:231
+
+	*anim_charge animlist:230
+	*anim_throw animlist:226
+	*anim_shortthrow animlist:243
+	*anim_reload animlist:231
+
+	*longthrowthreshold 0.2
+
+	*summondelay 0.64
+	*quicksummondelay 0.4
+
+	*startoffset 20
+
+	*ai_type RANGED_BOMB
+}
+
+*weapon_hebomb_normal
+{
+	*classname template_weapon_hebomb
+	*numitems 10
+}
+
+*weapon_hebomb_2
+{
+	*classname template_weapon_hebomb
+	*numitems 2
+	*price 0
+}
+
+*weapon_hebomb_4
+{
+	*classname template_weapon_hebomb
+	*numitems 4
+	*price 0
+}
+
+*weapon_hebomb_6
+{
+	*classname template_weapon_hebomb
+	*numitems 6
+	*price 0
+}
+
+*weapon_hebomb_8
+{
+	*classname template_weapon_hebomb
+	*numitems 8
+	*price 0
+}
+
+*weapon_hebomb_16
+{
+	*classname template_weapon_hebomb
+	*numitems 16
+	*price 0
+}
+
+//----------------------------------------------------------------------
+
+*template_weapon_firebottle
+{
+	*rpgclass thresholdsummon
+	
+	*skill bomb
+	*damagetype fire
+
+	*range 512
+
+	*itemtype 4
+	*linkeditemtypes 0x101
+
+	*flags renderquantity+autopickup+needammo+consume
+
+	*model "world\\stuff\\bigbottle"
+	*iconsurface gui_icon_molotov
+
+	*attachrottrack 15
+	*attachangles 0,0.24,0.92
+//	*attachmodel "Particles"
+
+	*magazinesize 1
+	*numitems 100
+	*spawn projectile_firebottle
+
+	*summondelay 0.1
+
+	*sound_equip EQ_MISC1
+	*sound_unequip EQ_MISC
+	*sound_pickup bottle01
+	
+	*anim_stance animlist:56
+	*anim_equip animlist:231
+
+	*anim_charge animlist:230
+	*anim_throw animlist:226
+	*anim_shortthrow animlist:243
+	*anim_reload animlist:231
+
+	*longthrowthreshold 0.2
+
+	*summondelay 0.64
+	*quicksummondelay 0.4
+
+	*startoffset 20
+
+	*ai_type RANGED_MOLOTOV
+}
+
+*weapon_firebottle_2
+{
+	*classname template_weapon_firebottle
+	*numitems 2
+	*price 0
+}
+
+*weapon_firebottle_4
+{
+	*classname template_weapon_firebottle
+	*numitems 4
+	*price 0
+}
+
+*weapon_firebottle_6
+{
+	*classname template_weapon_firebottle
+	*numitems 6
+	*price 0
+}
+
+*weapon_firebottle_8
+{
+	*classname template_weapon_firebottle
+	*numitems 8
+	*price 0
+}
+
+*weapon_firebottle_16
+{
+	*classname template_weapon_firebottle
+	*numitems 16
+	*price 0
+}
+
+//----------------------------------------------------------------------
+
+*template_weapon_hefirebottle
+{
+	*rpgclass thresholdsummon
+
+	*damagetype fire
+	*skill bomb
+
+	*range 512
+
+	*itemtype 4
+	*linkeditemtypes 0x101
+
+	*flags renderquantity+autopickup+needammo+consume
+
+	*spawn projectile_hefirebottle
+	*model "world\\stuff\\hefirebottle"
+	*iconsurface gui_icon_hefirebottle
+
+	*attachrottrack 15
+	*attachangles 0,0.24,0.92
+//	*attachmodel "Particles"
+
+	*magazinesize 1
+	*numitems 100
+
+	*summondelay 0.1
+
+	*sound_equip EQ_MISC1
+	*sound_unequip EQ_MISC
+	*sound_pickup bottle01
+	
+	*anim_stance animlist:56
+	*anim_equip animlist:231
+
+	*anim_charge animlist:230
+	*anim_throw animlist:226
+	*anim_shortthrow animlist:243
+	*anim_reload animlist:231
+
+	*longthrowthreshold 0.2
+
+	*summondelay 0.64
+	*quicksummondelay 0.4
+
+	*startoffset 20
+
+	*ai_type RANGED_MOLOTOV
+}
+
+*weapon_hefirebottle_2
+{
+	*classname template_weapon_hefirebottle
+	*numitems 2
+	*price 0
+}
+
+*weapon_hefirebottle_4
+{
+	*classname template_weapon_hefirebottle
+	*numitems 4
+	*price 0
+}
+
+*weapon_hefirebottle_6
+{
+	*classname template_weapon_hefirebottle
+	*numitems 6
+	*price 0
+}
+
+*weapon_hefirebottle_8
+{
+	*classname template_weapon_hefirebottle
+	*numitems 8
+	*price 0
+}
+
+*weapon_hefirebottle_16
+{
+	*classname template_weapon_hefirebottle
+	*numitems 16
+	*price 0
+}
+
+//----------------------------------------------------------------------
+
+*weapon_bomb_celenheim
+{
+	*rpgclass thresholdsummon
+	*spawn bomb_celenheim
+	
+	*damagetype explosive
+
+	*sound_cast firebolt1
+	
+	*longthrowthreshold 0.2
+
+	*summondelay 0.64
+	*quicksummondelay 0.4
+
+	*startoffset 20
+
+	*ai_type RANGED_BOMB
+}
